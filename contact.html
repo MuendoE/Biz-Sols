@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Alpha CR Solutions</title>
+<meta name="description" content="Contact Alpha CR Solutions — clinical research consultancy in Johannesburg, South Africa. SAHPRA submissions, GCP training, CRA services.">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-mark">α</div>
+    <div class="nav-logo-text">Alpha CR Solutions<span>Clinical Research</span></div>
+  </a>
+  <ul class="nav-menu">
+    <li>
+      <a href="#">Services <i class="fa-solid fa-chevron-down"></i></a>
+      <ul class="nav-dropdown">
+        <li><a href="regulatory-consultancy.html"><i class="fa-solid fa-shield-halved"></i>Regulatory Consultancy</a></li>
+        <li><a href="cra-monitoring.html"><i class="fa-solid fa-magnifying-glass-chart"></i>CRA &amp; Monitoring</a></li>
+        <li><a href="gcp-training.html"><i class="fa-solid fa-graduation-cap"></i>GCP Training</a></li>
+      </ul>
+    </li>
+    <li><a href="about.html">About</a></li>
+    <li class="active"><a href="contact.html" class="nav-cta">Contact Us</a></li>
+  </ul>
+  <button class="nav-hamburger" id="nav-burger"><span></span><span></span><span></span></button>
+</nav>
+<nav class="nav-mobile" id="nav-mobile">
+  <span class="mob-section">Services</span>
+  <a href="regulatory-consultancy.html">Regulatory Consultancy</a>
+  <a href="cra-monitoring.html">CRA &amp; Monitoring</a>
+  <a href="gcp-training.html">GCP Training</a>
+  <span class="mob-section">Company</span>
+  <a href="about.html">About Us</a>
+  <a href="contact.html" class="mob-cta">Contact Us</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner" style="max-width:760px;text-align:center;margin:0 auto;">
+    <p class="hero-breadcrumb">Get in Touch</p>
+    <h1>Let's Talk About<br><em>Your Trial</em></h1>
+    <p class="hero-sub" style="margin:0 auto 36px;max-width:520px;">Whether you need regulatory support, site monitoring, GCP training or are simply exploring options for your South African trial — we'd like to hear from you.</p>
+  </div>
+</section>
+
+<!-- CONTACT BODY -->
+<section class="bg-off">
+  <div class="section-inner">
+    <div class="contact-grid">
+
+      <!-- FORM -->
+      <div>
+        <h2 class="section-title" style="font-size:28px;margin-bottom:6px;">Send Us a Message</h2>
+        <p style="font-size:14px;color:var(--gray);margin-bottom:32px;">We respond to all enquiries within one business day.</p>
+
+        <form id="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" class="form-control" placeholder="Your full name" required>
+            </div>
+            <div class="form-group">
+              <label for="job">Job Title *</label>
+              <input type="text" id="job" name="job_title" class="form-control" placeholder="Your role" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="company">Company / Organisation *</label>
+              <input type="text" id="company" name="company" class="form-control" placeholder="Your company" required>
+            </div>
+            <div class="form-group">
+              <label for="country">Country *</label>
+              <input type="text" id="country" name="country" class="form-control" placeholder="Your country" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" class="form-control" placeholder="your@email.com" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" class="form-control" placeholder="+27 ...">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="service">Area of Interest *</label>
+            <select id="service" name="service" class="form-control" required>
+              <option value="">— Please select —</option>
+              <option value="regulatory">Regulatory Consultancy (SAHPRA / Ethics)</option>
+              <option value="cra">CRA &amp; Site Monitoring</option>
+              <option value="gcp">GCP Training</option>
+              <option value="sdr">SDR Methodology</option>
+              <option value="general">General Enquiry</option>
+              <option value="rfp">Request for Proposal</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" class="form-control" placeholder="Tell us about your trial, timeline, and what kind of support you're looking for..."></textarea>
+          </div>
+          <p style="font-size:12px;color:var(--gray);margin-bottom:20px;line-height:1.6;">
+            By submitting this form you consent to Alpha CR Solutions processing your information to respond to your enquiry, in accordance with our Privacy Policy.
+          </p>
+          <button type="submit" class="btn btn-primary form-submit" style="width:100%;justify-content:center;padding:15px;">
+            Send Message <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+
+      <!-- INFO -->
+      <div>
+        <div class="contact-info-card">
+          <h3>Contact Information</h3>
+          <div class="contact-item">
+            <div class="contact-item-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div>
+              <h5>Email</h5>
+              <p><a href="mailto:info@alphacrsolutions.co.za">info@alphacrsolutions.co.za</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div>
+              <h5>Location</h5>
+              <p>Johannesburg, Gauteng<br>South Africa</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+            <div>
+              <h5>LinkedIn</h5>
+              <p><a href="#">Alpha CR Solutions</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon"><i class="fa-solid fa-clock"></i></div>
+            <div>
+              <h5>Response Time</h5>
+              <p>We respond to all enquiries within one business day (Monday – Friday, 08:00–17:00 SAST).</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:24px;background:var(--teal-lt);border:1px solid rgba(0,155,168,.2);border-radius:12px;padding:24px;">
+          <h4 style="font-size:15px;font-weight:700;color:var(--navy);margin-bottom:12px;"><i class="fa-solid fa-graduation-cap" style="color:var(--teal);margin-right:8px;"></i>GCP Training Enquiries</h4>
+          <p style="font-size:13px;color:#3d4f6a;line-height:1.72;">For GCP training bookings, please indicate the number of participants, preferred date range, and delivery format (in-person or virtual) in your message.</p>
+        </div>
+
+        <div style="margin-top:16px;background:var(--gold-lt);border:1px solid rgba(201,138,43,.2);border-radius:12px;padding:24px;">
+          <h4 style="font-size:15px;font-weight:700;color:var(--navy);margin-bottom:12px;"><i class="fa-solid fa-shield-halved" style="color:var(--gold);margin-right:8px;"></i>SAHPRA Submissions</h4>
+          <p style="font-size:13px;color:#3d4f6a;line-height:1.72;">For regulatory support, it helps to share your therapeutic area, trial phase, anticipated CTA submission date and any specific timelines or constraints you are working to.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES STRIP -->
+<section class="bg-white" style="padding:60px 5%;">
+  <div class="section-inner">
+    <h2 class="section-title section-centered" style="margin-bottom:40px;">Not Sure Where to Start?</h2>
+    <div class="cards-grid-3">
+      <div class="service-card" style="text-align:center;">
+        <div class="card-icon" style="margin:0 auto 18px;"><i class="fa-solid fa-shield-halved"></i></div>
+        <h3>Regulatory &amp; Ethics</h3>
+        <p>SAHPRA CTAs, IRB and IEC ethics submissions, protocol development and regulatory strategy.</p>
+        <a href="regulatory-consultancy.html" class="card-link" style="justify-content:center;">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="service-card" style="text-align:center;">
+        <div class="card-icon gold" style="margin:0 auto 18px;"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+        <h3>CRA &amp; Monitoring</h3>
+        <p>Site qualification, initiation, routine monitoring visits, SDR and risk-based monitoring.</p>
+        <a href="cra-monitoring.html" class="card-link" style="justify-content:center;">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="service-card" style="text-align:center;">
+        <div class="card-icon" style="margin:0 auto 18px;"><i class="fa-solid fa-graduation-cap"></i></div>
+        <h3>GCP Training</h3>
+        <p>ICH E6(R2) aligned GCP training for investigators, coordinators and site teams.</p>
+        <a href="gcp-training.html" class="card-link" style="justify-content:center;">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="nav-logo" style="margin-bottom:4px;">
+        <div class="nav-logo-mark">α</div>
+        <div class="nav-logo-text" style="color:#fff;">Alpha CR Solutions<span>Clinical Research</span></div>
+      </a>
+      <p>Full-service clinical research consultancy based in Johannesburg, South Africa.</p>
+      <div class="social-links">
+        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="mailto:info@alphacrsolutions.co.za"><i class="fa-regular fa-envelope"></i></a>
+      </div>
+    </div>
+    <div class="footer-col"><h4>Services</h4><ul>
+      <li><a href="regulatory-consultancy.html">Regulatory Consultancy</a></li>
+      <li><a href="cra-monitoring.html">CRA &amp; Monitoring</a></li>
+      <li><a href="gcp-training.html">GCP Training</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Expertise</h4><ul>
+      <li><a href="#">Oncology</a></li><li><a href="#">Infectious Diseases</a></li>
+      <li><a href="#">Endocrinology</a></li><li><a href="#">Cardiovascular</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Company</h4><ul>
+      <li><a href="about.html">About Alpha CR</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span>© Alpha CR Solutions 2026 — All rights reserved · Johannesburg, South Africa</span>
+    <span><a href="#">Privacy Policy</a> · <a href="#">Terms of Use</a></span>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
