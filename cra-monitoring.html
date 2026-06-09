@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CRA &amp; Site Monitoring | Alpha CR Solutions</title>
+<meta name="description" content="Clinical Research Associate services and site monitoring — SDV, SDR, risk-based monitoring and ICH E6(R2) compliant site management in South Africa.">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="css/main.css">
+<style>
+.visit-grid {
+  display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; margin-top: 48px;
+}
+.visit-card {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: 12px; padding: 28px;
+  border-top: 3px solid var(--teal);
+  transition: box-shadow .2s, transform .2s;
+}
+.visit-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-3px); }
+.visit-card .visit-tag {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--teal); margin-bottom: 10px;
+}
+.visit-card h3 { font-size: 16px; color: var(--navy); margin-bottom: 12px; }
+.visit-card p  { font-size: 13px; color: var(--gray); line-height: 1.72; }
+.visit-card.gold-top { border-top-color: var(--gold); }
+.visit-card.gold-top .visit-tag { color: var(--gold); }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-mark">α</div>
+    <div class="nav-logo-text">Alpha CR Solutions<span>Clinical Research</span></div>
+  </a>
+  <ul class="nav-menu">
+    <li class="active">
+      <a href="#">Services <i class="fa-solid fa-chevron-down"></i></a>
+      <ul class="nav-dropdown">
+        <li><a href="regulatory-consultancy.html"><i class="fa-solid fa-shield-halved"></i>Regulatory Consultancy</a></li>
+        <li><a href="cra-monitoring.html"><i class="fa-solid fa-magnifying-glass-chart"></i>CRA &amp; Monitoring</a></li>
+        <li><a href="gcp-training.html"><i class="fa-solid fa-graduation-cap"></i>GCP Training</a></li>
+      </ul>
+    </li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+  </ul>
+  <button class="nav-hamburger" id="nav-burger"><span></span><span></span><span></span></button>
+</nav>
+<nav class="nav-mobile" id="nav-mobile">
+  <span class="mob-section">Services</span>
+  <a href="regulatory-consultancy.html">Regulatory Consultancy</a>
+  <a href="cra-monitoring.html">CRA &amp; Monitoring</a>
+  <a href="gcp-training.html">GCP Training</a>
+  <span class="mob-section">Company</span>
+  <a href="about.html">About Us</a>
+  <a href="contact.html" class="mob-cta">Contact Us</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero hero-split">
+  <div class="hero-inner">
+    <div>
+      <p class="hero-breadcrumb">Services · CRA &amp; Site Monitoring</p>
+      <h1>Site Monitoring Built on<br><em>Source Data Integrity</em></h1>
+      <p class="hero-sub">Our Clinical Research Associates bring an SDR-first approach to every site visit — ensuring data quality, regulatory compliance and inspection readiness throughout your trial.</p>
+      <div class="hero-actions">
+        <a href="contact.html" class="btn btn-primary">Discuss Your Trial <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="#visits" class="btn btn-ghost"><i class="fa-solid fa-chevron-down"></i> Our Services</a>
+      </div>
+    </div>
+    <div class="hero-stat-grid">
+      <div class="hero-stat-card"><div class="hsc-icon"><i class="fa-solid fa-magnifying-glass"></i></div><h4>Source Data Review</h4><p>SDR methodology built into every monitoring visit from site set-up.</p></div>
+      <div class="hero-stat-card"><div class="hsc-icon"><i class="fa-solid fa-chart-bar"></i></div><h4>Risk-Based Monitoring</h4><p>Centralised risk indicators driving targeted on-site activities.</p></div>
+      <div class="hero-stat-card"><div class="hsc-icon"><i class="fa-solid fa-file-shield"></i></div><h4>Inspection Ready</h4><p>ICH E6(R2) documentation standards maintained throughout.</p></div>
+      <div class="hero-stat-card"><div class="hsc-icon"><i class="fa-solid fa-location-dot"></i></div><h4>South Africa Based</h4><p>CRAs based in Johannesburg with national and international reach.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- VISIT TYPES -->
+<section class="bg-off" id="visits">
+  <div class="section-inner">
+    <span class="section-label">Monitoring Services</span>
+    <h2 class="section-title">Visits We Conduct</h2>
+    <p class="section-lead">Every visit is conducted to ICH E6(R2) standards, documented in real time, and followed up with a written monitoring visit report within agreed timelines.</p>
+    <div class="visit-grid">
+      <div class="visit-card">
+        <p class="visit-tag">SQV</p>
+        <h3>Site Qualification Visit</h3>
+        <p>Assessment of site facilities, staff, patient access and regulatory infrastructure to determine suitability for the study. Includes review of site CVs, SOPs and essential document readiness.</p>
+      </div>
+      <div class="visit-card">
+        <p class="visit-tag">SIV</p>
+        <h3>Site Initiation Visit</h3>
+        <p>Comprehensive training of site staff on the protocol, CRF completion, ICF process, IMP handling, SAE reporting and source documentation requirements before first patient enrolment.</p>
+      </div>
+      <div class="visit-card">
+        <p class="visit-tag">RMV</p>
+        <h3>Routine Monitoring Visit</h3>
+        <p>Ongoing source data verification, protocol compliance review, query management, IMP accountability, essential document review and subject safety monitoring throughout the active study.</p>
+      </div>
+      <div class="visit-card gold-top">
+        <p class="visit-tag">Co-Mon</p>
+        <h3>Co-Monitoring</h3>
+        <p>Accompaniment of sponsor or CRO monitors on site visits to provide local regulatory context, manage language and cultural requirements, and ensure quality of monitoring outputs.</p>
+      </div>
+      <div class="visit-card gold-top">
+        <p class="visit-tag">RBM</p>
+        <h3>Remote / Central Monitoring</h3>
+        <p>Risk-based monitoring activities conducted remotely, including centralised data review, risk indicator analysis and targeted follow-up to complement on-site monitoring visits.</p>
+      </div>
+      <div class="visit-card gold-top">
+        <p class="visit-tag">COV</p>
+        <h3>Site Close-Out Visit</h3>
+        <p>Final site visit to confirm all study activities are complete, outstanding queries resolved, IMP returned or destroyed, and essential documents archived to regulatory standards.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SDR METHODOLOGY -->
+<section class="bg-navy">
+  <div class="section-inner">
+    <span class="section-label">Our Approach</span>
+    <h2 class="section-title" style="color:#fff;">SDR-First Methodology</h2>
+    <p class="section-lead">Source data integrity is the foundation of every reliable clinical trial. Our SDR-first approach embeds data quality checks from the earliest stages of site setup.</p>
+    <div class="cards-grid-2" style="margin-top:48px;">
+      <div class="service-card dark">
+        <div class="card-icon"><i class="fa-solid fa-layer-group"></i></div>
+        <h3>Source Data Development</h3>
+        <p>We work with sites to establish compliant source documents before the first patient is screened — reducing downstream query volume and protecting data integrity from day one. Source document templates are reviewed against the protocol, CRF and applicable regulations before SIV.</p>
+      </div>
+      <div class="service-card dark">
+        <div class="card-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+        <h3>Structured Source Data Review</h3>
+        <p>Our CRAs conduct systematic source data review at every monitoring visit using protocol-specific checklists. SDR findings are documented in the monitoring visit report and fed into the central risk management system, enabling early detection of data quality trends.</p>
+      </div>
+      <div class="service-card dark">
+        <div class="card-icon"><i class="fa-solid fa-chart-bar"></i></div>
+        <h3>Risk-Based Monitoring Integration</h3>
+        <p>SDR outputs drive centralised risk indicators, allowing the monitoring plan to adapt dynamically to site performance. High-risk data points trigger targeted on-site visits; low-risk sites benefit from reduced monitoring burden — all aligned with ICH E6(R2).</p>
+      </div>
+      <div class="service-card dark">
+        <div class="card-icon"><i class="fa-solid fa-file-shield"></i></div>
+        <h3>Inspection Readiness</h3>
+        <p>All monitoring activities are documented to SAHPRA and ICH standards. Sites managed by Alpha CR Solutions are prepared for sponsor audits and SAHPRA GCP inspections at any point in the study — not just at close-out.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ESSENTIAL DOCUMENTS -->
+<section class="bg-off">
+  <div class="section-inner">
+    <span class="section-label">Trial Master File</span>
+    <h2 class="section-title">Essential Documents &amp;<br><em>TMF Management</em></h2>
+    <p class="section-lead">A complete and contemporaneous Trial Master File is not just a regulatory requirement — it is the evidence of how your trial was conducted. We manage TMF compliance throughout.</p>
+    <div class="cards-grid-3" style="margin-top:48px;">
+      <div class="service-card">
+        <div class="card-icon"><i class="fa-solid fa-folder-open"></i></div>
+        <h3>Site Regulatory Binder</h3>
+        <p>Setup and maintenance of all essential documents at site level, including approvals, agreements, staff CVs, training logs, and all correspondence with regulatory and ethics authorities.</p>
+      </div>
+      <div class="service-card">
+        <div class="card-icon"><i class="fa-solid fa-clipboard-check"></i></div>
+        <h3>TMF Reviews</h3>
+        <p>Periodic review of the Trial Master File against the essential documents list from ICH E6(R2) and the study-specific TMF plan, with gap analysis and remediation tracking.</p>
+      </div>
+      <div class="service-card">
+        <div class="card-icon gold"><i class="fa-solid fa-archive"></i></div>
+        <h3>Archiving Preparation</h3>
+        <p>At close-out, preparation of all site documents for archiving to regulatory standards, including the required retention periods under SAHPRA regulations and sponsor requirements.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner">
+  <div class="cta-banner-inner">
+    <div class="cta-text">
+      <h2>Need a CRA for your South African sites?</h2>
+      <p>Alpha CR Solutions provides experienced, ICH E6(R2) trained CRAs based in Johannesburg — available for single visits or full trial monitoring contracts.</p>
+    </div>
+    <a href="contact.html" class="btn btn-white">Request a CRA →</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="nav-logo" style="margin-bottom:4px;">
+        <div class="nav-logo-mark">α</div>
+        <div class="nav-logo-text" style="color:#fff;">Alpha CR Solutions<span>Clinical Research</span></div>
+      </a>
+      <p>Full-service clinical research consultancy based in Johannesburg, South Africa.</p>
+      <div class="social-links">
+        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="mailto:info@alphacrsolutions.co.za"><i class="fa-regular fa-envelope"></i></a>
+      </div>
+    </div>
+    <div class="footer-col"><h4>Services</h4><ul>
+      <li><a href="regulatory-consultancy.html">Regulatory Consultancy</a></li>
+      <li><a href="cra-monitoring.html">CRA &amp; Monitoring</a></li>
+      <li><a href="gcp-training.html">GCP Training</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Expertise</h4><ul>
+      <li><a href="#">Oncology</a></li><li><a href="#">Infectious Diseases</a></li>
+      <li><a href="#">Endocrinology</a></li><li><a href="#">Cardiovascular</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Company</h4><ul>
+      <li><a href="about.html">About Alpha CR</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span>© Alpha CR Solutions 2026 — All rights reserved · Johannesburg, South Africa</span>
+    <span><a href="#">Privacy Policy</a> · <a href="#">Terms of Use</a></span>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
