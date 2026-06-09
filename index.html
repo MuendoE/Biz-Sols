@@ -1,123 +1,378 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alpha CR Solutions — Clinical Research & Consulting</title>
-  <meta name="description" content="Alpha CR Solutions provides clinical research associate services and consulting for clinical trials and research-driven organisations.">
-  <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alpha CR Solutions | Clinical Research Consultancy · Johannesburg</title>
+<meta name="description" content="Alpha CR Solutions — Clinical research consultancy specialising in SAHPRA submissions, IRB/IEC ethics, GCP training and CRA services in South Africa.">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="css/main.css">
+<style>
+/* ── Homepage-specific ─────────────────────────────────── */
+.hero-home {
+  background: linear-gradient(135deg, var(--navy) 0%, #162c55 50%, #0a3d4a 100%);
+  padding: 110px 5% 0; position: relative; overflow: hidden;
+}
+.hero-home::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    radial-gradient(circle at 80% 20%, rgba(0,155,168,.2) 0%, transparent 50%),
+    radial-gradient(circle at 10% 90%, rgba(201,138,43,.14) 0%, transparent 45%);
+}
+.hero-home-inner {
+  position: relative; z-index: 1;
+  max-width: 1200px; margin: 0 auto; text-align: center;
+}
+.hero-home h1 { font-size: clamp(40px, 6vw, 68px); color: #fff; margin-bottom: 24px; max-width: 900px; margin-left: auto; margin-right: auto; }
+.hero-home .hero-sub { font-size: 17px; max-width: 580px; margin: 0 auto 38px; }
+.hero-home .hero-actions { justify-content: center; }
+.hero-wave {
+  position: relative; z-index: 1; margin-top: 70px;
+  display: flex; justify-content: center;
+  opacity: .06;
+}
+.hero-wave svg { width: 100%; }
+
+/* Services overview strip */
+.services-strip { background: var(--white); border-bottom: 1px solid var(--border); }
+.services-strip-inner {
+  max-width: 1200px; margin: 0 auto; padding: 0 5%;
+  display: grid; grid-template-columns: repeat(4,1fr);
+}
+.strip-item {
+  padding: 32px 20px; text-align: center;
+  border-right: 1px solid var(--border);
+  transition: background .2s;
+  cursor: pointer;
+}
+.strip-item:last-child { border-right: none; }
+.strip-item:hover { background: var(--off); }
+.strip-item a { color: inherit; }
+.strip-icon {
+  width: 50px; height: 50px; border-radius: 12px; margin: 0 auto 14px;
+  background: var(--teal-lt); color: var(--teal);
+  display: flex; align-items: center; justify-content: center; font-size: 21px;
+}
+.strip-icon.gold { background: var(--gold-lt); color: var(--gold); }
+.strip-item h4 { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+.strip-item p  { font-size: 12px; color: var(--gray); line-height: 1.5; }
+
+/* About preview */
+.about-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: center;
+}
+.about-visual {
+  border-radius: 14px; overflow: hidden;
+  background: linear-gradient(135deg, var(--navy) 0%, #1a3060 60%, #0a3d4a 100%);
+  height: 460px; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 20px; padding: 40px;
+}
+.about-visual-logo {
+  width: 80px; height: 80px; border-radius: 18px;
+  background: linear-gradient(135deg, var(--teal), var(--teal-dk));
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'DM Serif Display', serif; font-size: 42px; color: #fff;
+  margin-bottom: 10px;
+}
+.about-visual h3 { font-size: 22px; color: #fff; text-align: center; }
+.about-visual p  { font-size: 14px; color: rgba(255,255,255,.6); text-align: center; line-height: 1.6; }
+.about-visual-badges { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-top: 10px; }
+.about-visual-badge {
+  background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2);
+  border-radius: 20px; padding: 6px 14px; font-size: 12px; color: rgba(255,255,255,.8);
+}
+.about-body .section-title { margin-top: 14px; }
+.about-body p { font-size: 15px; color: #3d4f6a; line-height: 1.82; margin-bottom: 16px; }
+.about-body strong { color: var(--navy); }
+</style>
 </head>
 <body>
 
-  <header class="site-header">
-    <nav class="nav">
-      <a class="brand" href="index.html">Alpha <span>CR Solutions</span></span></a>
-      <div class="nav-links">
-        <a href="index.html" class="active">Home</a>
-        <a href="services.html">Services</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </nav>
-  </header>
+<!-- NAV -->
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-mark">α</div>
+    <div class="nav-logo-text">Alpha CR Solutions<span>Clinical Research</span></div>
+  </a>
+  <ul class="nav-menu">
+    <li>
+      <a href="#">Services <i class="fa-solid fa-chevron-down"></i></a>
+      <ul class="nav-dropdown">
+        <li><a href="regulatory-consultancy.html"><i class="fa-solid fa-shield-halved"></i>Regulatory Consultancy</a></li>
+        <li><a href="cra-monitoring.html"><i class="fa-solid fa-magnifying-glass-chart"></i>CRA &amp; Monitoring</a></li>
+        <li><a href="gcp-training.html"><i class="fa-solid fa-graduation-cap"></i>GCP Training</a></li>
+      </ul>
+    </li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+  </ul>
+  <button class="nav-hamburger" id="nav-burger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<nav class="nav-mobile" id="nav-mobile">
+  <span class="mob-section">Services</span>
+  <a href="regulatory-consultancy.html"><i class="fa-solid fa-shield-halved" style="width:18px;color:var(--teal);margin-right:4px;"></i> Regulatory Consultancy</a>
+  <a href="cra-monitoring.html"><i class="fa-solid fa-magnifying-glass-chart" style="width:18px;color:var(--teal);margin-right:4px;"></i> CRA &amp; Monitoring</a>
+  <a href="gcp-training.html"><i class="fa-solid fa-graduation-cap" style="width:18px;color:var(--teal);margin-right:4px;"></i> GCP Training</a>
+  <span class="mob-section">Company</span>
+  <a href="about.html">About Us</a>
+  <a href="contact.html" class="mob-cta">Contact Us</a>
+</nav>
 
-  <main>
-    <!-- HERO -->
-    <section class="hero">
-      <div class="wrap">
-        <p class="eyebrow reveal">Clinical Research &middot; Consulting</p>
-        <h1 class="reveal d1">Rigorous clinical research support, delivered with precision.</h1>
-        <p class="lead reveal d2">Alpha CR Solutions partners with sponsors, sites, and research teams to keep clinical trials on track. From hands-on clinical research associate services to strategic consulting, we bring clarity and compliance to every stage of the study.</p>
-        <div class="hero-cta reveal d3">
-          <a class="btn" href="contact.html">Start a conversation</a>
-          <a class="btn btn-ghost" href="services.html">Explore services</a>
+<!-- HERO -->
+<section class="hero-home">
+  <div class="hero-home-inner">
+    <p class="hero-breadcrumb">Clinical Research Consultancy · Johannesburg, South Africa</p>
+    <h1>Advancing Clinical Trials<br>with <em>Regulatory Precision</em></h1>
+    <p class="hero-sub">Expert SAHPRA submissions, IRB and IEC ethics management, GCP training and CRA services — from Johannesburg to the continent.</p>
+    <div class="hero-actions">
+      <a href="regulatory-consultancy.html" class="btn btn-primary">Our Services <i class="fa-solid fa-arrow-right"></i></a>
+      <a href="contact.html" class="btn btn-ghost">Get in Touch</a>
+    </div>
+    <div class="hero-wave">
+      <svg viewBox="0 0 1440 60" fill="none"><path d="M0 30 Q360 0 720 30 Q1080 60 1440 30V60H0Z" fill="white"/></svg>
+    </div>
+  </div>
+</section>
+
+<!-- STATS STRIP -->
+<div class="stats-strip">
+  <div class="stats-strip-inner">
+    <div class="stat-item">
+      <div class="stat-num"><span class="count-up" data-target="15" data-suffix="+">0+</span></div>
+      <div class="stat-label">Therapeutic Areas</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num"><span class="count-up" data-target="100" data-suffix="%">0%</span></div>
+      <div class="stat-label">GCP Compliant</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num"><span class="count-up" data-target="3" data-suffix="">0</span></div>
+      <div class="stat-label">Regulatory Frameworks</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num"><span class="count-up" data-target="1" data-suffix="">0</span></div>
+      <div class="stat-label">Dedicated CRO Partner</div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES STRIP -->
+<div class="services-strip">
+  <div class="services-strip-inner">
+    <div class="strip-item"><a href="regulatory-consultancy.html">
+      <div class="strip-icon"><i class="fa-solid fa-shield-halved"></i></div>
+      <h4>Regulatory Consultancy</h4>
+      <p>SAHPRA CTAs, amendments and annual reports</p>
+    </a></div>
+    <div class="strip-item"><a href="regulatory-consultancy.html#ethics">
+      <div class="strip-icon"><i class="fa-solid fa-circle-check"></i></div>
+      <h4>Ethics Submissions</h4>
+      <p>NHREC IRBs and site IEC management</p>
+    </a></div>
+    <div class="strip-item"><a href="cra-monitoring.html">
+      <div class="strip-icon gold"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+      <h4>CRA &amp; Monitoring</h4>
+      <p>SDV, SDR and risk-based monitoring</p>
+    </a></div>
+    <div class="strip-item"><a href="gcp-training.html">
+      <div class="strip-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+      <h4>GCP Training</h4>
+      <p>ICH E6(R2) aligned site team training</p>
+    </a></div>
+  </div>
+</div>
+
+<!-- ABOUT PREVIEW -->
+<section class="bg-off">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-visual">
+        <div class="about-visual-logo">α</div>
+        <h3>Alpha CR Solutions</h3>
+        <p>Clinical research consultancy headquartered in Johannesburg, Gauteng — serving sponsors and sites across South Africa and the African continent.</p>
+        <div class="about-visual-badges">
+          <span class="about-visual-badge">SAHPRA Expertise</span>
+          <span class="about-visual-badge">ICH E6(R2)</span>
+          <span class="about-visual-badge">SDR-First</span>
+          <span class="about-visual-badge">GCP Certified</span>
         </div>
       </div>
-    </section>
-
-    <!-- SERVICES -->
-    <section class="section-soft">
-      <div class="wrap">
-        <h2 class="section-title">What we do</h2>
-        <p class="section-intro">A complete set of services across the clinical trial lifecycle, each built to reduce risk and move your research forward.</p>
-        <div class="cards">
-          <div class="card">
-            <span class="num">01</span>
-            <h3>Clinical Research Associate Services</h3>
-            <p>Site monitoring, source data verification, and trial oversight that protects data integrity and participant safety while keeping your study compliant and on schedule.</p>
-            <a href="services.html">Learn more &rarr;</a>
-          </div>
-          <div class="card">
-            <span class="num">02</span>
-            <h3>Consulting</h3>
-            <p>Strategic guidance on trial design, regulatory readiness, process improvement, and quality systems for organisations that need experienced clinical research expertise.</p>
-            <a href="services.html">Learn more &rarr;</a>
-          </div>
-          <div class="card">
-            <span class="num">03</span>
-            <h3>Regulatory &amp; Ethics Submissions</h3>
-            <p>Preparation and management of regulatory submissions to SAHPRA and other bodies, and ethics submissions to IRBs, IECs, and Pharma-Ethics, accurate and on time.</p>
-            <a href="services.html">Learn more &rarr;</a>
-          </div>
-          <div class="card">
-            <span class="num">04</span>
-            <h3>Source Data Development</h3>
-            <p>Design and optimisation of source documents, worksheets, and site tools that improve data quality at the point of capture and reduce downstream queries.</p>
-            <a href="services.html">Learn more &rarr;</a>
-          </div>
-          <div class="card">
-            <span class="num">05</span>
-            <h3>Training &amp; GCP Certification</h3>
-            <p>Hands-on training for individuals in CRA and site-based roles, plus a separate week-long GCP training course for those entering clinical research.</p>
-            <a href="services.html">Learn more &rarr;</a>
-          </div>
+      <div class="about-body">
+        <span class="section-label">Who We Are</span>
+        <h2 class="section-title">A South African CRO<br>Built for <em>Precision</em></h2>
+        <p>Alpha CR Solutions is a Johannesburg-based clinical research consultancy founded on the principle that regulatory quality and operational efficiency are not competing priorities — they are the same goal.</p>
+        <p>We bring together expertise in <strong>SAHPRA regulatory affairs</strong>, ethics committee management, clinical monitoring and GCP training to provide sponsors and sites with a single, accountable partner across the full trial lifecycle.</p>
+        <p>Our SDR-first methodology means data integrity is built into every site engagement from day one — reducing audit findings, protecting subjects, and accelerating the path to clean data.</p>
+        <div style="display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;">
+          <a href="about.html" class="btn btn-navy">About Alpha CR <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="contact.html" class="btn btn-outline">Get in Touch</a>
         </div>
-      </div>
-    </section>
-
-    <!-- CREDIBILITY -->
-    <section>
-      <div class="wrap">
-        <div class="strip">
-          <div>
-            <div class="stat">6+</div>
-            <div class="label">Years in clinical research</div>
-          </div>
-          <div>
-            <div class="stat">8+</div>
-            <div class="label">Therapeutic areas monitored</div>
-          </div>
-          <div>
-            <div class="stat">0</div>
-            <div class="label">Major findings across 4 independent audits</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="section-soft">
-      <div class="wrap" style="text-align:center;">
-        <h2 class="section-title">Let's discuss your study.</h2>
-        <p class="section-intro" style="margin:0 auto 30px;">Whether you need monitoring support or a strategic partner, we'd be glad to talk through what you're working on.</p>
-        <a class="btn" href="contact.html">Get in touch</a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="wrap">
-      <div>
-        <div class="brand-foot">Alpha CR Solutions</div>
-        <div>Clinical research &amp; consulting</div>
-      </div>
-      <div>
-        <div>muendo38@gmail.com</div>
-        <div>+27 78 265 0716</div>
-        <div>Johannesburg, Gauteng</div>
       </div>
     </div>
-  </footer>
+  </div>
+</section>
 
+<!-- SERVICES DETAIL -->
+<section class="bg-white">
+  <div class="section-inner">
+    <span class="section-label">Our Services</span>
+    <h2 class="section-title">Everything Your Trial Needs</h2>
+    <p class="section-lead">From first submission to final close-out, Alpha CR Solutions covers every regulatory and operational requirement of your South African clinical trial.</p>
+    <div class="cards-grid-3">
+      <div class="service-card">
+        <div class="card-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <h3>Regulatory &amp; Ethics Consultancy</h3>
+        <p>End-to-end management of SAHPRA Clinical Trial Applications, IRB submissions and site IEC management — with full query handling and authority liaison.</p>
+        <ul class="service-list">
+          <li>SAHPRA CTA submission and management</li>
+          <li>NHREC-registered IRB submissions</li>
+          <li>Site IEC submissions and renewals</li>
+          <li>Protocol and ICF development</li>
+          <li>Annual progress reports and amendments</li>
+        </ul>
+        <a href="regulatory-consultancy.html" class="card-link">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="service-card">
+        <div class="card-icon gold"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+        <h3>CRA &amp; Site Monitoring</h3>
+        <p>Experienced Clinical Research Associates delivering source data review, site qualification, initiation, routine monitoring and close-out visits to ICH E6(R2) standards.</p>
+        <ul class="service-list">
+          <li>Site qualification and initiation visits</li>
+          <li>Routine monitoring and co-monitoring</li>
+          <li>Source data verification (SDV)</li>
+          <li>Risk-based monitoring support</li>
+          <li>Essential documents and TMF review</li>
+        </ul>
+        <a href="cra-monitoring.html" class="card-link">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="service-card">
+        <div class="card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+        <h3>GCP Training</h3>
+        <p>ICH E6(R2) aligned Good Clinical Practice training tailored to South African sites, investigators, coordinators and pharmacists — with certificate of completion.</p>
+        <ul class="service-list">
+          <li>ICH E6(R2) GCP principles</li>
+          <li>SAHPRA regulatory context</li>
+          <li>Informed consent and ethics</li>
+          <li>Source documentation standards</li>
+          <li>Inspection and audit readiness</li>
+        </ul>
+        <a href="gcp-training.html" class="card-link">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY ALPHA CR -->
+<section class="bg-navy">
+  <div class="section-inner">
+    <span class="section-label">Why Choose Us</span>
+    <h2 class="section-title" style="color:#fff;">The Alpha CR <em>Difference</em></h2>
+    <p class="section-lead" style="color:rgba(255,255,255,.6);">We are not a generic CRO. We are a focused regulatory and clinical operations partner built specifically for the South African clinical research environment.</p>
+    <div class="feature-grid" style="margin-top:52px;">
+      <div class="feature-block">
+        <div class="feature-num">01</div>
+        <h4 style="color:#fff;">SDR-First by Design</h4>
+        <p style="color:rgba(255,255,255,.6);">Source Data Review is built into our monitoring approach from site set-up, not added as an afterthought. Every site we manage is inspection-ready from day one.</p>
+      </div>
+      <div class="feature-block">
+        <div class="feature-num">02</div>
+        <h4 style="color:#fff;">Deep SAHPRA Expertise</h4>
+        <p style="color:rgba(255,255,255,.6);">We understand the SAHPRA submission process in detail — from CTA dossier structure to query management timelines — and plan your regulatory strategy accordingly.</p>
+      </div>
+      <div class="feature-block">
+        <div class="feature-num">03</div>
+        <h4 style="color:#fff;">Single Point of Accountability</h4>
+        <p style="color:rgba(255,255,255,.6);">One partner covering regulatory, ethics, monitoring and training means no handoff gaps, aligned timelines and consistent quality standards throughout your trial.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THERAPEUTIC AREAS -->
+<section class="bg-off">
+  <div class="section-inner">
+    <span class="section-label section-centered" style="display:block;">Therapeutic Expertise</span>
+    <h2 class="section-title section-centered">Areas We Serve</h2>
+    <div class="ta-grid">
+      <div class="ta-card"><div class="ta-icon"><i class="fa-solid fa-ribbon"></i></div><div><h4>Oncology</h4><p>Solid tumours &amp; haematology</p></div></div>
+      <div class="ta-card"><div class="ta-icon"><i class="fa-solid fa-virus"></i></div><div><h4>Infectious Diseases</h4><p>HIV, TB, malaria, hepatitis</p></div></div>
+      <div class="ta-card"><div class="ta-icon"><i class="fa-solid fa-heart-pulse"></i></div><div><h4>Cardiovascular</h4><p>Hypertension &amp; cardiac disease</p></div></div>
+      <div class="ta-card"><div class="ta-icon"><i class="fa-solid fa-droplet"></i></div><div><h4>Endocrinology</h4><p>Diabetes &amp; metabolic disease</p></div></div>
+      <div class="ta-card"><div class="ta-icon"><i class="fa-solid fa-brain"></i></div><div><h4>CNS &amp; Neurology</h4><p>Central nervous system trials</p></div></div>
+      <div class="ta-card"><div class="ta-icon"><i class="fa-solid fa-lungs"></i></div><div><h4>Respiratory</h4><p>Asthma, COPD &amp; pulmonology</p></div></div>
+      <div class="ta-card"><div class="ta-icon"><i class="fa-solid fa-syringe"></i></div><div><h4>Vaccines</h4><p>Preventive &amp; therapeutic vaccines</p></div></div>
+      <div class="ta-card"><div class="ta-icon"><i class="fa-solid fa-flask"></i></div><div><h4>Rare Diseases</h4><p>Orphan indications &amp; ATMPs</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner">
+  <div class="cta-banner-inner">
+    <div class="cta-text">
+      <h2>Ready to start your next clinical trial?</h2>
+      <p>Let Alpha CR Solutions handle the regulatory and ethics complexity — so you can focus on the science.</p>
+    </div>
+    <a href="contact.html" class="btn btn-white">Contact Our Team →</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="nav-logo" style="margin-bottom:4px;">
+        <div class="nav-logo-mark">α</div>
+        <div class="nav-logo-text" style="color:#fff;">Alpha CR Solutions<span>Clinical Research</span></div>
+      </a>
+      <p>Full-service clinical research consultancy based in Johannesburg, South Africa — supporting sponsors and sites with regulatory, ethics and monitoring services.</p>
+      <div class="social-links">
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="mailto:info@alphacrsolutions.co.za" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="regulatory-consultancy.html">Regulatory Consultancy</a></li>
+        <li><a href="cra-monitoring.html">CRA &amp; Monitoring</a></li>
+        <li><a href="gcp-training.html">GCP Training</a></li>
+        <li><a href="regulatory-consultancy.html">SAHPRA Submissions</a></li>
+        <li><a href="regulatory-consultancy.html#ethics">Ethics Submissions</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Expertise</h4>
+      <ul>
+        <li><a href="#">Oncology</a></li>
+        <li><a href="#">Infectious Diseases</a></li>
+        <li><a href="#">Endocrinology</a></li>
+        <li><a href="#">Cardiovascular</a></li>
+        <li><a href="#">CNS &amp; Neurology</a></li>
+        <li><a href="#">Vaccines</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="about.html">About Alpha CR</a></li>
+        <li><a href="about.html#approach">Our Approach</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© Alpha CR Solutions 2026 — All rights reserved · Johannesburg, Gauteng, South Africa</span>
+    <span><a href="#">Privacy Policy</a> · <a href="#">Terms of Use</a></span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
 </body>
 </html>
