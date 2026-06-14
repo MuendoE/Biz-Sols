@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CRA Training &amp; Simulations | Alpha CR Solutions</title>
+<meta name="description" content="CRA training through real-site shadowing and online CRA simulations to build and assess monitoring competency. Plus patient engagement and recruitment support for clinical trials in South Africa.">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="main.css">
+<style>
+.audience-grid { display: grid; grid-template-columns: repeat(5,1fr); gap: 16px; margin-top: 40px; }
+.audience-card {
+  border: 1px solid var(--border); border-radius: 12px;
+  padding: 22px 16px; text-align: center;
+  transition: box-shadow .2s, transform .2s;
+}
+.audience-card:hover { box-shadow: var(--shadow); transform: translateY(-2px); }
+.audience-icon {
+  width: 48px; height: 48px; border-radius: 50%;
+  background: var(--teal-lt); color: var(--teal);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 19px; margin: 0 auto 12px;
+}
+.audience-card h4 { font-size: 13px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+.audience-card p  { font-size: 11px; color: var(--gray); line-height: 1.5; }
+.usecase-card {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: 14px; padding: 32px;
+}
+.usecase-card .uc-icon {
+  width: 50px; height: 50px; border-radius: 12px;
+  background: var(--teal-lt); color: var(--teal);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 21px; margin-bottom: 18px;
+}
+.usecase-card.gold .uc-icon { background: var(--gold-lt); color: var(--gold); }
+.usecase-card h3 { font-size: 18px; color: var(--navy); margin-bottom: 12px; }
+.usecase-card p { font-size: 14px; color: var(--gray); line-height: 1.75; margin-bottom: 16px; }
+@media (max-width: 900px) { .audience-grid { grid-template-columns: repeat(3,1fr); } }
+@media (max-width: 600px) { .audience-grid { grid-template-columns: 1fr 1fr; } }
+
+/* Paid course tooltip */
+.paid-wrap { position: relative; display: inline-block; }
+.paid-wrap .paid-tip {
+  visibility: hidden; opacity: 0;
+  position: absolute; bottom: 125%; left: 50%; transform: translateX(-50%);
+  width: 280px; background: var(--navy); color: #fff;
+  text-align: left; border-radius: 10px; padding: 14px 16px;
+  font-size: 12px; line-height: 1.55; font-weight: 400;
+  box-shadow: 0 10px 30px rgba(0,0,0,.25); z-index: 50;
+  transition: opacity .2s, visibility .2s;
+}
+.paid-wrap .paid-tip::after {
+  content: ''; position: absolute; top: 100%; left: 50%;
+  transform: translateX(-50%); border: 7px solid transparent;
+  border-top-color: var(--navy);
+}
+.paid-wrap:hover .paid-tip { visibility: visible; opacity: 1; }
+.paid-tip strong { color: var(--teal); }
+.paid-note {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 12px; color: var(--gold); font-weight: 600; margin-top: 10px;
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-mark">α</div>
+    <div class="nav-logo-text">Alpha CR Solutions<span>Clinical Research</span></div>
+  </a>
+  <ul class="nav-menu">
+    <li class="active">
+      <a href="#">Services <i class="fa-solid fa-chevron-down"></i></a>
+      <ul class="nav-dropdown">
+        <li><a href="regulatory-consultancy.html"><i class="fa-solid fa-shield-halved"></i>Regulatory Consultancy</a></li>
+        <li><a href="study-startup.html"><i class="fa-solid fa-rocket"></i>Study Start-up &amp; Site Support</a></li>
+        <li><a href="cra-monitoring.html"><i class="fa-solid fa-magnifying-glass-chart"></i>CRA &amp; Monitoring</a></li>
+        <li><a href="cra-training.html"><i class="fa-solid fa-user-graduate"></i>CRA Training &amp; Simulations</a></li>
+        <li><a href="gcp-training.html"><i class="fa-solid fa-graduation-cap"></i>GCP Training</a></li>
+        <li><a href="software.html"><i class="fa-solid fa-laptop-code"></i>Software Solutions</a></li>
+      </ul>
+    </li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+  </ul>
+  <button class="nav-hamburger" id="nav-burger"><span></span><span></span><span></span></button>
+</nav>
+<nav class="nav-mobile" id="nav-mobile">
+  <span class="mob-section">Services</span>
+  <a href="regulatory-consultancy.html">Regulatory Consultancy</a>
+  <a href="study-startup.html">Study Start-up &amp; Site Support</a>
+  <a href="cra-monitoring.html">CRA &amp; Monitoring</a>
+  <a href="cra-training.html">CRA Training &amp; Simulations</a>
+  <a href="gcp-training.html">GCP Training</a>
+  <a href="software.html">Software Solutions</a>
+  <span class="mob-section">Company</span>
+  <a href="about.html">About Us</a>
+  <a href="contact.html" class="mob-cta">Contact Us</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero hero-split">
+  <div class="hero-inner">
+    <div>
+      <p class="hero-breadcrumb">Services · CRA Training &amp; Simulations</p>
+      <h1>Building &amp; Proving<br><em>CRA Competency</em></h1>
+      <p class="hero-sub">Alpha CR Solutions trains the next generation of Clinical Research Associates through real-site shadowing and online CRA simulations — and helps CROs and sponsors assess monitoring competency to reduce qualification oversight visits.</p>
+      <div class="hero-actions">
+        <span class="paid-wrap"><a href="LMS_COURSE_URL" class="btn btn-primary">Start a Simulation <i class="fa-solid fa-lock"></i></a><span class="paid-tip">This is a <strong>paid course</strong>. To enrol, email <strong>gemuendo@outlook.com</strong> for banking details. Once payment reflects, your login details will be sent to you.</span></span>
+        <a href="#simulations" class="btn btn-ghost"><i class="fa-solid fa-chevron-down"></i> Learn More</a>
+      </div>
+    </div>
+    <div class="hero-stat-grid">
+      <div class="hero-stat-card"><div class="hsc-icon"><i class="fa-solid fa-user-graduate"></i></div><h4>CRA Training</h4><p>Training new CRAs through structured shadowing of real site visits.</p></div>
+      <div class="hero-stat-card"><div class="hsc-icon"><i class="fa-solid fa-laptop-code"></i></div><h4>Online Simulations</h4><p>Simulated monitoring scenarios completed online to build and test skills.</p></div>
+      <div class="hero-stat-card"><div class="hsc-icon"><i class="fa-solid fa-chart-line"></i></div><h4>Reduce QOVs</h4><p>Competency assessment that helps reduce qualification oversight visit frequency.</p></div>
+      <div class="hero-stat-card"><div class="hsc-icon"><i class="fa-solid fa-users"></i></div><h4>Patient Recruitment</h4><p>Patient engagement and recruitment support to keep enrolment on track.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CRA SIMULATIONS -->
+<section class="bg-off" id="simulations">
+  <div class="section-inner">
+    <span class="section-label">CRA Simulations</span>
+    <h2 class="section-title">Online CRA Simulations<br><em>for Every Stage of a Career</em></h2>
+    <p class="section-lead">Our online CRA simulations recreate the real challenges of clinical monitoring — protocol deviations, source data discrepancies, difficult site interactions — in a controlled environment. They can be tailored to what a client wants to assess or teach.</p>
+
+    <h3 style="font-size:18px;color:var(--navy);margin:48px 0 0;">Who the Simulations Are For</h3>
+    <div class="audience-grid">
+      <div class="audience-card">
+        <div class="audience-icon"><i class="fa-solid fa-seedling"></i></div>
+        <h4>Upcoming CRAs</h4>
+        <p>Build practical monitoring skills before your first real assignment.</p>
+      </div>
+      <div class="audience-card">
+        <div class="audience-icon"><i class="fa-solid fa-user-check"></i></div>
+        <h4>Existing CRAs</h4>
+        <p>Sharpen skills and demonstrate competency on new protocol types.</p>
+      </div>
+      <div class="audience-card">
+        <div class="audience-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+        <h4>Curious Individuals</h4>
+        <p>Explore what clinical monitoring involves before committing to the path.</p>
+      </div>
+      <div class="audience-card">
+        <div class="audience-icon"><i class="fa-solid fa-building"></i></div>
+        <h4>CROs &amp; Sponsors</h4>
+        <p>Assess CRA competency objectively and reduce oversight visit frequency.</p>
+      </div>
+      <div class="audience-card">
+        <div class="audience-icon"><i class="fa-solid fa-hospital-user"></i></div>
+        <h4>Aspiring Site Staff</h4>
+        <p>Understand what monitors look for to prepare your site for visits.</p>
+      </div>
+    </div>
+
+    <div class="cards-grid-2" style="margin-top:48px;">
+      <div class="usecase-card">
+        <div class="uc-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+        <h3>Skills Building for Individuals</h3>
+        <p>For individuals entering or growing in the CRA profession, simulations provide a safe, realistic environment to practise source data verification, protocol compliance checks, query management and site communication — without the risk of learning on a live trial.</p>
+        <ul class="service-list">
+          <li>Realistic monitoring scenarios</li>
+          <li>Self-paced online completion</li>
+          <li>Feedback on performance</li>
+          <li>Evidence of competency for your CV</li>
+        </ul>
+        <span class="paid-wrap" style="display:block;margin-top:18px;"><a href="LMS_COURSE_URL" class="btn btn-primary" style="width:100%;justify-content:center;">Start a Simulation <i class="fa-solid fa-lock"></i></a><span class="paid-tip">This is a <strong>paid course</strong>. To enrol, email <strong>gemuendo@outlook.com</strong> for banking details. Once payment reflects, your login details will be sent to you.</span></span>
+      </div>
+      <div class="usecase-card gold">
+        <div class="uc-icon"><i class="fa-solid fa-chart-line"></i></div>
+        <h3>Competency Assessment for Organisations</h3>
+        <p>For CROs and sponsors, custom-built simulations objectively assess a CRA's experience and competency before or during an engagement. Demonstrated competency can support a reduced frequency of qualification oversight visits (QOVs), saving time and cost.</p>
+        <ul class="service-list">
+          <li>Custom simulations to your protocols</li>
+          <li>Objective competency scoring</li>
+          <li>Supports reduced QOV frequency</li>
+          <li>Onboarding and vetting of new CRAs</li>
+        </ul>
+        <a href="contact.html" class="btn btn-outline" style="width:100%;justify-content:center;margin-top:18px;">Enquire About Custom Simulations</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SHADOWING / FIELD TRAINING -->
+<section class="bg-white">
+  <div class="section-inner">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;">
+      <div>
+        <span class="section-label">Field Training</span>
+        <h2 class="section-title">Training New CRAs<br><em>on Real Site Work</em></h2>
+        <p style="font-size:15px;color:#3d4f6a;line-height:1.82;margin-bottom:16px;">Simulations build the foundation, but real competency comes from the field. Alpha CR Solutions trains new CRAs by having them shadow experienced monitors on real site visits — under supervision and within the bounds of site and sponsor agreements.</p>
+        <p style="font-size:15px;color:#3d4f6a;line-height:1.82;margin-bottom:28px;">This structured, mentored approach bridges the gap between theory and practice, producing CRAs who are genuinely ready to monitor independently.</p>
+        <a href="contact.html" class="btn btn-primary">Train With Us <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="cards-grid-2" style="grid-template-columns:1fr;gap:16px;margin-top:0;">
+        <div class="service-card">
+          <div class="card-icon"><i class="fa-solid fa-eye"></i></div>
+          <h3>Structured Shadowing</h3>
+          <p>New CRAs accompany experienced monitors on real visits, observing source data review, query handling and site interaction first-hand.</p>
+        </div>
+        <div class="service-card">
+          <div class="card-icon gold"><i class="fa-solid fa-clipboard-check"></i></div>
+          <h3>Supervised Progression</h3>
+          <p>Trainees gradually take on monitoring tasks under supervision until they are assessed as ready to monitor independently.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PATIENT ENGAGEMENT & RECRUITMENT -->
+<section class="bg-navy">
+  <div class="section-inner">
+    <span class="section-label">Recruitment Support</span>
+    <h2 class="section-title" style="color:#fff;">Patient Engagement &amp;<br><em>Recruitment Support</em></h2>
+    <p class="section-lead">Recruitment shortfall is the leading cause of trial delays. As part of our CRA services, Alpha CR Solutions provides patient engagement and recruitment support to help sites find and retain eligible participants.</p>
+    <div class="cards-grid-3" style="margin-top:48px;">
+      <div class="service-card dark">
+        <div class="card-icon"><i class="fa-solid fa-magnifying-glass-location"></i></div>
+        <h3>Patient Finder Support</h3>
+        <p>Helping sites identify potentially eligible patients within their existing populations, supporting faster screening and enrolment against protocol criteria.</p>
+      </div>
+      <div class="service-card dark">
+        <div class="card-icon"><i class="fa-solid fa-comments"></i></div>
+        <h3>Patient Engagement</h3>
+        <p>Supporting sites with patient-facing engagement and communication strategies that improve recruitment, informed consent and retention through the trial.</p>
+      </div>
+      <div class="service-card dark">
+        <div class="card-icon" style="background:rgba(201,138,43,.2);color:var(--gold);"><i class="fa-solid fa-chart-line"></i></div>
+        <h3>Recruitment Monitoring</h3>
+        <p>Tracking recruitment performance against targets and flagging at-risk sites early, so corrective action can be taken before the trial timeline slips.</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:36px;">
+      <p style="font-size:13px;color:rgba(255,255,255,.55);margin-bottom:16px;">Our recruitment support will be complemented by our Clinical Trial Patient Matcher software, currently in development.</p>
+      <a href="software.html#matcher" class="btn btn-primary">About the Patient Matcher <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner">
+  <div class="cta-banner-inner">
+    <div class="cta-text">
+      <h2>Build and prove CRA competency with Alpha CR Solutions</h2>
+      <p>Start a simulation on our LMS, or contact us about custom simulations and patient recruitment support.</p>
+    </div>
+    <span class="paid-wrap"><a href="LMS_COURSE_URL" class="btn btn-white">Start a Simulation <i class="fa-solid fa-lock"></i></a><span class="paid-tip">This is a <strong>paid course</strong>. To enrol, email <strong>gemuendo@outlook.com</strong> for banking details. Once payment reflects, your login details will be sent to you.</span></span>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="nav-logo" style="margin-bottom:4px;">
+        <div class="nav-logo-mark">α</div>
+        <div class="nav-logo-text" style="color:#fff;">Alpha CR Solutions<span>Clinical Research</span></div>
+      </a>
+      <p>Full-service clinical research consultancy based in Johannesburg, South Africa.</p>
+      <div class="social-links">
+        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="mailto:info@alphacrsolutions.co.za"><i class="fa-regular fa-envelope"></i></a>
+      </div>
+    </div>
+    <div class="footer-col"><h4>Services</h4><ul>
+      <li><a href="regulatory-consultancy.html">Regulatory Consultancy</a></li>
+      <li><a href="study-startup.html">Study Start-up &amp; Site Support</a></li>
+      <li><a href="cra-monitoring.html">CRA &amp; Monitoring</a></li>
+      <li><a href="cra-training.html">CRA Training &amp; Simulations</a></li>
+      <li><a href="gcp-training.html">GCP Training</a></li>
+      <li><a href="software.html">Software Solutions</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Expertise</h4><ul>
+      <li><a href="#">Oncology</a></li><li><a href="#">Infectious Diseases</a></li>
+      <li><a href="#">Endocrinology</a></li><li><a href="#">Cardiovascular</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Company</h4><ul>
+      <li><a href="about.html">About Alpha CR</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span>© Alpha CR Solutions 2026 — All rights reserved · Johannesburg, South Africa</span>
+    <span><a href="#">Privacy Policy</a> · <a href="#">Terms of Use</a></span>
+  </div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>

@@ -39,10 +39,12 @@
 .services-strip { background: var(--white); border-bottom: 1px solid var(--border); }
 .services-strip-inner {
   max-width: 1200px; margin: 0 auto; padding: 0 5%;
-  display: grid; grid-template-columns: repeat(4,1fr);
+  display: grid; grid-template-columns: repeat(6,1fr);
 }
+@media (max-width: 900px) { .services-strip-inner { grid-template-columns: repeat(3,1fr); } }
+@media (max-width: 600px) { .services-strip-inner { grid-template-columns: repeat(2,1fr); } }
 .strip-item {
-  padding: 32px 20px; text-align: center;
+  padding: 28px 14px; text-align: center;
   border-right: 1px solid var(--border);
   transition: background .2s;
   cursor: pointer;
@@ -51,9 +53,9 @@
 .strip-item:hover { background: var(--off); }
 .strip-item a { color: inherit; }
 .strip-icon {
-  width: 50px; height: 50px; border-radius: 12px; margin: 0 auto 14px;
+  width: 46px; height: 46px; border-radius: 12px; margin: 0 auto 12px;
   background: var(--teal-lt); color: var(--teal);
-  display: flex; align-items: center; justify-content: center; font-size: 21px;
+  display: flex; align-items: center; justify-content: center; font-size: 19px;
 }
 .strip-icon.gold { background: var(--gold-lt); color: var(--gold); }
 .strip-item h4 { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
@@ -101,8 +103,11 @@
       <a href="#">Services <i class="fa-solid fa-chevron-down"></i></a>
       <ul class="nav-dropdown">
         <li><a href="regulatory-consultancy.html"><i class="fa-solid fa-shield-halved"></i>Regulatory Consultancy</a></li>
+        <li><a href="study-startup.html"><i class="fa-solid fa-rocket"></i>Study Start-up &amp; Site Support</a></li>
         <li><a href="cra-monitoring.html"><i class="fa-solid fa-magnifying-glass-chart"></i>CRA &amp; Monitoring</a></li>
+        <li><a href="cra-training.html"><i class="fa-solid fa-user-graduate"></i>CRA Training &amp; Simulations</a></li>
         <li><a href="gcp-training.html"><i class="fa-solid fa-graduation-cap"></i>GCP Training</a></li>
+        <li><a href="software.html"><i class="fa-solid fa-laptop-code"></i>Software Solutions</a></li>
       </ul>
     </li>
     <li><a href="about.html">About</a></li>
@@ -115,8 +120,11 @@
 <nav class="nav-mobile" id="nav-mobile">
   <span class="mob-section">Services</span>
   <a href="regulatory-consultancy.html"><i class="fa-solid fa-shield-halved" style="width:18px;color:var(--teal);margin-right:4px;"></i> Regulatory Consultancy</a>
+  <a href="study-startup.html"><i class="fa-solid fa-rocket" style="width:18px;color:var(--teal);margin-right:4px;"></i> Study Start-up &amp; Site Support</a>
   <a href="cra-monitoring.html"><i class="fa-solid fa-magnifying-glass-chart" style="width:18px;color:var(--teal);margin-right:4px;"></i> CRA &amp; Monitoring</a>
+  <a href="cra-training.html"><i class="fa-solid fa-user-graduate" style="width:18px;color:var(--teal);margin-right:4px;"></i> CRA Training &amp; Simulations</a>
   <a href="gcp-training.html"><i class="fa-solid fa-graduation-cap" style="width:18px;color:var(--teal);margin-right:4px;"></i> GCP Training</a>
+  <a href="software.html"><i class="fa-solid fa-laptop-code" style="width:18px;color:var(--teal);margin-right:4px;"></i> Software Solutions</a>
   <span class="mob-section">Company</span>
   <a href="about.html">About Us</a>
   <a href="contact.html" class="mob-cta">Contact Us</a>
@@ -154,7 +162,7 @@
       <div class="stat-label">Regulatory Frameworks</div>
     </div>
     <div class="stat-item">
-      <div class="stat-num"><span class="count-up" data-target="0" data-suffix="">0</span></div>
+      <div class="stat-num"><span class="count-up" data-target="1" data-suffix="">0</span></div>
       <div class="stat-label">Dedicated CRO Partner</div>
     </div>
   </div>
@@ -165,23 +173,33 @@
   <div class="services-strip-inner">
     <div class="strip-item"><a href="regulatory-consultancy.html">
       <div class="strip-icon"><i class="fa-solid fa-shield-halved"></i></div>
-      <h4>Regulatory Consultancy</h4>
-      <p>SAHPRA CTAs, amendments and annual reports</p>
+      <h4>Regulatory &amp; Ethics</h4>
+      <p>SAHPRA CTAs and IRB / IEC submissions</p>
     </a></div>
-    <div class="strip-item"><a href="regulatory-consultancy.html#ethics">
-      <div class="strip-icon"><i class="fa-solid fa-circle-check"></i></div>
-      <h4>Ethics Submissions</h4>
-      <p>NHREC IRBs and site IEC management</p>
+    <div class="strip-item"><a href="study-startup.html">
+      <div class="strip-icon"><i class="fa-solid fa-rocket"></i></div>
+      <h4>Study Start-up</h4>
+      <p>Permits, vendors, source data and SOPs</p>
     </a></div>
     <div class="strip-item"><a href="cra-monitoring.html">
       <div class="strip-icon gold"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
       <h4>CRA &amp; Monitoring</h4>
       <p>SDV, SDR and risk-based monitoring</p>
     </a></div>
+    <div class="strip-item"><a href="cra-training.html">
+      <div class="strip-icon"><i class="fa-solid fa-user-graduate"></i></div>
+      <h4>CRA Training</h4>
+      <p>Simulations and field training</p>
+    </a></div>
     <div class="strip-item"><a href="gcp-training.html">
       <div class="strip-icon"><i class="fa-solid fa-graduation-cap"></i></div>
       <h4>GCP Training</h4>
-      <p>ICH E6(R2) aligned site team training</p>
+      <p>LMS and in-person GCP courses</p>
+    </a></div>
+    <div class="strip-item"><a href="software.html">
+      <div class="strip-icon gold"><i class="fa-solid fa-laptop-code"></i></div>
+      <h4>Software</h4>
+      <p>LMS, dashboards and patient matcher</p>
     </a></div>
   </div>
 </div>
@@ -196,14 +214,14 @@
         <p>Clinical research consultancy headquartered in Johannesburg, Gauteng — serving sponsors and sites across South Africa and the African continent.</p>
         <div class="about-visual-badges">
           <span class="about-visual-badge">SAHPRA Expertise</span>
-          <span class="about-visual-badge">ICH E6(R2)</span>
+          <span class="about-visual-badge">ICH E6(R3)</span>
           <span class="about-visual-badge">SDR-First</span>
           <span class="about-visual-badge">GCP Certified</span>
         </div>
       </div>
       <div class="about-body">
         <span class="section-label">Who We Are</span>
-        <h2 class="section-title">A South African Clinical Consultancy<br>Built for <em>Precision</em></h2>
+        <h2 class="section-title">A South African CRO<br>Built for <em>Precision</em></h2>
         <p>Alpha CR Solutions is a Johannesburg-based clinical research consultancy founded on the principle that regulatory quality and operational efficiency are not competing priorities — they are the same goal.</p>
         <p>We bring together expertise in <strong>SAHPRA regulatory affairs</strong>, ethics committee management, clinical monitoring and GCP training to provide sponsors and sites with a single, accountable partner across the full trial lifecycle.</p>
         <p>Our SDR-first methodology means data integrity is built into every site engagement from day one — reducing audit findings, protecting subjects, and accelerating the path to clean data.</p>
@@ -232,35 +250,68 @@
           <li>NHREC-registered IRB submissions</li>
           <li>Site IEC submissions and renewals</li>
           <li>Protocol and ICF development</li>
-          <li>Annual progress reports and amendments</li>
         </ul>
         <a href="regulatory-consultancy.html" class="card-link">Learn more <i class="fa-solid fa-arrow-right"></i></a>
       </div>
       <div class="service-card">
+        <div class="card-icon"><i class="fa-solid fa-rocket"></i></div>
+        <h3>Study Start-up &amp; Site Support</h3>
+        <p>Study start-up, MTA and import/export permits, vendor assessments, source data and SOP development, and site set-up for naive and established sites.</p>
+        <ul class="service-list">
+          <li>Study start-up coordination</li>
+          <li>MTA, import &amp; export permits</li>
+          <li>Vendor assessments &amp; database</li>
+          <li>Source data &amp; SOP development</li>
+        </ul>
+        <a href="study-startup.html" class="card-link">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="service-card">
         <div class="card-icon gold"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
         <h3>CRA &amp; Site Monitoring</h3>
-        <p>Experienced Clinical Research Associates delivering source data review, site qualification, initiation, routine monitoring and close-out visits to ICH E6(R2) standards.</p>
+        <p>Experienced Clinical Research Associates delivering source data review, site qualification, initiation, routine monitoring and close-out visits to ICH E6(R3) standards.</p>
         <ul class="service-list">
           <li>Site qualification and initiation visits</li>
           <li>Routine monitoring and co-monitoring</li>
           <li>Source data verification (SDV)</li>
           <li>Risk-based monitoring support</li>
-          <li>Essential documents and TMF review</li>
         </ul>
         <a href="cra-monitoring.html" class="card-link">Learn more <i class="fa-solid fa-arrow-right"></i></a>
       </div>
       <div class="service-card">
+        <div class="card-icon"><i class="fa-solid fa-user-graduate"></i></div>
+        <h3>CRA Training &amp; Simulations</h3>
+        <p>Training new CRAs through real-site shadowing and online simulations, competency assessment for CROs and sponsors, plus patient engagement and recruitment support.</p>
+        <ul class="service-list">
+          <li>Online CRA simulations</li>
+          <li>Field training and shadowing</li>
+          <li>Competency assessment</li>
+          <li>Patient engagement &amp; recruitment</li>
+        </ul>
+        <a href="cra-training.html" class="card-link">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="service-card">
         <div class="card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
         <h3>GCP Training</h3>
-        <p>ICH E6(R2) aligned Good Clinical Practice training tailored to South African sites, investigators, coordinators and pharmacists — with certificate of completion.</p>
+        <p>ICH E6(R3) aligned Good Clinical Practice training delivered through our LMS and in-person sessions for sites, investigators, coordinators and pharmacists.</p>
         <ul class="service-list">
-          <li>ICH E6(R2) GCP principles</li>
+          <li>ICH E6(R3) GCP principles</li>
+          <li>LMS and in-person delivery</li>
           <li>SAHPRA regulatory context</li>
-          <li>Informed consent and ethics</li>
-          <li>Source documentation standards</li>
           <li>Inspection and audit readiness</li>
         </ul>
         <a href="gcp-training.html" class="card-link">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="service-card">
+        <div class="card-icon" style="background:rgba(13,27,53,.08);color:var(--navy);"><i class="fa-solid fa-laptop-code"></i></div>
+        <h3>Software Solutions</h3>
+        <p>Clinical research software — LMS development, custom dashboards and bespoke data tools, plus our Clinical Trial Patient Matcher (coming soon).</p>
+        <ul class="service-list">
+          <li>Clinical Trial Patient Matcher (coming soon)</li>
+          <li>LMS development</li>
+          <li>Custom recruitment dashboards</li>
+          <li>Bespoke clinical data tools</li>
+        </ul>
+        <a href="software.html" class="card-link">Learn more <i class="fa-solid fa-arrow-right"></i></a>
       </div>
     </div>
   </div>
@@ -271,7 +322,7 @@
   <div class="section-inner">
     <span class="section-label">Why Choose Us</span>
     <h2 class="section-title" style="color:#fff;">The Alpha CR <em>Difference</em></h2>
-    <p class="section-lead" style="color:rgba(255,255,255,.6);">We are not a generic consulting company or CRO. We are a focused regulatory and clinical operations partner built specifically for the South African clinical research environment.</p>
+    <p class="section-lead" style="color:rgba(255,255,255,.6);">We are not a generic CRO. We are a focused regulatory and clinical operations partner built specifically for the South African clinical research environment.</p>
     <div class="feature-grid" style="margin-top:52px;">
       <div class="feature-block">
         <div class="feature-num">01</div>
@@ -340,10 +391,11 @@
       <h4>Services</h4>
       <ul>
         <li><a href="regulatory-consultancy.html">Regulatory Consultancy</a></li>
+        <li><a href="study-startup.html">Study Start-up &amp; Site Support</a></li>
         <li><a href="cra-monitoring.html">CRA &amp; Monitoring</a></li>
+        <li><a href="cra-training.html">CRA Training &amp; Simulations</a></li>
         <li><a href="gcp-training.html">GCP Training</a></li>
-        <li><a href="regulatory-consultancy.html">SAHPRA Submissions</a></li>
-        <li><a href="regulatory-consultancy.html#ethics">Ethics Submissions</a></li>
+        <li><a href="software.html">Software Solutions</a></li>
       </ul>
     </div>
     <div class="footer-col">

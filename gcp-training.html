@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GCP Training | Alpha CR Solutions</title>
-<meta name="description" content="ICH E6(R2) aligned Good Clinical Practice training for investigators, coordinators and site teams in South Africa — Alpha CR Solutions, Johannesburg.">
+<meta name="description" content="ICH E6(R3) aligned Good Clinical Practice training for investigators, coordinators and site teams in South Africa — Alpha CR Solutions, Johannesburg.">
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="stylesheet" href="main.css">
@@ -45,6 +45,29 @@
 }
 .format-card ul li:last-child { border-bottom: none; }
 .format-card ul li i { color: var(--teal); font-size: 12px; margin-top: 3px; flex-shrink: 0; }
+
+/* Paid course tooltip */
+.paid-wrap { position: relative; display: inline-block; }
+.paid-wrap .paid-tip {
+  visibility: hidden; opacity: 0;
+  position: absolute; bottom: 125%; left: 50%; transform: translateX(-50%);
+  width: 280px; background: var(--navy); color: #fff;
+  text-align: left; border-radius: 10px; padding: 14px 16px;
+  font-size: 12px; line-height: 1.55; font-weight: 400;
+  box-shadow: 0 10px 30px rgba(0,0,0,.25); z-index: 50;
+  transition: opacity .2s, visibility .2s;
+}
+.paid-wrap .paid-tip::after {
+  content: ''; position: absolute; top: 100%; left: 50%;
+  transform: translateX(-50%); border: 7px solid transparent;
+  border-top-color: var(--navy);
+}
+.paid-wrap:hover .paid-tip { visibility: visible; opacity: 1; }
+.paid-tip strong { color: var(--teal); }
+.paid-note {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 12px; color: var(--gold); font-weight: 600; margin-top: 10px;
+}
 </style>
 </head>
 <body>
@@ -60,8 +83,11 @@
       <a href="#">Services <i class="fa-solid fa-chevron-down"></i></a>
       <ul class="nav-dropdown">
         <li><a href="regulatory-consultancy.html"><i class="fa-solid fa-shield-halved"></i>Regulatory Consultancy</a></li>
+        <li><a href="study-startup.html"><i class="fa-solid fa-rocket"></i>Study Start-up &amp; Site Support</a></li>
         <li><a href="cra-monitoring.html"><i class="fa-solid fa-magnifying-glass-chart"></i>CRA &amp; Monitoring</a></li>
+        <li><a href="cra-training.html"><i class="fa-solid fa-user-graduate"></i>CRA Training &amp; Simulations</a></li>
         <li><a href="gcp-training.html"><i class="fa-solid fa-graduation-cap"></i>GCP Training</a></li>
+        <li><a href="software.html"><i class="fa-solid fa-laptop-code"></i>Software Solutions</a></li>
       </ul>
     </li>
     <li><a href="about.html">About</a></li>
@@ -72,8 +98,11 @@
 <nav class="nav-mobile" id="nav-mobile">
   <span class="mob-section">Services</span>
   <a href="regulatory-consultancy.html">Regulatory Consultancy</a>
+  <a href="study-startup.html">Study Start-up &amp; Site Support</a>
   <a href="cra-monitoring.html">CRA &amp; Monitoring</a>
+  <a href="cra-training.html">CRA Training &amp; Simulations</a>
   <a href="gcp-training.html">GCP Training</a>
+  <a href="software.html">Software Solutions</a>
   <span class="mob-section">Company</span>
   <a href="about.html">About Us</a>
   <a href="contact.html" class="mob-cta">Contact Us</a>
@@ -84,22 +113,22 @@
   <div class="hero-inner">
     <div>
       <p class="hero-breadcrumb">Services · GCP Training</p>
-      <h1>ICH E6(R2)<br><em>GCP Training</em><br>for South African Sites</h1>
+      <h1>ICH E6(R3)<br><em>GCP Training</em><br>for South African Sites</h1>
       <p class="hero-sub">Good Clinical Practice is not a once-off certification — it is a working culture. Alpha CR Solutions delivers practical, South Africa-contextualised GCP training for investigative site teams at every level.</p>
       <div class="hero-actions">
-        <a href="contact.html" class="btn btn-primary">Book a Training <i class="fa-solid fa-arrow-right"></i></a>
-        <a href="#curriculum" class="btn btn-ghost"><i class="fa-solid fa-chevron-down"></i> View Curriculum</a>
+        <span class="paid-wrap"><a href="LMS_COURSE_URL" class="btn btn-primary">Access the Course <i class="fa-solid fa-lock"></i></a><span class="paid-tip">This is a <strong>paid course</strong>. To enrol, email <strong>gemuendo@outlook.com</strong> for banking details. Once payment reflects, your login details will be sent to you.</span></span>
+        <a href="contact.html" class="btn btn-ghost">Book Group Training</a>
       </div>
       <div style="margin-top:28px;display:flex;gap:10px;flex-wrap:wrap;">
-        <span class="badge badge-teal"><i class="fa-solid fa-certificate"></i> ICH E6(R2) Aligned</span>
+        <span class="badge badge-teal"><i class="fa-solid fa-certificate"></i> ICH E6(R3) Aligned</span>
         <span class="badge badge-teal"><i class="fa-solid fa-shield-halved"></i> SAHPRA Compliant</span>
         <span class="badge badge-gold"><i class="fa-solid fa-award"></i> Certificate Issued</span>
       </div>
     </div>
     <div class="hero-stat-grid">
-      <div class="hero-stat-card"><div class="hsc-icon"><i class="fa-solid fa-book-open"></i></div><h4>12 Core Modules</h4><p>Covering all ICH E6(R2) GCP principles with South African regulatory context.</p></div>
+      <div class="hero-stat-card"><div class="hsc-icon"><i class="fa-solid fa-book-open"></i></div><h4>ICH E6(R3) Aligned</h4><p>Built around the latest Good Clinical Practice guideline and South African regulatory context.</p></div>
       <div class="hero-stat-card"><div class="hsc-icon"><i class="fa-solid fa-users"></i></div><h4>All Site Roles</h4><p>Designed for investigators, coordinators, pharmacists and data managers.</p></div>
-      <div class="hero-stat-card"><div class="hsc-icon"><i class="fa-solid fa-laptop"></i></div><h4>In-Person &amp; Virtual</h4><p>Delivered on-site at your facility or via live virtual session.</p></div>
+      <div class="hero-stat-card"><div class="hsc-icon"><i class="fa-solid fa-laptop"></i></div><h4>Three Formats</h4><p>Delivered via LMS, in-person, or live virtual session over Teams.</p></div>
       <div class="hero-stat-card"><div class="hsc-icon"><i class="fa-solid fa-certificate"></i></div><h4>Certificate Issued</h4><p>All participants receive a signed certificate of completion.</p></div>
     </div>
   </div>
@@ -115,7 +144,7 @@
       <div class="audience-card">
         <div class="audience-icon"><i class="fa-solid fa-user-doctor"></i></div>
         <h4>Principal Investigators</h4>
-        <p>Responsibilities under ICH E6(R2), delegation of duties, oversight of study conduct, safety reporting obligations and regulatory accountability.</p>
+        <p>Responsibilities under ICH E6(R3), delegation of duties, oversight of study conduct, safety reporting obligations and regulatory accountability.</p>
       </div>
       <div class="audience-card">
         <div class="audience-icon"><i class="fa-solid fa-clipboard-user"></i></div>
@@ -130,7 +159,7 @@
       <div class="audience-card">
         <div class="audience-icon"><i class="fa-solid fa-database"></i></div>
         <h4>Data Managers</h4>
-        <p>Source data standards, CRF completion requirements, data query processes, audit trails and data integrity obligations under ICH E6(R2).</p>
+        <p>Source data standards, CRF completion requirements, data query processes, audit trails and data integrity obligations under ICH E6(R3).</p>
       </div>
       <div class="audience-card">
         <div class="audience-icon"><i class="fa-solid fa-flask"></i></div>
@@ -146,111 +175,45 @@
   </div>
 </section>
 
-<!-- CURRICULUM -->
-<section class="bg-white" id="curriculum">
-  <div class="section-inner">
-    <span class="section-label">What We Cover</span>
-    <h2 class="section-title">Training Curriculum</h2>
-    <p class="section-lead">All twelve modules are delivered in a logical sequence that mirrors the life cycle of a clinical trial — from protocol to archive.</p>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:48px;">
-      <div>
-        <div style="margin-bottom:16px;">
-          <div style="display:flex;align-items:flex-start;gap:16px;padding:16px 0;border-bottom:1px solid var(--border);">
-            <div style="width:32px;height:32px;border-radius:8px;background:var(--teal-lt);color:var(--teal);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0;">1</div>
-            <div><h4 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:4px;">GCP Principles &amp; History</h4><p style="font-size:13px;color:var(--gray);">Origins of GCP, the Declaration of Helsinki, Belmont Report and the ICH E6(R2) framework.</p></div>
-          </div>
-          <div style="display:flex;align-items:flex-start;gap:16px;padding:16px 0;border-bottom:1px solid var(--border);">
-            <div style="width:32px;height:32px;border-radius:8px;background:var(--teal-lt);color:var(--teal);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0;">2</div>
-            <div><h4 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:4px;">Regulatory Framework &amp; SAHPRA</h4><p style="font-size:13px;color:var(--gray);">South African clinical trial legislation, SAHPRA's role, NHREC and institutional ethics requirements.</p></div>
-          </div>
-          <div style="display:flex;align-items:flex-start;gap:16px;padding:16px 0;border-bottom:1px solid var(--border);">
-            <div style="width:32px;height:32px;border-radius:8px;background:var(--teal-lt);color:var(--teal);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0;">3</div>
-            <div><h4 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:4px;">IRB/IEC and Ethics Requirements</h4><p style="font-size:13px;color:var(--gray);">Roles, responsibilities and processes of ethics committees in South African clinical trials.</p></div>
-          </div>
-          <div style="display:flex;align-items:flex-start;gap:16px;padding:16px 0;border-bottom:1px solid var(--border);">
-            <div style="width:32px;height:32px;border-radius:8px;background:var(--teal-lt);color:var(--teal);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0;">4</div>
-            <div><h4 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:4px;">Investigator Responsibilities</h4><p style="font-size:13px;color:var(--gray);">PI accountability, delegation logs, qualification requirements and oversight obligations.</p></div>
-          </div>
-          <div style="display:flex;align-items:flex-start;gap:16px;padding:16px 0;border-bottom:1px solid var(--border);">
-            <div style="width:32px;height:32px;border-radius:8px;background:var(--teal-lt);color:var(--teal);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0;">5</div>
-            <div><h4 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:4px;">Informed Consent Process</h4><p style="font-size:13px;color:var(--gray);">Consent requirements, vulnerable populations, literacy considerations and re-consent obligations.</p></div>
-          </div>
-          <div style="display:flex;align-items:flex-start;gap:16px;padding:16px 0;border-bottom:1px solid var(--border);">
-            <div style="width:32px;height:32px;border-radius:8px;background:var(--teal-lt);color:var(--teal);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0;">6</div>
-            <div><h4 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:4px;">Source Documentation Standards</h4><p style="font-size:13px;color:var(--gray);">ALCOA-C principles, source data definition, acceptable source documents and common errors.</p></div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div style="margin-bottom:16px;">
-          <div style="display:flex;align-items:flex-start;gap:16px;padding:16px 0;border-bottom:1px solid var(--border);">
-            <div style="width:32px;height:32px;border-radius:8px;background:var(--gold-lt);color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0;">7</div>
-            <div><h4 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:4px;">Essential Documents &amp; TMF</h4><p style="font-size:13px;color:var(--gray);">ICH E6(R2) essential documents list, TMF structure, maintenance and inspection readiness.</p></div>
-          </div>
-          <div style="display:flex;align-items:flex-start;gap:16px;padding:16px 0;border-bottom:1px solid var(--border);">
-            <div style="width:32px;height:32px;border-radius:8px;background:var(--gold-lt);color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0;">8</div>
-            <div><h4 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:4px;">IMP Accountability</h4><p style="font-size:13px;color:var(--gray);">Receipt, storage, dispensing, reconciliation, temperature monitoring and destruction of investigational products.</p></div>
-          </div>
-          <div style="display:flex;align-items:flex-start;gap:16px;padding:16px 0;border-bottom:1px solid var(--border);">
-            <div style="width:32px;height:32px;border-radius:8px;background:var(--gold-lt);color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0;">9</div>
-            <div><h4 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:4px;">Safety Reporting (SAEs &amp; SUSARs)</h4><p style="font-size:13px;color:var(--gray);">Definitions, timelines, reporting pathways to SAHPRA, ethics committees and the sponsor.</p></div>
-          </div>
-          <div style="display:flex;align-items:flex-start;gap:16px;padding:16px 0;border-bottom:1px solid var(--border);">
-            <div style="width:32px;height:32px;border-radius:8px;background:var(--gold-lt);color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0;">10</div>
-            <div><h4 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:4px;">Protocol Deviations</h4><p style="font-size:13px;color:var(--gray);">Classification, documentation, reporting requirements and corrective/preventive action (CAPA) processes.</p></div>
-          </div>
-          <div style="display:flex;align-items:flex-start;gap:16px;padding:16px 0;border-bottom:1px solid var(--border);">
-            <div style="width:32px;height:32px;border-radius:8px;background:var(--gold-lt);color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0;">11</div>
-            <div><h4 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:4px;">Risk-Based Monitoring</h4><p style="font-size:13px;color:var(--gray);">What RBM means for sites, what monitors look for, and how to prepare for monitoring visits.</p></div>
-          </div>
-          <div style="display:flex;align-items:flex-start;gap:16px;padding:16px 0;border-bottom:1px solid var(--border);">
-            <div style="width:32px;height:32px;border-radius:8px;background:var(--gold-lt);color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0;">12</div>
-            <div><h4 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:4px;">Audit &amp; Inspection Readiness</h4><p style="font-size:13px;color:var(--gray);">What to expect during a sponsor audit or SAHPRA inspection, common findings and preparation strategies.</p></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- FORMATS -->
 <section class="bg-off">
   <div class="section-inner">
     <span class="section-label">Delivery Formats</span>
-    <h2 class="section-title">Training Delivered<br><em>Your Way</em></h2>
-    <p class="section-lead">We adapt the training format to your team's schedule, location and size — without compromising the quality or depth of the programme.</p>
+    <h2 class="section-title">Delivered via <em>LMS</em>,<br>In-Person and Live Virtual</h2>
+    <p class="section-lead">Our GCP training is delivered through three channels — a self-paced Learning Management System (LMS), live physical training, and live virtual sessions — so you can choose what fits your team's schedule, location and size.</p>
     <div class="cards-grid-3" style="margin-top:48px;">
       <div class="format-card">
-        <div class="format-badge"><i class="fa-solid fa-people-group"></i> On-Site</div>
-        <h3>In-Person Group Training</h3>
-        <p>Full-day training delivered at your site or a venue of your choosing. Ideal for full site teams of 5–30 participants. Includes printed reference materials and group exercises.</p>
+        <div class="format-badge"><i class="fa-solid fa-laptop"></i> LMS</div>
+        <h3>LMS / Online Learning</h3>
+        <p>Self-paced GCP training delivered through our Learning Management System — ideal for geographically dispersed teams or sites that need to train staff flexibly without operational disruption.</p>
         <ul>
-          <li><i class="fa-solid fa-check"></i>Full-day structured programme</li>
+          <li><i class="fa-solid fa-check"></i>Self-paced online modules</li>
+          <li><i class="fa-solid fa-check"></i>Accessible anywhere, anytime</li>
+          <li><i class="fa-solid fa-check"></i>Progress tracking and assessments</li>
+          <li><i class="fa-solid fa-check"></i>Certificate issued on completion</li>
+        </ul>
+        <span class="paid-wrap" style="display:block;margin-top:18px;"><a href="LMS_COURSE_URL" class="btn btn-primary" style="width:100%;justify-content:center;">Access the Course <i class="fa-solid fa-lock"></i></a><span class="paid-tip">This is a <strong>paid course</strong>. To enrol, email <strong>gemuendo@outlook.com</strong> for banking details. Once payment reflects, your login details will be sent to you.</span></span>
+      </div>
+      <div class="format-card">
+        <div class="format-badge"><i class="fa-solid fa-people-group"></i> In-Person</div>
+        <h3>Physical Group Training</h3>
+        <p>Live training delivered at your site or a venue of your choosing. Ideal for full site teams who benefit from face-to-face instruction, printed reference materials and group exercises.</p>
+        <ul>
+          <li><i class="fa-solid fa-check"></i>Live, in-person instruction</li>
           <li><i class="fa-solid fa-check"></i>Printed workbooks and reference cards</li>
           <li><i class="fa-solid fa-check"></i>Case study exercises and Q&amp;A</li>
-          <li><i class="fa-solid fa-check"></i>Certificate issued same day</li>
+          <li><i class="fa-solid fa-check"></i>Certificate issued on completion</li>
         </ul>
       </div>
       <div class="format-card">
-        <div class="format-badge"><i class="fa-solid fa-laptop"></i> Virtual</div>
+        <div class="format-badge"><i class="fa-solid fa-video"></i> Live Virtual</div>
         <h3>Live Virtual Training</h3>
-        <p>Live instructor-led training via video conference — ideal for geographically dispersed teams or sites that need to train staff without operational disruption.</p>
+        <p>Instructor-led GCP training delivered live over Microsoft Teams or similar — combining the interaction of in-person training with the convenience of remote attendance.</p>
         <ul>
-          <li><i class="fa-solid fa-check"></i>Live instructor, not pre-recorded</li>
-          <li><i class="fa-solid fa-check"></i>Digital materials and slide deck</li>
-          <li><i class="fa-solid fa-check"></i>Interactive polls and breakout rooms</li>
-          <li><i class="fa-solid fa-check"></i>Certificate issued within 24 hours</li>
-        </ul>
-      </div>
-      <div class="format-card" style="border-top:3px solid var(--gold);">
-        <div class="format-badge" style="background:var(--gold-lt);color:var(--gold);border-color:rgba(201,138,43,.25);"><i class="fa-solid fa-user"></i> Tailored</div>
-        <h3>Role-Specific Training</h3>
-        <p>Focused half-day sessions designed for a specific site role — pharmacists, data managers, or new coordinators — covering only the modules most relevant to their responsibilities.</p>
-        <ul>
-          <li><i class="fa-solid fa-check"></i>Half-day format (in-person or virtual)</li>
-          <li><i class="fa-solid fa-check"></i>Role-specific case studies</li>
-          <li><i class="fa-solid fa-check"></i>Protocol-specific context where available</li>
-          <li><i class="fa-solid fa-check"></i>Certificate issued</li>
+          <li><i class="fa-solid fa-check"></i>Live instructor over Teams</li>
+          <li><i class="fa-solid fa-check"></i>Interactive Q&amp;A and discussion</li>
+          <li><i class="fa-solid fa-check"></i>No travel required</li>
+          <li><i class="fa-solid fa-check"></i>Certificate issued on completion</li>
         </ul>
       </div>
     </div>
@@ -293,10 +256,10 @@
 <section class="cta-banner">
   <div class="cta-banner-inner">
     <div class="cta-text">
-      <h2>Ready to book GCP training for your site?</h2>
-      <p>Contact us to discuss dates, format and any protocol-specific training requirements.</p>
+      <h2>Ready to start GCP training?</h2>
+      <p>Access the course on our LMS now, or contact us to arrange in-person group training for your site.</p>
     </div>
-    <a href="contact.html" class="btn btn-white">Book a Training →</a>
+    <span class="paid-wrap"><a href="LMS_COURSE_URL" class="btn btn-white">Access the Course <i class="fa-solid fa-lock"></i></a><span class="paid-tip">This is a <strong>paid course</strong>. To enrol, email <strong>gemuendo@outlook.com</strong> for banking details. Once payment reflects, your login details will be sent to you.</span></span>
   </div>
 </section>
 
@@ -317,8 +280,11 @@
     </div>
     <div class="footer-col"><h4>Services</h4><ul>
       <li><a href="regulatory-consultancy.html">Regulatory Consultancy</a></li>
+      <li><a href="study-startup.html">Study Start-up &amp; Site Support</a></li>
       <li><a href="cra-monitoring.html">CRA &amp; Monitoring</a></li>
+      <li><a href="cra-training.html">CRA Training &amp; Simulations</a></li>
       <li><a href="gcp-training.html">GCP Training</a></li>
+      <li><a href="software.html">Software Solutions</a></li>
     </ul></div>
     <div class="footer-col"><h4>Expertise</h4><ul>
       <li><a href="#">Oncology</a></li><li><a href="#">Infectious Diseases</a></li>

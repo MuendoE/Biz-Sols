@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Software Solutions | Alpha CR Solutions</title>
+<meta name="description" content="Clinical research software — patient matching systems, recruitment dashboards and custom data tools built for sponsors, CROs and sites. Alpha CR Solutions, Johannesburg.">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="main.css">
+<style>
+/* ── Product hero card ─────────────────────────────────────────── */
+.product-hero {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 16px; overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  margin-top: 52px;
+}
+.product-hero-top {
+  background: linear-gradient(135deg, var(--navy) 0%, #1a3060 55%, #0a3d4a 100%);
+  padding: 40px 48px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;
+}
+.product-tag {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: rgba(0,155,168,.25); color: var(--teal);
+  border: 1px solid rgba(0,155,168,.4);
+  padding: 5px 12px; border-radius: 20px;
+  font-size: 11px; font-weight: 700; letter-spacing: 0.08em;
+  text-transform: uppercase; margin-bottom: 16px;
+}
+.product-hero-top h2 {
+  color: #fff; font-size: 30px; margin-bottom: 14px; line-height: 1.15;
+}
+.product-hero-top h2 em { color: var(--teal); font-style: italic; }
+.product-hero-top p { font-size: 14px; color: rgba(255,255,255,.65); line-height: 1.78; margin-bottom: 24px; }
+.product-screen {
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 12px; padding: 20px;
+}
+.screen-bar {
+  display: flex; align-items: center; gap: 6px; margin-bottom: 14px;
+}
+.screen-dot {
+  width: 10px; height: 10px; border-radius: 50%;
+}
+.screen-title {
+  font-size: 11px; color: rgba(255,255,255,.4);
+  margin-left: 8px; font-weight: 500;
+}
+.screen-row {
+  display: flex; gap: 10px; margin-bottom: 10px;
+}
+.screen-card {
+  flex: 1; background: rgba(255,255,255,.08);
+  border-radius: 8px; padding: 12px;
+}
+.screen-card .sc-label { font-size: 9px; color: rgba(255,255,255,.4); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 5px; }
+.screen-card .sc-val   { font-size: 18px; font-family: 'DM Serif Display', serif; color: var(--teal); }
+.screen-card .sc-sub   { font-size: 9px; color: rgba(255,255,255,.4); margin-top: 2px; }
+.screen-list { list-style: none; margin-top: 12px; }
+.screen-list li {
+  display: flex; align-items: center; gap: 8px;
+  padding: 7px 10px; border-radius: 6px;
+  font-size: 11px; color: rgba(255,255,255,.7);
+  margin-bottom: 4px;
+}
+.screen-list li.match { background: rgba(46,204,113,.12); }
+.screen-list li.miss  { background: rgba(231,76,60,.08); }
+.screen-list li .dot  { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+.screen-list li.match .dot { background: #2ecc71; }
+.screen-list li.miss  .dot { background: #e74c3c; }
+
+.product-hero-bottom {
+  padding: 32px 48px;
+  display: grid; grid-template-columns: repeat(4,1fr); gap: 24px;
+  border-top: 1px solid var(--border);
+}
+.product-feature { display: flex; gap: 14px; align-items: flex-start; }
+.pf-icon {
+  width: 36px; height: 36px; border-radius: 8px; flex-shrink: 0;
+  background: var(--teal-lt); color: var(--teal);
+  display: flex; align-items: center; justify-content: center; font-size: 15px;
+}
+.pf-icon.gold { background: var(--gold-lt); color: var(--gold); }
+.product-feature h5 { font-size: 13px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+.product-feature p  { font-size: 12px; color: var(--gray); line-height: 1.6; }
+
+/* ── Custom solution cards ─────────────────────────────────────── */
+.solution-card {
+  border: 1px solid var(--border); border-radius: 14px;
+  overflow: hidden; transition: box-shadow .25s, transform .2s;
+}
+.solution-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-3px); }
+.solution-card-top {
+  padding: 28px 28px 22px;
+  background: var(--off);
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; gap: 16px;
+}
+.solution-icon {
+  width: 52px; height: 52px; border-radius: 12px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center; font-size: 22px;
+}
+.solution-card-top h3 { font-size: 17px; font-weight: 700; color: var(--navy); margin-bottom: 5px; }
+.solution-card-top p  { font-size: 12px; color: var(--gray); }
+.solution-card-body { padding: 22px 28px; background: var(--white); }
+.solution-card-body > p { font-size: 13px; color: #3d4f6a; line-height: 1.75; margin-bottom: 16px; }
+.solution-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 16px; }
+.solution-tag {
+  font-size: 11px; font-weight: 600; padding: 4px 10px; border-radius: 12px;
+  background: var(--off); color: var(--gray); border: 1px solid var(--border);
+}
+
+/* ── Tech stack ────────────────────────────────────────────────── */
+.tech-grid {
+  display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; margin-top: 40px;
+}
+.tech-card {
+  border: 1px solid var(--border); border-radius: 10px; padding: 20px 16px; text-align: center;
+  transition: box-shadow .2s, transform .2s;
+}
+.tech-card:hover { box-shadow: var(--shadow); transform: translateY(-2px); }
+.tech-card i { font-size: 26px; color: var(--teal); margin-bottom: 10px; display: block; }
+.tech-card h5 { font-size: 13px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+.tech-card p  { font-size: 11px; color: var(--gray); line-height: 1.5; }
+
+/* ── Pricing cards ─────────────────────────────────────────────── */
+.pricing-grid {
+  display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 48px;
+}
+.pricing-card {
+  border: 1px solid var(--border); border-radius: 14px;
+  padding: 32px; position: relative;
+  transition: box-shadow .25s, transform .2s;
+  background: var(--white);
+}
+.pricing-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-3px); }
+.pricing-card.featured {
+  border-color: var(--teal);
+  box-shadow: 0 0 0 1px var(--teal), var(--shadow-lg);
+}
+.pricing-badge {
+  position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+  background: var(--teal); color: #fff;
+  font-size: 11px; font-weight: 700; padding: 4px 14px; border-radius: 20px;
+  white-space: nowrap;
+}
+.pricing-card h3 { font-size: 18px; color: var(--navy); margin-bottom: 8px; }
+.pricing-card .price {
+  font-family: 'DM Serif Display', serif;
+  font-size: 14px; color: var(--gray); margin-bottom: 20px; line-height: 1.5;
+}
+.pricing-card .price strong { font-size: 28px; color: var(--navy); display: block; }
+.pricing-card ul { list-style: none; margin-bottom: 28px; }
+.pricing-card ul li {
+  font-size: 13px; color: #3d4f6a;
+  padding: 8px 0; border-bottom: 1px solid var(--border);
+  display: flex; gap: 10px; line-height: 1.5;
+}
+.pricing-card ul li:last-child { border-bottom: none; }
+.pricing-card ul li i { color: var(--teal); font-size: 12px; margin-top: 3px; flex-shrink: 0; }
+
+@media (max-width: 900px) {
+  .product-hero-top { grid-template-columns: 1fr; }
+  .product-hero-bottom { grid-template-columns: 1fr 1fr; }
+  .tech-grid { grid-template-columns: repeat(2,1fr); }
+  .pricing-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .product-hero-top, .product-hero-bottom { padding: 24px; }
+  .tech-grid { grid-template-columns: 1fr 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-mark">α</div>
+    <div class="nav-logo-text">Alpha CR Solutions<span>Clinical Research</span></div>
+  </a>
+  <ul class="nav-menu">
+    <li class="active">
+      <a href="#">Services <i class="fa-solid fa-chevron-down"></i></a>
+      <ul class="nav-dropdown">
+        <li><a href="regulatory-consultancy.html"><i class="fa-solid fa-shield-halved"></i>Regulatory Consultancy</a></li>
+        <li><a href="study-startup.html"><i class="fa-solid fa-rocket"></i>Study Start-up &amp; Site Support</a></li>
+        <li><a href="cra-monitoring.html"><i class="fa-solid fa-magnifying-glass-chart"></i>CRA &amp; Monitoring</a></li>
+        <li><a href="cra-training.html"><i class="fa-solid fa-user-graduate"></i>CRA Training &amp; Simulations</a></li>
+        <li><a href="gcp-training.html"><i class="fa-solid fa-graduation-cap"></i>GCP Training</a></li>
+        <li><a href="software.html"><i class="fa-solid fa-laptop-code"></i>Software Solutions</a></li>
+      </ul>
+    </li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+  </ul>
+  <button class="nav-hamburger" id="nav-burger"><span></span><span></span><span></span></button>
+</nav>
+<nav class="nav-mobile" id="nav-mobile">
+  <span class="mob-section">Services</span>
+  <a href="regulatory-consultancy.html">Regulatory Consultancy</a>
+  <a href="study-startup.html">Study Start-up &amp; Site Support</a>
+  <a href="cra-monitoring.html">CRA &amp; Monitoring</a>
+  <a href="cra-training.html">CRA Training &amp; Simulations</a>
+  <a href="gcp-training.html">GCP Training</a>
+  <a href="software.html">Software Solutions</a>
+  <span class="mob-section">Company</span>
+  <a href="about.html">About Us</a>
+  <a href="contact.html" class="mob-cta">Contact Us</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero hero-split">
+  <div class="hero-inner">
+    <div>
+      <p class="hero-breadcrumb">Services · Software Solutions</p>
+      <h1>Clinical Research<br>Software <em>Built for<br>the Field</em></h1>
+      <p class="hero-sub">Alpha CR Solutions builds purpose-built software for clinical research — Learning Management Systems, custom dashboards, and our Clinical Trial Patient Matcher.</p>
+      <div class="hero-actions">
+        <a href="#solutions" class="btn btn-primary">Explore Our Software <i class="fa-solid fa-arrow-down"></i></a>
+        <a href="contact.html" class="btn btn-ghost">Discuss a Custom Build</a>
+      </div>
+      <div style="margin-top:28px;display:flex;gap:10px;flex-wrap:wrap;">
+        <span class="badge badge-teal"><i class="fa-solid fa-chalkboard-user"></i> LMS Development</span>
+        <span class="badge badge-teal"><i class="fa-solid fa-table-columns"></i> Custom Dashboards</span>
+        <span class="badge badge-gold"><i class="fa-solid fa-clock"></i> Patient Matcher (Coming Soon)</span>
+      </div>
+    </div>
+    <div class="hero-stat-grid">
+      <div class="hero-stat-card"><div class="hsc-icon"><i class="fa-solid fa-chalkboard-user"></i></div><h4>LMS Development</h4><p>Learning Management Systems for sites, sponsors and CROs.</p></div>
+      <div class="hero-stat-card"><div class="hsc-icon"><i class="fa-solid fa-table-columns"></i></div><h4>Custom Dashboards</h4><p>Bespoke data visualisation tools built around your trial's metrics.</p></div>
+      <div class="hero-stat-card"><div class="hsc-icon"><i class="fa-solid fa-users-between-lines"></i></div><h4>Patient Matcher <span style="font-size:9px;color:var(--gold);">SOON</span></h4><p>AI-powered eligibility matching against EHR data — in development.</p></div>
+      <div class="hero-stat-card"><div class="hsc-icon"><i class="fa-solid fa-code-branch"></i></div><h4>Open Architecture</h4><p>Built on open standards that integrate with your existing systems.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CUSTOM SOLUTIONS -->
+<section class="bg-off" id="solutions">
+  <div class="section-inner">
+    <span class="section-label">Our Software</span>
+    <h2 class="section-title">Software Built<br><em>for Clinical Research</em></h2>
+    <p class="section-lead">From Learning Management Systems to custom dashboards and our flagship Patient Matcher, Alpha CR Solutions builds software tailored to the way clinical trials actually run.</p>
+    <div class="cards-grid-3" style="margin-top:48px;">
+
+      <div class="solution-card">
+        <div class="solution-card-top">
+          <div class="solution-icon" style="background:var(--teal-lt);color:var(--teal);"><i class="fa-solid fa-chalkboard-user"></i></div>
+          <div><h3>LMS Development</h3><p>Learning systems for sites, sponsors &amp; CROs</p></div>
+        </div>
+        <div class="solution-card-body">
+          <p>Custom Learning Management Systems built for sites, sponsors and CROs — depending on their needs. Host GCP training, protocol-specific training, SOPs and competency assessments in one managed platform.</p>
+          <ul class="service-list">
+            <li>Custom LMS for sites, sponsors and CROs</li>
+            <li>GCP and protocol-specific training delivery</li>
+            <li>Progress tracking and assessments</li>
+            <li>Certificate generation and records</li>
+            <li>TMF-ready training documentation</li>
+          </ul>
+          <div class="solution-tags">
+            <span class="solution-tag">LMS</span>
+            <span class="solution-tag">Web-based</span>
+            <span class="solution-tag">Tracking</span>
+            <span class="solution-tag">Custom Built</span>
+          </div>
+        </div>
+      </div>
+      <div class="solution-card">
+        <div class="solution-card-top">
+          <div class="solution-icon" style="background:var(--teal-lt);color:var(--teal);"><i class="fa-solid fa-gauge-high"></i></div>
+          <div><h3>Recruitment Dashboards</h3><p>Real-time enrollment monitoring</p></div>
+        </div>
+        <div class="solution-card-body">
+          <p>Interactive dashboards showing live enrollment vs target, screen failure rates, site performance comparisons and SD model forecasts — updated automatically from your trial data.</p>
+          <ul class="service-list">
+            <li>Site-level enrollment tracking</li>
+            <li>Screen failure rate analysis</li>
+            <li>Recruitment forecast (SD model)</li>
+            <li>Urgency alerts and escalation flags</li>
+            <li>Exportable reports for sponsor meetings</li>
+          </ul>
+          <div class="solution-tags">
+            <span class="solution-tag">Python</span>
+            <span class="solution-tag">Matplotlib</span>
+            <span class="solution-tag">SD Model</span>
+            <span class="solution-tag">Web / Desktop</span>
+          </div>
+        </div>
+      </div>
+      <div class="solution-card">
+        <div class="solution-card-top">
+          <div class="solution-icon" style="background:rgba(13,27,53,.07);color:var(--navy);"><i class="fa-solid fa-chart-column"></i></div>
+          <div><h3>Clinical Data Dashboards</h3><p>Custom analytics and visualisation</p></div>
+        </div>
+        <div class="solution-card-body">
+          <p>Custom data visualisation tools for clinical operations teams — safety signal monitoring, protocol deviation tracking, query management analytics and operational KPI dashboards.</p>
+          <ul class="service-list">
+            <li>Safety signal and SAE tracking</li>
+            <li>Protocol deviation dashboards</li>
+            <li>Query aging and resolution analytics</li>
+            <li>Site performance scorecards</li>
+            <li>Sponsor-ready reporting views</li>
+          </ul>
+          <div class="solution-tags">
+            <span class="solution-tag">Python</span>
+            <span class="solution-tag">Interactive Charts</span>
+            <span class="solution-tag">CSV / API</span>
+            <span class="solution-tag">Export-ready</span>
+          </div>
+        </div>
+      </div>
+      <div class="solution-card">
+        <div class="solution-card-top">
+          <div class="solution-icon" style="background:var(--gold-lt);color:var(--gold);"><i class="fa-solid fa-hospital-user"></i></div>
+          <div><h3>Patient Eligibility Tools</h3><p>Custom matching for your protocol</p></div>
+        </div>
+        <div class="solution-card-body">
+          <p>Bespoke eligibility screening tools built around your specific protocol criteria, EHR system and site infrastructure — including integration with REDCap, Epic, Cerner or custom source systems.</p>
+          <ul class="service-list">
+            <li>Protocol-specific criteria configuration</li>
+            <li>Integration with existing EHR/EDC</li>
+            <li>Consent management layer</li>
+            <li>Coordinator workflow and alert system</li>
+            <li>Audit trail for regulatory compliance</li>
+          </ul>
+          <div class="solution-tags">
+            <span class="solution-tag">FHIR R4</span>
+            <span class="solution-tag">REDCap API</span>
+            <span class="solution-tag">Python</span>
+            <span class="solution-tag">AI Parsing</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FLAGSHIP PRODUCT -->
+<section class="bg-white" id="matcher">
+  <div class="section-inner">
+    <span class="section-label">Flagship Product · Coming Soon</span>
+    <h2 class="section-title">Clinical Trial<br><em>Patient Matcher</em></h2>
+    <p class="section-lead">A product in active development at Alpha CR Solutions — an end-to-end system that parses trial protocols, queries hospital EHR systems, matches patients to eligibility criteria, and forecasts recruitment outcomes. Currently in development and not yet available for deployment.</p>
+
+    <div class="product-hero">
+      <div class="product-hero-top">
+        <div>
+          <div class="product-tag" style="background:rgba(201,138,43,.25);color:var(--gold);border-color:rgba(201,138,43,.4);"><i class="fa-solid fa-clock"></i> Coming Soon</div>
+          <h2>Clinical Trial Patient <em>Matcher</em></h2>
+          <p>The system will extract structured eligibility rules from a protocol's inclusion and exclusion criteria, query consented patient records across connected hospital EHRs, and return a ranked list of eligible patients with a full audit trail of every matching decision.</p>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;">
+            <a href="contact.html" class="btn btn-primary" style="font-size:13px;padding:10px 20px;">Register Interest <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Simulated UI preview (DEMO DATA) -->
+        <div class="product-screen">
+          <div class="screen-bar">
+            <div class="screen-dot" style="background:#e74c3c;"></div>
+            <div class="screen-dot" style="background:#f39c12;"></div>
+            <div class="screen-dot" style="background:#2ecc71;"></div>
+            <span class="screen-title">Patient Matcher — Demo Preview</span>
+          </div>
+          <div style="text-align:center;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:12px;">Illustrative demo data — not real patients</div>
+          <div class="screen-row">
+            <div class="screen-card">
+              <div class="sc-label">Matched</div>
+              <div class="sc-val">8</div>
+              <div class="sc-sub">demo figure</div>
+            </div>
+            <div class="screen-card">
+              <div class="sc-label">Near-miss</div>
+              <div class="sc-val">5</div>
+              <div class="sc-sub">demo figure</div>
+            </div>
+            <div class="screen-card">
+              <div class="sc-label">Screened</div>
+              <div class="sc-val">28</div>
+              <div class="sc-sub">demo figure</div>
+            </div>
+          </div>
+          <ul class="screen-list">
+            <li class="match"><div class="dot"></div>Demo patient A · Site 1 · 100% match</li>
+            <li class="match"><div class="dot"></div>Demo patient B · Site 2 · 100% match</li>
+            <li class="match"><div class="dot"></div>Demo patient C · Site 3 · 100% match</li>
+            <li class="miss"><div class="dot"></div>Demo patient D · below lab threshold</li>
+            <li class="miss"><div class="dot"></div>Demo patient E · exclusion criterion met</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="product-hero-bottom">
+        <div class="product-feature">
+          <div class="pf-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+          <div><h5>AI Criteria Parser</h5><p>Designed to convert free-text I/E criteria into computable rules — reducing manual configuration.</p></div>
+        </div>
+        <div class="product-feature">
+          <div class="pf-icon"><i class="fa-solid fa-hospital"></i></div>
+          <div><h5>Federated EHR Access</h5><p>Architected so patient data never leaves the hospital — matching runs inside each institution's environment.</p></div>
+        </div>
+        <div class="product-feature">
+          <div class="pf-icon gold"><i class="fa-solid fa-chart-line"></i></div>
+          <div><h5>SD Recruitment Forecast</h5><p>A system dynamics model to project enrolment under different recruitment policy scenarios.</p></div>
+        </div>
+        <div class="product-feature">
+          <div class="pf-icon"><i class="fa-solid fa-bell"></i></div>
+          <div><h5>Automated Alerts</h5><p>Intended to notify site coordinators of each potential match with a criteria breakdown and audit log.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- TECH STACK -->
+<section class="bg-navy">
+  <div class="section-inner">
+    <span class="section-label">Technology</span>
+    <h2 class="section-title" style="color:#fff;">Built on <em>Open Standards</em></h2>
+    <p class="section-lead">All Alpha CR software is built on widely-adopted open standards and frameworks — ensuring longevity, interoperability and the ability to integrate with your existing infrastructure.</p>
+    <div class="tech-grid">
+      <div class="tech-card" style="background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.1);">
+        <i class="fa-brands fa-python" style="color:var(--teal);"></i>
+        <h5 style="color:#fff;">Python</h5>
+        <p style="color:rgba(255,255,255,.5);">Core backend logic, matching engine, data processing and simulation.</p>
+      </div>
+      <div class="tech-card" style="background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.1);">
+        <i class="fa-solid fa-wand-magic-sparkles" style="color:var(--teal);"></i>
+        <h5 style="color:#fff;">Anthropic API</h5>
+        <p style="color:rgba(255,255,255,.5);">AI-powered natural language criteria extraction and protocol parsing.</p>
+      </div>
+      <div class="tech-card" style="background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.1);">
+        <i class="fa-solid fa-hospital" style="color:var(--teal);"></i>
+        <h5 style="color:#fff;">FHIR R4</h5>
+        <p style="color:rgba(255,255,255,.5);">Standard healthcare data exchange — compatible with Epic, Cerner and OpenMRS.</p>
+      </div>
+      <div class="tech-card" style="background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.1);">
+        <i class="fa-solid fa-chart-line" style="color:var(--gold);"></i>
+        <h5 style="color:#fff;">System Dynamics</h5>
+        <p style="color:rgba(255,255,255,.5);">Vensim-compatible SD model for recruitment forecasting and policy simulation.</p>
+      </div>
+      <div class="tech-card" style="background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.1);">
+        <i class="fa-brands fa-html5" style="color:var(--teal);"></i>
+        <h5 style="color:#fff;">Web Dashboards</h5>
+        <p style="color:rgba(255,255,255,.5);">Browser-based interfaces deployable on any device — no installation required.</p>
+      </div>
+      <div class="tech-card" style="background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.1);">
+        <i class="fa-solid fa-desktop" style="color:var(--teal);"></i>
+        <h5 style="color:#fff;">Desktop Apps</h5>
+        <p style="color:rgba(255,255,255,.5);">Native desktop applications for offline or secure on-premises deployment.</p>
+      </div>
+      <div class="tech-card" style="background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.1);">
+        <i class="fa-solid fa-lock" style="color:var(--gold);"></i>
+        <h5 style="color:#fff;">Privacy by Design</h5>
+        <p style="color:rgba(255,255,255,.5);">Federated architecture — patient data never leaves the hospital environment.</p>
+      </div>
+      <div class="tech-card" style="background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.1);">
+        <i class="fa-brands fa-github" style="color:var(--teal);"></i>
+        <h5 style="color:#fff;">Open Source Options</h5>
+        <p style="color:rgba(255,255,255,.5);">Core components available open source — enabling academic and site-level deployment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ENGAGEMENT -->
+<section class="bg-off">
+  <div class="section-inner">
+    <span class="section-label">How to Engage</span>
+    <h2 class="section-title">Working With Us<br><em>on Software</em></h2>
+    <p class="section-lead">Whether you need a Learning Management System, a custom dashboard, or want to register interest in the Patient Matcher, we scope each engagement to your specific requirements.</p>
+    <div class="cards-grid-3" style="margin-top:48px;">
+      <div class="service-card">
+        <div class="card-icon"><i class="fa-solid fa-comments"></i></div>
+        <h3>1. Discovery</h3>
+        <p>We start with a conversation about your needs, your data environment and what you want the software to achieve — at no cost and with no obligation.</p>
+      </div>
+      <div class="service-card">
+        <div class="card-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+        <h3>2. Scoping &amp; Proposal</h3>
+        <p>We define the requirements, propose an approach, and agree a scope. Licensing and development terms are tailored to each project and shared as part of the proposal.</p>
+      </div>
+      <div class="service-card">
+        <div class="card-icon gold"><i class="fa-solid fa-rocket"></i></div>
+        <h3>3. Build &amp; Deliver</h3>
+        <p>We build, test and deliver the solution, with documentation and onboarding support so your team can use it with confidence.</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:40px;">
+      <a href="contact.html" class="btn btn-primary">Discuss Your Project <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner">
+  <div class="cta-banner-inner">
+    <div class="cta-text">
+      <h2>Have a software need in clinical research?</h2>
+      <p>Tell us what you want to build, or register your interest in the Patient Matcher — we'd like to hear from you.</p>
+    </div>
+    <a href="contact.html" class="btn btn-white">Get in Touch →</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="nav-logo" style="margin-bottom:4px;">
+        <div class="nav-logo-mark">α</div>
+        <div class="nav-logo-text" style="color:#fff;">Alpha CR Solutions<span>Clinical Research</span></div>
+      </a>
+      <p>Full-service clinical research consultancy and software developer based in Johannesburg, South Africa.</p>
+      <div class="social-links">
+        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="mailto:info@alphacrsolutions.co.za"><i class="fa-regular fa-envelope"></i></a>
+      </div>
+    </div>
+    <div class="footer-col"><h4>Services</h4><ul>
+      <li><a href="regulatory-consultancy.html">Regulatory Consultancy</a></li>
+      <li><a href="study-startup.html">Study Start-up &amp; Site Support</a></li>
+      <li><a href="cra-monitoring.html">CRA &amp; Monitoring</a></li>
+      <li><a href="cra-training.html">CRA Training &amp; Simulations</a></li>
+      <li><a href="gcp-training.html">GCP Training</a></li>
+      <li><a href="software.html">Software Solutions</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Software</h4><ul>
+      <li><a href="software.html#solutions">LMS Development</a></li>
+      <li><a href="software.html#solutions">Custom Dashboards</a></li>
+      <li><a href="software.html#matcher">Patient Matcher (soon)</a></li>
+      <li><a href="contact.html">Discuss a Project</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Company</h4><ul>
+      <li><a href="about.html">About Alpha CR</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span>© Alpha CR Solutions 2026 — All rights reserved · Johannesburg, South Africa</span>
+    <span><a href="#">Privacy Policy</a> · <a href="#">Terms of Use</a></span>
+  </div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>
