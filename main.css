@@ -596,3 +596,23 @@ select.form-control { appearance: none; cursor: pointer; }
   .pathway-steps { grid-template-columns: 1fr 1fr; }
   .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
 }
+
+/* ── How to enrol — 4-step flow (reuses .pathway-step visuals) ──── */
+.enrol-pathway {
+  display: grid; grid-template-columns: repeat(4,1fr);
+  margin-top: 52px; position: relative; gap: 0 8px;
+}
+.enrol-pathway::before {
+  content: ''; position: absolute; top: 34px;
+  left: calc(100%/8); right: calc(100%/8); height: 2px;
+  background: linear-gradient(90deg, var(--teal), var(--gold)); z-index: 0;
+}
+.enrol-pathway .step-body a { color: var(--teal); font-weight: 600; text-decoration: none; }
+.enrol-pathway .step-body a:hover { text-decoration: underline; }
+@media (max-width: 900px) {
+  .enrol-pathway { grid-template-columns: 1fr 1fr; gap: 34px 12px; }
+  .enrol-pathway::before { display: none; }
+}
+@media (max-width: 600px) {
+  .enrol-pathway { grid-template-columns: 1fr; gap: 30px; }
+}
