@@ -8,9 +8,15 @@
   var KB = {
     gcp: {
       label: "GCP Training",
-      answer: "Our GCP training is ICH E6(R3) aligned and delivered three ways — self-paced on our LMS, in-person at your site, or live online over Teams. Every participant receives a certificate of completion and TMF-ready training records.",
+      answer: "Our Good Clinical Practice Course (ICH E6(R3)) is TransCelerate mutually recognised and listed on the Shared Investigator Platform (SIP). It's delivered three ways — self-paced on our LMS, in-person at your site, or live online over Teams. Every participant receives a certificate of completion and TMF-ready training records.",
       links: [["View GCP Training", "gcp-training.html"], ["Enrol on the LMS", "https://learn.alphacrsolutions.co.za"]],
-      next: ["enrol", "craTraining", "contact"]
+      next: ["transcelerate", "enrol", "craTraining", "contact"]
+    },
+    transcelerate: {
+      label: "TransCelerate recognition",
+      answer: "Yes — our Good Clinical Practice Course (ICH E6(R3)) is mutually recognised under the TransCelerate GCP Training Mutual Recognition Programme and is uploaded to the Shared Investigator Platform (SIP). That means a GCP certificate earned through this course is accepted across TransCelerate member companies and investigator sites, so your team won't need to repeat GCP training when joining their trials.",
+      links: [["GCP Training", "gcp-training.html"], ["View the TransCelerate listing", "https://www.transcelerate-gcp-mutual-recognition.com/view-course"]],
+      next: ["enrol", "gcp", "contact"]
     },
     cra: {
       label: "CRA & Monitoring",
@@ -75,6 +81,7 @@
     [/\b(price|pricing|cost|costs|fee|fees|how much|quote|payment)\b/i, "pricing"],
     [/\b(enrol|enroll|register|sign ?up|how do i (join|start|enrol)|get started|book)\b/i, "enrol"],
     [/\b(simulation|simulations|shadow|shadowing|cra training)\b/i, "craTraining"],
+    [/(transcelerate|mutual(ly)? recognis|mutual(ly)? recogniz|mutual recognition|\bsip\b|shared investigator)/i, "transcelerate"],
     [/\b(gcp|good clinical practice|e6|ich)\b/i, "gcp"],
     [/\b(cra|monitor|monitoring|sdv|sdr|risk[- ]?based|rbm|site visit)\b/i, "cra"],
     [/\b(sahpra|regulatory|ethic|ethics|nhrec|irb|iec|submission|cta|protocol|icf)\b/i, "regulatory"],
