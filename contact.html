@@ -13,6 +13,14 @@
 <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<style>
+/* Signature: live availability pulse */
+.reach{display:inline-flex;align-items:center;gap:9px;font-family:var(--font-mono);font-size:12px;letter-spacing:.03em;color:rgba(255,255,255,.6);}
+.reach-dot{width:8px;height:8px;border-radius:50%;background:#2FC4CE;position:relative;flex-shrink:0;}
+.reach-dot::after{content:'';position:absolute;inset:0;border-radius:50%;border:2px solid #2FC4CE;animation:reach-pulse 2s ease-out infinite;}
+@keyframes reach-pulse{0%{transform:scale(1);opacity:.7}100%{transform:scale(2.6);opacity:0}}
+@media (prefers-reduced-motion:reduce){.reach-dot::after{display:none;}}
+</style>
 </head>
 <body>
 
@@ -61,7 +69,11 @@
   <div class="hero-inner" style="max-width:760px;text-align:center;margin:0 auto;">
     <p class="hero-breadcrumb">Get in Touch</p>
     <h1>Let's Talk About<br><em>Your Trial</em></h1>
-    <p class="hero-sub" style="margin:0 auto 36px;max-width:520px;">Whether you need regulatory support, site monitoring, GCP training or are simply exploring options for your South African trial — we'd like to hear from you.</p>
+    <p class="hero-sub" style="margin:0 auto 24px;max-width:520px;">Whether you need regulatory support, site monitoring, GCP training or are simply exploring options for your South African trial — we'd like to hear from you.</p>
+    <div class="reach" aria-hidden="true">
+      <span class="reach-dot"></span>
+      <span class="reach-txt">Johannesburg · replies within one business day</span>
+    </div>
   </div>
 </section>
 

@@ -106,6 +106,32 @@
   font-size: 12px; color: var(--gold); font-weight: 600; margin-top: 10px;
 }
 </style>
+<style>
+/* Signature: GCP course-completion ring */
+.sig-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:22px;backdrop-filter:blur(8px);align-self:center;}
+.sig-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;}
+.sig-lbl{font-family:var(--font-mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:#5DCAA5;}
+.sig-live{width:7px;height:7px;border-radius:50%;background:#C98A2B;animation:sig-blink 1.6s ease-in-out infinite;}
+@keyframes sig-blink{50%{opacity:.25}}
+.gcp-body{display:flex;align-items:center;gap:20px;}
+.gcp-ring{position:relative;width:104px;height:104px;flex-shrink:0;}
+.gcp-ring svg{width:104px;height:104px;transform:rotate(-90deg);}
+.gcp-track{fill:none;stroke:rgba(255,255,255,.14);stroke-width:8;}
+.gcp-arc{fill:none;stroke:var(--teal);stroke-width:8;stroke-linecap:round;stroke-dasharray:326.7;stroke-dashoffset:326.7;animation:gcp-fill 6s ease-in-out infinite;}
+@keyframes gcp-fill{0%,6%{stroke-dashoffset:326.7}70%,100%{stroke-dashoffset:0}}
+.gcp-pct{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:26px;color:#5DCAA5;}
+.gcp-mods{list-style:none;padding:0;margin:0;flex:1;}
+.gcp-mods li{display:flex;align-items:center;gap:9px;font-size:12.5px;color:rgba(255,255,255,.8);padding:5px 0;}
+.gcp-mods li i{font-size:10px;color:#2FC4CE;opacity:0;animation:gcp-tick 6s ease-in-out infinite;}
+.gcp-mods li:nth-child(1) i{animation-delay:.6s}
+.gcp-mods li:nth-child(2) i{animation-delay:1.5s}
+.gcp-mods li:nth-child(3) i{animation-delay:2.4s}
+.gcp-mods li:nth-child(4) i{animation-delay:3.3s}
+@keyframes gcp-tick{0%,6%{opacity:0}12%,94%{opacity:1}100%{opacity:0}}
+.gcp-foot{display:flex;justify-content:space-between;margin-top:16px;font-family:var(--font-mono);font-size:11px;color:rgba(255,255,255,.55);}
+.gcp-foot .gcp-cert{color:#E0A23C;}
+@media (prefers-reduced-motion:reduce){.sig-live{animation:none}.gcp-arc{stroke-dashoffset:0;animation:none}.gcp-mods li i{opacity:1!important;animation:none}}
+</style>
 </head>
 <body>
 
@@ -167,11 +193,24 @@
         <span class="badge badge-gold"><i class="fa-solid fa-award"></i> Certificate Issued</span>
       </div>
     </div>
-    <div class="hero-stat-grid">
-      <div class="hero-stat-card"><div class="hsc-icon"><i class="fa-solid fa-book-open"></i></div><h4>ICH E6(R3) Aligned</h4><p>Built around the latest <a class="ref-link" href="https://www.ich.org/page/efficacy-guidelines" target="_blank" rel="noopener">Good Clinical Practice guideline</a> and South African regulatory context.</p></div>
-      <div class="hero-stat-card"><div class="hsc-icon"><i class="fa-solid fa-users"></i></div><h4>All Site Roles</h4><p>Designed for investigators, coordinators, pharmacists and data managers.</p></div>
-      <div class="hero-stat-card"><div class="hsc-icon"><i class="fa-solid fa-laptop"></i></div><h4>Three Formats</h4><p>Delivered via LMS, in-person, or live virtual session over Teams.</p></div>
-      <div class="hero-stat-card"><div class="hsc-icon"><i class="fa-solid fa-certificate"></i></div><h4>Certificate Issued</h4><p>All participants receive a signed certificate of completion.</p></div>
+    <div class="sig-card">
+      <div class="sig-head"><span class="sig-lbl">Course Progress</span><span class="sig-live"></span></div>
+      <div class="gcp-body">
+        <div class="gcp-ring">
+          <svg viewBox="0 0 120 120" aria-hidden="true">
+            <circle class="gcp-track" cx="60" cy="60" r="52"></circle>
+            <circle class="gcp-arc" cx="60" cy="60" r="52"></circle>
+          </svg>
+          <div class="gcp-pct"><i class="fa-solid fa-graduation-cap"></i></div>
+        </div>
+        <ul class="gcp-mods">
+          <li><i class="fa-solid fa-check"></i>Responsibilities &amp; oversight</li>
+          <li><i class="fa-solid fa-check"></i>Informed consent</li>
+          <li><i class="fa-solid fa-check"></i>Safety reporting</li>
+          <li><i class="fa-solid fa-check"></i>Data integrity</li>
+        </ul>
+      </div>
+      <div class="gcp-foot"><span>ICH E6(R3) aligned</span><span class="gcp-cert">Certificate issued</span></div>
     </div>
   </div>
 </section>

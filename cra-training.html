@@ -100,6 +100,28 @@
   font-size: 12px; color: var(--gold); font-weight: 600; margin-top: 10px;
 }
 </style>
+<style>
+/* Signature: CRA simulation console */
+.sig-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:22px;backdrop-filter:blur(8px);align-self:center;}
+.sig-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;}
+.sig-lbl{font-family:var(--font-mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:#5DCAA5;}
+.sig-live{width:7px;height:7px;border-radius:50%;background:#C98A2B;animation:sig-blink 1.6s ease-in-out infinite;}
+@keyframes sig-blink{50%{opacity:.25}}
+.sim-screen{background:rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:16px;font-family:var(--font-mono);}
+.sim-line{font-size:12px;line-height:1.5;color:rgba(255,255,255,.82);margin:0 0 9px;opacity:0;transform:translateY(4px);animation:sim-in 7s ease infinite;}
+.sim-line:last-child{margin-bottom:0;}
+.sim-arrow{color:#5DCAA5;margin-right:7px;}
+.sim-line.ok,.sim-line.ok .sim-arrow{color:#2FC4CE;}
+.sim-line.l1{animation-delay:.4s}
+.sim-line.l2{animation-delay:1.3s}
+.sim-line.l3{animation-delay:2.2s}
+.sim-line.l4{animation-delay:3.1s}
+.sim-line.l5{animation-delay:4.0s}
+@keyframes sim-in{0%,3%{opacity:0;transform:translateY(4px)}8%,92%{opacity:1;transform:none}100%{opacity:0}}
+.sim-cursor{margin-left:4px;color:#2FC4CE;animation:sim-cur 1s steps(1) infinite;}
+@keyframes sim-cur{50%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.sig-live,.sim-cursor{animation:none}.sim-line{opacity:1;transform:none;animation:none}}
+</style>
 </head>
 <body>
 
@@ -155,11 +177,15 @@
         <a href="#simulations" class="btn btn-ghost"><i class="fa-solid fa-chevron-down"></i> Learn More</a>
       </div>
     </div>
-    <div class="hero-stat-grid">
-      <div class="hero-stat-card"><div class="hsc-icon"><i class="fa-solid fa-user-graduate"></i></div><h4>CRA Training</h4><p>Training new CRAs through structured shadowing of real site visits.</p></div>
-      <div class="hero-stat-card"><div class="hsc-icon"><i class="fa-solid fa-laptop-code"></i></div><h4>Online Simulations</h4><p>Simulated monitoring scenarios completed online to build and test skills.</p></div>
-      <div class="hero-stat-card"><div class="hsc-icon"><i class="fa-solid fa-chart-line"></i></div><h4>Reduce QOVs</h4><p>Competency assessment that helps reduce qualification oversight visit frequency.</p></div>
-      <div class="hero-stat-card"><div class="hsc-icon"><i class="fa-solid fa-users"></i></div><h4>Patient Recruitment</h4><p>Patient engagement and recruitment support to keep enrolment on track.</p></div>
+    <div class="sig-card">
+      <div class="sig-head"><span class="sig-lbl">Simulation Console</span><span class="sig-live"></span></div>
+      <div class="sim-screen">
+        <p class="sim-line l1"><span class="sim-arrow">▸</span>Scenario 03 loaded · Phase II</p>
+        <p class="sim-line l2"><span class="sim-arrow">▸</span>Protocol deviation detected</p>
+        <p class="sim-line l3"><span class="sim-arrow">▸</span>Source discrepancy · Visit 4 vitals</p>
+        <p class="sim-line l4"><span class="sim-arrow">▸</span>Query raised to site</p>
+        <p class="sim-line l5 ok"><span class="sim-arrow">✓</span>Resolved · competency scored<span class="sim-cursor">▌</span></p>
+      </div>
     </div>
   </div>
 </section>

@@ -179,6 +179,31 @@
   .tech-grid { grid-template-columns: 1fr 1fr; }
 }
 </style>
+<style>
+/* Signature: live study dashboard */
+.sig-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:22px;backdrop-filter:blur(8px);align-self:center;}
+.sig-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;}
+.sig-lbl{font-family:var(--font-mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:#5DCAA5;}
+.sig-live{width:7px;height:7px;border-radius:50%;background:#C98A2B;animation:sig-blink 1.6s ease-in-out infinite;}
+@keyframes sig-blink{50%{opacity:.25}}
+.dash-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px;}
+.dash-m{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:9px;padding:10px 6px;text-align:center;}
+.dash-k{display:block;font-size:10px;color:rgba(255,255,255,.55);margin-bottom:5px;}
+.dash-v{display:block;font-family:var(--font-mono);font-size:19px;font-weight:600;color:#fff;}
+.dash-bars{display:flex;align-items:flex-end;gap:7px;height:64px;}
+.dash-bars span{flex:1;height:var(--h);background:linear-gradient(180deg,#2FC4CE,#0F6E56);border-radius:3px 3px 0 0;transform-origin:bottom;animation:dash-bar 4s ease-in-out infinite;}
+.dash-bars span:nth-child(1){animation-delay:.0s}
+.dash-bars span:nth-child(2){animation-delay:.12s}
+.dash-bars span:nth-child(3){animation-delay:.24s}
+.dash-bars span:nth-child(4){animation-delay:.36s}
+.dash-bars span:nth-child(5){animation-delay:.48s}
+.dash-bars span:nth-child(6){animation-delay:.60s}
+.dash-bars span:nth-child(7){animation-delay:.72s}
+@keyframes dash-bar{0%{transform:scaleY(.3)}25%{transform:scaleY(1)}55%{transform:scaleY(.72)}80%{transform:scaleY(1)}100%{transform:scaleY(.3)}}
+.dash-foot{display:flex;justify-content:space-between;margin-top:14px;font-family:var(--font-mono);font-size:11px;color:rgba(255,255,255,.55);}
+.dash-foot .dash-up{color:#5DCAA5;}
+@media (prefers-reduced-motion:reduce){.sig-live{animation:none}.dash-bars span{transform:none;animation:none}}
+</style>
 </head>
 <body>
 
@@ -239,11 +264,17 @@
         <span class="badge badge-gold"><i class="fa-solid fa-clock"></i> Patient Matcher (Coming Soon)</span>
       </div>
     </div>
-    <div class="hero-stat-grid">
-      <div class="hero-stat-card"><div class="hsc-icon"><i class="fa-solid fa-chalkboard-user"></i></div><h4>LMS Development</h4><p>Learning Management Systems for sites, sponsors and CROs.</p></div>
-      <div class="hero-stat-card"><div class="hsc-icon"><i class="fa-solid fa-table-columns"></i></div><h4>Custom Dashboards</h4><p>Bespoke data visualisation tools built around your trial's metrics.</p></div>
-      <div class="hero-stat-card"><div class="hsc-icon"><i class="fa-solid fa-users-between-lines"></i></div><h4>Patient Matcher <span style="font-size:9px;color:var(--gold);">SOON</span></h4><p>AI-powered eligibility matching against EHR data — in development.</p></div>
-      <div class="hero-stat-card"><div class="hsc-icon"><i class="fa-solid fa-code-branch"></i></div><h4>Open Architecture</h4><p>Built on open standards that integrate with your existing systems.</p></div>
+    <div class="sig-card">
+      <div class="sig-head"><span class="sig-lbl">Site Performance</span><span class="sig-live"></span></div>
+      <div class="dash-metrics">
+        <div class="dash-m"><span class="dash-k">Enrolment</span><span class="dash-v">128</span></div>
+        <div class="dash-m"><span class="dash-k">SDV done</span><span class="dash-v">94%</span></div>
+        <div class="dash-m"><span class="dash-k">Queries</span><span class="dash-v">7</span></div>
+      </div>
+      <div class="dash-bars">
+        <span style="--h:52%"></span><span style="--h:74%"></span><span style="--h:46%"></span><span style="--h:88%"></span><span style="--h:66%"></span><span style="--h:100%"></span><span style="--h:80%"></span>
+      </div>
+      <div class="dash-foot"><span>Live study dashboard</span><span class="dash-up"><i class="fa-solid fa-arrow-trend-up"></i> updating</span></div>
     </div>
   </div>
 </section>

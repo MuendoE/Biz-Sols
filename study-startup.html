@@ -32,6 +32,34 @@
 .startup-card h3 { font-size: 16px; color: var(--navy); margin-bottom: 10px; }
 .startup-card p { font-size: 13px; color: var(--gray); line-height: 1.72; margin-bottom: 14px; }
 </style>
+<style>
+/* Signature: site-activation checklist */
+.sig-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:22px;backdrop-filter:blur(8px);align-self:center;}
+.sig-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;}
+.sig-lbl{font-family:var(--font-mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:#5DCAA5;}
+.sig-live{width:7px;height:7px;border-radius:50%;background:#C98A2B;animation:sig-blink 1.6s ease-in-out infinite;}
+@keyframes sig-blink{50%{opacity:.25}}
+.chk-row{display:flex;align-items:center;gap:12px;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.08);}
+.chk-row:last-child{border-bottom:none;}
+.chk-box{width:20px;height:20px;border-radius:6px;border:1.5px solid rgba(255,255,255,.28);display:flex;align-items:center;justify-content:center;flex-shrink:0;background:transparent;}
+.chk-box i{font-size:10px;color:#fff;opacity:0;}
+.chk-name{font-size:13px;color:rgba(255,255,255,.82);}
+.chk-row .chk-box,.chk-row .chk-box i{animation:chk-on 7s ease-in-out infinite;}
+.chk-row .chk-box i{animation-name:chk-ck;}
+.chk-row:nth-child(1) .chk-box,.chk-row:nth-child(1) .chk-box i{animation-delay:.4s}
+.chk-row:nth-child(2) .chk-box,.chk-row:nth-child(2) .chk-box i{animation-delay:1.3s}
+.chk-row:nth-child(3) .chk-box,.chk-row:nth-child(3) .chk-box i{animation-delay:2.2s}
+.chk-row:nth-child(4) .chk-box,.chk-row:nth-child(4) .chk-box i{animation-delay:3.1s}
+.chk-row:nth-child(5) .chk-box,.chk-row:nth-child(5) .chk-box i{animation-delay:4.0s}
+@keyframes chk-on{0%,4%{background:transparent;border-color:rgba(255,255,255,.28)}9%,94%{background:var(--teal);border-color:var(--teal)}100%{background:transparent;border-color:rgba(255,255,255,.28)}}
+@keyframes chk-ck{0%,5%{opacity:0}11%,94%{opacity:1}100%{opacity:0}}
+.chk-prog{height:4px;border-radius:3px;background:rgba(255,255,255,.14);margin-top:16px;overflow:hidden;}
+.chk-prog span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--teal),#E0A23C);animation:chk-grow 7s ease-in-out infinite;}
+@keyframes chk-grow{0%,4%{width:0}86%,100%{width:100%}}
+.chk-foot{display:flex;justify-content:space-between;margin-top:12px;font-family:var(--font-mono);font-size:11px;color:rgba(255,255,255,.55);}
+.chk-foot .chk-pct{color:#5DCAA5;}
+@media (prefers-reduced-motion:reduce){.sig-live{animation:none}.chk-box{background:var(--teal)!important;border-color:var(--teal)!important;animation:none}.chk-box i{opacity:1!important;animation:none}.chk-prog span{width:100%;animation:none}}
+</style>
 </head>
 <body>
 
@@ -87,11 +115,17 @@
         <a href="#services" class="btn btn-ghost"><i class="fa-solid fa-chevron-down"></i> Our Services</a>
       </div>
     </div>
-    <div class="hero-stat-grid">
-      <div class="hero-stat-card"><div class="hsc-icon"><i class="fa-solid fa-rocket"></i></div><h4>Study Start-up</h4><p>End-to-end coordination of all activities needed to activate your sites.</p></div>
-      <div class="hero-stat-card"><div class="hsc-icon"><i class="fa-solid fa-file-import"></i></div><h4>MTA &amp; Permits</h4><p>Material Transfer Agreements and import/export permit applications.</p></div>
-      <div class="hero-stat-card"><div class="hsc-icon"><i class="fa-solid fa-clipboard-check"></i></div><h4>Vendor Assessments</h4><p>Vendor qualification per client specification, backed by a vendor database.</p></div>
-      <div class="hero-stat-card"><div class="hsc-icon"><i class="fa-solid fa-file-lines"></i></div><h4>Source Data &amp; SOPs</h4><p>Source data templates and SOP development, support and tracking.</p></div>
+    <div class="sig-card">
+      <div class="sig-head"><span class="sig-lbl">Site Activation</span><span class="sig-live"></span></div>
+      <div class="chk">
+        <div class="chk-row"><span class="chk-box"><i class="fa-solid fa-check"></i></span><span class="chk-name">Regulatory &amp; ethics pack</span></div>
+        <div class="chk-row"><span class="chk-box"><i class="fa-solid fa-check"></i></span><span class="chk-name">Site contract &amp; budget</span></div>
+        <div class="chk-row"><span class="chk-box"><i class="fa-solid fa-check"></i></span><span class="chk-name">Vendors qualified</span></div>
+        <div class="chk-row"><span class="chk-box"><i class="fa-solid fa-check"></i></span><span class="chk-name">Source docs &amp; SOPs</span></div>
+        <div class="chk-row"><span class="chk-box"><i class="fa-solid fa-check"></i></span><span class="chk-name">Site initiation visit</span></div>
+      </div>
+      <div class="chk-prog"><span></span></div>
+      <div class="chk-foot"><span>First patient ready</span><span class="chk-pct">Site live</span></div>
     </div>
   </div>
 </section>

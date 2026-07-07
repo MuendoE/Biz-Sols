@@ -13,6 +13,34 @@
 <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<style>
+/* Signature: SAHPRA submission tracker */
+.sig-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:24px 22px;backdrop-filter:blur(8px);align-self:center;}
+.sig-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;}
+.sig-lbl{font-family:var(--font-mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:#5DCAA5;}
+.sig-live{width:7px;height:7px;border-radius:50%;background:#C98A2B;animation:sig-blink 1.6s ease-in-out infinite;}
+@keyframes sig-blink{50%{opacity:.25}}
+.trk{position:relative;}
+.trk-line{position:absolute;left:9px;top:20px;bottom:20px;width:2px;background:rgba(255,255,255,.14);overflow:hidden;}
+.trk-fill{position:absolute;left:0;top:0;width:100%;height:0;background:var(--teal);animation:trk-grow 6.5s ease-in-out infinite;}
+@keyframes trk-grow{0%,12%{height:0}80%,100%{height:100%}}
+.trk-step{display:flex;align-items:center;gap:12px;padding:11px 0;position:relative;}
+.trk-dot{width:20px;height:20px;border-radius:50%;background:var(--navy);border:2px solid rgba(255,255,255,.28);display:flex;align-items:center;justify-content:center;flex-shrink:0;z-index:1;}
+.trk-dot i{font-size:9px;color:#fff;opacity:0;}
+.trk-name{font-size:13px;color:rgba(255,255,255,.82);flex:1;}
+.trk-code{font-family:var(--font-mono);font-size:10px;color:#5DCAA5;letter-spacing:.05em;}
+.trk-step .trk-dot,.trk-step .trk-dot i{animation:trk-on 6.5s ease-in-out infinite;}
+.trk-step .trk-dot i{animation-name:trk-ck;}
+.s1 .trk-dot,.s1 .trk-dot i{animation-delay:.3s}
+.s2 .trk-dot,.s2 .trk-dot i{animation-delay:1.5s}
+.s3 .trk-dot,.s3 .trk-dot i{animation-delay:2.7s}
+.s4 .trk-dot,.s4 .trk-dot i{animation-delay:3.9s}
+@keyframes trk-on{0%,4%{background:var(--navy);border-color:rgba(255,255,255,.28)}9%,94%{background:var(--teal);border-color:var(--teal)}100%{background:var(--navy);border-color:rgba(255,255,255,.28)}}
+@keyframes trk-ck{0%,5%{opacity:0}10%,94%{opacity:1}100%{opacity:0}}
+.trk-stamp{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.1em;color:#E0A23C;border:1.5px solid #E0A23C;border-radius:5px;padding:2px 8px;opacity:0;transform:rotate(-5deg);animation:trk-stamp 6.5s ease-in-out infinite;animation-delay:4s;}
+@keyframes trk-stamp{0%,60%{opacity:0;transform:rotate(-5deg) scale(1.4)}67%{opacity:1;transform:rotate(-5deg) scale(1)}94%{opacity:1;transform:rotate(-5deg) scale(1)}100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.sig-live{animation:none}.trk-fill{height:100%;animation:none}.trk-dot{background:var(--teal)!important;border-color:var(--teal)!important;animation:none}.trk-dot i{opacity:1!important;animation:none}.trk-stamp{opacity:1!important;transform:rotate(-5deg);animation:none}}
+</style>
 </head>
 <body>
 
@@ -68,11 +96,15 @@
         <a href="#services" class="btn btn-ghost"><i class="fa-solid fa-chevron-down"></i> Explore Services</a>
       </div>
     </div>
-    <div class="hero-stat-grid">
-      <div class="hero-stat-card"><div class="hsc-icon"><i class="fa-solid fa-shield-halved"></i></div><h4>SAHPRA Submissions</h4><p>Clinical Trial Applications, amendments and annual safety reports.</p></div>
-      <div class="hero-stat-card"><div class="hsc-icon"><i class="fa-solid fa-circle-check"></i></div><h4>Ethics Committees</h4><p>NHREC-registered IRB and site IEC submissions across therapeutic areas.</p></div>
-      <div class="hero-stat-card"><div class="hsc-icon"><i class="fa-solid fa-file-pen"></i></div><h4>Protocol &amp; ICF Development</h4><p>Protocol, ICF and IMPD documents prepared and reviewed to ICH standards.</p></div>
-      <div class="hero-stat-card"><div class="hsc-icon"><i class="fa-solid fa-compass"></i></div><h4>Regulatory Strategy</h4><p>Gap analysis and submission strategy aligned to your timeline and budget.</p></div>
+    <div class="sig-card">
+      <div class="sig-head"><span class="sig-lbl">Submission Status</span><span class="sig-live"></span></div>
+      <div class="trk">
+        <div class="trk-line"><span class="trk-fill"></span></div>
+        <div class="trk-step s1"><span class="trk-dot"><i class="fa-solid fa-check"></i></span><span class="trk-name">Pre-submission pack</span><span class="trk-code">DOC</span></div>
+        <div class="trk-step s2"><span class="trk-dot"><i class="fa-solid fa-check"></i></span><span class="trk-name">SAHPRA CTA lodged</span><span class="trk-code">CTA</span></div>
+        <div class="trk-step s3"><span class="trk-dot"><i class="fa-solid fa-check"></i></span><span class="trk-name">Ethics / IEC review</span><span class="trk-code">IEC</span></div>
+        <div class="trk-step s4"><span class="trk-dot"><i class="fa-solid fa-check"></i></span><span class="trk-name">Approval</span><span class="trk-stamp">APPROVED</span></div>
+      </div>
     </div>
   </div>
 </section>

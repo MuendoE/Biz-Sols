@@ -33,6 +33,32 @@
 .visit-card.gold-top { border-top-color: var(--gold); }
 .visit-card.gold-top .visit-tag { color: var(--gold); }
 </style>
+<style>
+/* Signature: source-data-verification scan */
+.sig-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:22px;backdrop-filter:blur(8px);align-self:center;}
+.sig-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;}
+.sig-lbl{font-family:var(--font-mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:#5DCAA5;}
+.sig-live{width:7px;height:7px;border-radius:50%;background:#C98A2B;animation:sig-blink 1.6s ease-in-out infinite;}
+@keyframes sig-blink{50%{opacity:.25}}
+.sdv-crf{position:relative;overflow:hidden;}
+.sdv-row{display:flex;align-items:center;gap:10px;padding:10px 2px;border-bottom:1px solid rgba(255,255,255,.08);}
+.sdv-row:last-child{border-bottom:none;}
+.sdv-field{font-size:12px;color:rgba(255,255,255,.82);width:104px;flex-shrink:0;}
+.sdv-bar{height:6px;border-radius:3px;background:rgba(255,255,255,.14);flex:1;}
+.sdv-ck{font-size:11px;color:#2FC4CE;opacity:0;flex-shrink:0;width:12px;}
+.sdv-scan{position:absolute;left:-4px;right:-4px;height:28px;top:-32px;background:linear-gradient(180deg,transparent,rgba(47,196,206,.16),transparent);border-top:1px solid rgba(47,196,206,.55);border-bottom:1px solid rgba(47,196,206,.55);pointer-events:none;animation:sdv-sweep 5s ease-in-out infinite;}
+@keyframes sdv-sweep{0%{top:-32px}55%{top:100%}100%{top:100%}}
+.sdv-row .sdv-ck{animation:sdv-tick 5s ease-in-out infinite;}
+.sdv-row:nth-child(2) .sdv-ck{animation-delay:.55s}
+.sdv-row:nth-child(3) .sdv-ck{animation-delay:1.05s}
+.sdv-row:nth-child(4) .sdv-ck{animation-delay:1.55s}
+.sdv-row:nth-child(5) .sdv-ck{animation-delay:2.05s}
+.sdv-row:nth-child(6) .sdv-ck{animation-delay:2.55s}
+@keyframes sdv-tick{0%,8%{opacity:0;transform:scale(.5)}13%{opacity:1;transform:scale(1)}92%{opacity:1}100%{opacity:0}}
+.sdv-foot{display:flex;justify-content:space-between;margin-top:14px;font-family:var(--font-mono);font-size:11px;color:rgba(255,255,255,.55);}
+.sdv-foot .sdv-src{color:#5DCAA5;}
+@media (prefers-reduced-motion:reduce){.sig-live{animation:none;}.sdv-scan{display:none;}.sdv-ck{opacity:1 !important;animation:none;}}
+</style>
 </head>
 <body>
 
@@ -88,11 +114,17 @@
         <a href="#visits" class="btn btn-ghost"><i class="fa-solid fa-chevron-down"></i> Our Services</a>
       </div>
     </div>
-    <div class="hero-stat-grid">
-      <div class="hero-stat-card"><div class="hsc-icon"><i class="fa-solid fa-magnifying-glass"></i></div><h4>Source Data Review</h4><p>SDR methodology built into every monitoring visit from site set-up.</p></div>
-      <div class="hero-stat-card"><div class="hsc-icon"><i class="fa-solid fa-chart-bar"></i></div><h4>Risk-Based Monitoring</h4><p>Centralised risk indicators driving targeted on-site activities.</p></div>
-      <div class="hero-stat-card"><div class="hsc-icon"><i class="fa-solid fa-file-shield"></i></div><h4>Inspection Ready</h4><p>ICH E6(R3) documentation standards maintained throughout.</p></div>
-      <div class="hero-stat-card"><div class="hsc-icon"><i class="fa-solid fa-location-dot"></i></div><h4>South Africa Based</h4><p>CRAs based in Johannesburg with national and international reach.</p></div>
+    <div class="sig-card">
+      <div class="sig-head"><span class="sig-lbl">Source Data Verification</span><span class="sig-live"></span></div>
+      <div class="sdv-crf">
+        <div class="sdv-scan"></div>
+        <div class="sdv-row"><span class="sdv-field">Subject 04-017</span><span class="sdv-bar"></span><i class="fa-solid fa-check sdv-ck"></i></div>
+        <div class="sdv-row"><span class="sdv-field">Vitals · Visit 3</span><span class="sdv-bar"></span><i class="fa-solid fa-check sdv-ck"></i></div>
+        <div class="sdv-row"><span class="sdv-field">Adverse events</span><span class="sdv-bar"></span><i class="fa-solid fa-check sdv-ck"></i></div>
+        <div class="sdv-row"><span class="sdv-field">Con-meds</span><span class="sdv-bar"></span><i class="fa-solid fa-check sdv-ck"></i></div>
+        <div class="sdv-row"><span class="sdv-field">Lab results</span><span class="sdv-bar"></span><i class="fa-solid fa-check sdv-ck"></i></div>
+      </div>
+      <div class="sdv-foot"><span>Source verified against CRF</span><span class="sdv-src">SDV 100%</span></div>
     </div>
   </div>
 </section>

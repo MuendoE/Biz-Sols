@@ -13,6 +13,19 @@
 <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<style>
+/* Signature: full-lifecycle ribbon with a sweeping glow */
+.lifecycle{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:40px;}
+.lc-node{font-family:var(--font-mono);font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.45);padding:7px 13px;border:1px solid rgba(255,255,255,.16);border-radius:20px;animation:lc-glow 7s ease-in-out infinite;}
+.lc-node:nth-child(1){animation-delay:.2s}
+.lc-node:nth-child(2){animation-delay:.9s}
+.lc-node:nth-child(3){animation-delay:1.6s}
+.lc-node:nth-child(4){animation-delay:2.3s}
+.lc-node:nth-child(5){animation-delay:3.0s}
+.lc-node:nth-child(6){animation-delay:3.7s}
+@keyframes lc-glow{0%,3%{color:rgba(255,255,255,.45);border-color:rgba(255,255,255,.16)}8%{color:#fff;border-color:var(--teal)}22%{color:rgba(255,255,255,.45);border-color:rgba(255,255,255,.16)}100%{color:rgba(255,255,255,.45)}}
+@media (prefers-reduced-motion:reduce){.lc-node{animation:none;}}
+</style>
 </head>
 <body>
 
@@ -65,6 +78,14 @@
     <div class="hero-actions" style="justify-content:center;">
       <a href="#mission" class="btn btn-primary">Our Mission <i class="fa-solid fa-arrow-down"></i></a>
       <a href="contact.html" class="btn btn-ghost">Get in Touch</a>
+    </div>
+    <div class="lifecycle" aria-hidden="true">
+      <span class="lc-node">Protocol</span>
+      <span class="lc-node">Ethics</span>
+      <span class="lc-node">Start-up</span>
+      <span class="lc-node">Monitoring</span>
+      <span class="lc-node">Training</span>
+      <span class="lc-node">Close-out</span>
     </div>
   </div>
 </section>
