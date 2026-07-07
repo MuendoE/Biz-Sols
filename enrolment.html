@@ -15,13 +15,13 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <style>
 /* Signature: enrolment pathway activates step by step */
-.enrol-pathway .step-circle::after{content:'';position:absolute;inset:-6px;border-radius:50%;border:2px solid var(--teal);opacity:0;pointer-events:none;animation:enrol-pulse 6s ease-in-out infinite;}
+.enrol-pathway .step-circle::after{content:'';position:absolute;inset:-6px;border-radius:50%;border:2px solid var(--teal);opacity:0;pointer-events:none;animation:enrol-pulse 12s ease-in-out infinite;}
 .enrol-pathway .pathway-step.step-gold .step-circle::after{border-color:var(--gold);}
-.enrol-pathway .pathway-step:nth-child(1) .step-circle::after{animation-delay:.3s}
-.enrol-pathway .pathway-step:nth-child(2) .step-circle::after{animation-delay:1.5s}
-.enrol-pathway .pathway-step:nth-child(3) .step-circle::after{animation-delay:2.7s}
-.enrol-pathway .pathway-step:nth-child(4) .step-circle::after{animation-delay:3.9s}
-@keyframes enrol-pulse{0%,4%{opacity:0;transform:scale(.85)}9%{opacity:.85;transform:scale(1)}26%{opacity:0;transform:scale(1.55)}100%{opacity:0}}
+.enrol-pathway .pathway-step:nth-child(1) .step-circle::after{animation-delay:0s}
+.enrol-pathway .pathway-step:nth-child(2) .step-circle::after{animation-delay:3.2s}
+.enrol-pathway .pathway-step:nth-child(3) .step-circle::after{animation-delay:6.4s}
+.enrol-pathway .pathway-step:nth-child(4) .step-circle::after{animation-delay:9.6s}
+@keyframes enrol-pulse{0%{opacity:0;transform:scale(.85)}8%{opacity:.35;transform:scale(.95)}20%{opacity:.75;transform:scale(1)}45%{opacity:.3;transform:scale(1.2)}70%{opacity:0;transform:scale(1.45)}100%{opacity:0;transform:scale(1.45)}}
 @media (prefers-reduced-motion:reduce){.enrol-pathway .step-circle::after{display:none;}}
 </style>
 </head>

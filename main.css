@@ -641,15 +641,33 @@ select.form-control { appearance: none; cursor: pointer; }
 /* ── How to enrol — 4-step flow (reuses .pathway-step visuals) ──── */
 .enrol-pathway {
   display: grid; grid-template-columns: repeat(4,1fr);
-  margin-top: 52px; position: relative; gap: 0 8px;
+  margin-top: 52px; position: relative; gap: 0 8px; overflow: visible;
 }
 .enrol-pathway::before {
   content: ''; position: absolute; top: 34px;
-  left: calc(100%/8); right: calc(100%/8); height: 2px;
+  left: calc(100%/8); width: calc(100% - 2*(100%/8)); height: 2px;
   background: linear-gradient(90deg, var(--teal), var(--gold)); z-index: 0;
+}
+.enrol-pathway::after {
+  content: ''; position: absolute; top: 28px;
+  left: calc(100%/8 - 7px); width: 14px; height: 14px;
+  border-top: 2px solid var(--gold); border-right: 2px solid var(--gold);
+  transform: rotate(45deg); z-index: 0; pointer-events: none;
+  animation: enrol-arrow-travel 12s linear infinite;
+  opacity: 1;
 }
 .enrol-pathway .step-body a { color: var(--teal); font-weight: 600; text-decoration: none; }
 .enrol-pathway .step-body a:hover { text-decoration: underline; }
+@keyframes enrol-arrow-travel {
+  0% { left: calc(100%/8 - 7px); opacity: 1; }
+  16% { left: calc(100%/8 - 7px); opacity: 1; }
+  20% { left: calc(3*(100%/8) - 7px); opacity: 1; }
+  36% { left: calc(3*(100%/8) - 7px); opacity: 1; }
+  40% { left: calc(5*(100%/8) - 7px); opacity: 1; }
+  56% { left: calc(5*(100%/8) - 7px); opacity: 1; }
+  60% { left: calc(7*(100%/8) - 7px); opacity: 1; }
+  100% { left: calc(7*(100%/8) - 7px); opacity: 1; }
+}
 @media (max-width: 900px) {
   .enrol-pathway { grid-template-columns: 1fr 1fr; gap: 34px 12px; }
   .enrol-pathway::before { display: none; }
