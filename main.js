@@ -69,5 +69,13 @@ document.addEventListener('DOMContentLoaded', () => {
     counters.forEach(c => counterObserver.observe(c));
   }
 
+  /* ── Nav condenses after leaving the hero ──────────────────── */
+  const siteNav = document.querySelector('.site-nav');
+  if (siteNav) {
+    const onNavScroll = () => siteNav.classList.toggle('scrolled', window.scrollY > 36);
+    onNavScroll();
+    window.addEventListener('scroll', onNavScroll, { passive: true });
+  }
+
   /* Contact form is handled by an embedded Microsoft Form (see contact.html). */
 });

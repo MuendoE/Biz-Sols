@@ -678,3 +678,27 @@ select.form-control { appearance: none; cursor: pointer; }
 .faq-item .faq-a { padding: 0 22px 18px; }
 .faq-item .faq-a p { font-size: 14px; color: var(--gray); line-height: 1.7; margin: 0; }
 .faq-item .faq-a a { color: var(--teal); font-weight: 600; }
+
+/* ── Dynamic upgrades: nav condense, card motion, stat readouts ──── */
+.site-nav { transition: height .28s ease, box-shadow .28s ease, border-color .28s ease; border-bottom: 1px solid transparent; }
+.site-nav .nav-logo-mark { transition: width .28s ease, height .28s ease, font-size .28s ease; }
+.site-nav.scrolled { height: 54px; box-shadow: 0 2px 20px rgba(0,0,0,0.42); border-bottom-color: rgba(255,255,255,0.09); }
+.site-nav.scrolled .nav-logo-mark { width: 32px; height: 32px; font-size: 17px; }
+
+.card-icon { transition: transform .28s cubic-bezier(.2,.7,.2,1), background .25s ease, color .25s ease; }
+.service-card { transition: box-shadow .25s, transform .2s, border-color .25s; }
+.service-card:hover { border-color: rgba(0,155,168,.4); }
+.service-card:hover .card-icon { transform: translateY(-3px) scale(1.08); }
+
+/* Stats read as measured instrument values */
+.stats-strip .stat-num { position: relative; display: inline-block; padding-bottom: 9px; }
+.stats-strip .stat-num::after {
+  content: ''; position: absolute; left: 50%; bottom: 0;
+  width: 20px; height: 2px; background: rgba(255,255,255,.5);
+  transform: translateX(-50%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-nav, .site-nav .nav-logo-mark, .card-icon, .service-card { transition: none; }
+  .service-card:hover .card-icon { transform: none; }
+}
