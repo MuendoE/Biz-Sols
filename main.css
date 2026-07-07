@@ -702,3 +702,21 @@ select.form-control { appearance: none; cursor: pointer; }
   .site-nav, .site-nav .nav-logo-mark, .card-icon, .service-card { transition: none; }
   .service-card:hover .card-icon { transform: none; }
 }
+
+/* ── Cohesive motion layer (all inner pages) ────────────────────── */
+/* Hero content settles in on load */
+.hero .hero-inner > * { opacity: 0; animation: hero-enter .65s cubic-bezier(.2,.7,.2,1) forwards; }
+.hero .hero-inner > *:nth-child(1) { animation-delay: .05s; }
+.hero .hero-inner > *:nth-child(2) { animation-delay: .14s; }
+.hero .hero-inner > *:nth-child(3) { animation-delay: .23s; }
+.hero .hero-inner > *:nth-child(4) { animation-delay: .32s; }
+@keyframes hero-enter { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+
+/* Sections reveal as they scroll into view (elements tagged by main.js) */
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s cubic-bezier(.2,.7,.2,1); }
+.reveal.revealed { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero .hero-inner > * { opacity: 1; animation: none; }
+  .reveal, .reveal.revealed { opacity: 1; transform: none; transition: none; }
+}
