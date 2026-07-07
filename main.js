@@ -69,42 +69,5 @@ document.addEventListener('DOMContentLoaded', () => {
     counters.forEach(c => counterObserver.observe(c));
   }
 
-  /* ── Contact form feedback ─────────────────────────────────── */
-  const form = document.getElementById('contact-form');
-  if (form) {
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const btn = form.querySelector('.form-submit');
-      const originalText = btn.textContent;
-      btn.textContent = 'Sending…';
-      btn.disabled = true;
-      try {
-        const res = await fetch(form.action, {
-          method: 'POST',
-          body: new FormData(form),
-          headers: { 'Accept': 'application/json' }
-        });
-        if (res.ok) {
-          form.innerHTML = `
-            <div style="text-align:center;padding:48px 0;">
-              <div style="width:64px;height:64px;border-radius:50%;background:var(--teal-lt);color:var(--teal);
-                          display:flex;align-items:center;justify-content:center;
-                          font-size:28px;margin:0 auto 20px;">
-                <i class="fa-solid fa-check"></i>
-              </div>
-              <h3 style="color:var(--navy);margin-bottom:12px;">Message sent!</h3>
-              <p style="color:var(--gray);font-size:15px;">
-                Thank you for reaching out. We'll be in touch within one business day.
-              </p>
-            </div>`;
-        } else {
-          btn.textContent = 'Try again';
-          btn.disabled = false;
-        }
-      } catch {
-        btn.textContent = originalText;
-        btn.disabled = false;
-      }
-    });
-  }
+  /* Contact form is handled by an embedded Microsoft Form (see contact.html). */
 });
