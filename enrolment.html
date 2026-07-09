@@ -107,8 +107,23 @@
         <div class="card-icon"><i class="fa-solid fa-credit-card"></i></div>
         <h3>Online Card Payment</h3>
         <p>Pay instantly and securely by debit or credit card through PayFast, South Africa's trusted online payment gateway.</p>
-        <!-- TODO: replace href="#" with your PayFast payment link/button URL -->
-        <a href="#" class="btn btn-primary" style="margin-top:6px;">Pay with PayFast <i class="fa-solid fa-arrow-right"></i></a>
+        <form name="PayFastPayNowForm" action="https://payment.payfast.io/eng/process" method="post" style="margin-top:6px;">
+          <input required type="hidden" name="cmd" value="_paynow">
+          <input required type="hidden" name="receiver" pattern="[0-9]" value="35819753">
+          <input type="hidden" name="return_url" value="https://alphacrsolutions.co.za/enrolment.html">
+          <input type="hidden" name="cancel_url" value="https://alphacrsolutions.co.za/enrolment.html">
+          <input type="hidden" name="notify_url" value="https://alphacrsolutions.co.za/contact.html">
+          <input required type="hidden" name="amount" value="575">
+          <input required type="hidden" name="item_name" maxlength="255" value="ICH-GCP E6 (R3)">
+          <input type="hidden" name="item_description" maxlength="255" value="The TransCelerate recognised ICH-GCP certificate. Applies to both SA and rest of the world.">
+          <table>
+            <tr>
+              <td colspan="2" align="center">
+                <input type="image" src="https://my.payfast.io/images/buttons/PayNow/Dark-Large-PayNow.png" alt="Pay Now" title="Pay Now with Payfast">
+              </td>
+            </tr>
+          </table>
+        </form>
         <p style="font-size:12px;color:var(--gray-lt);margin:12px 0 0;"><i class="fa-solid fa-lock"></i> Secured by PayFast</p>
       </div>
     </div>
