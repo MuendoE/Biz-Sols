@@ -224,11 +224,11 @@ months must be maintained. `[VERIFY]`
 | R1 | Selenium strength exceeds the scheduling threshold, making it S1+ and outside the health supplement route | Medium | High — wrong licence type, wrong application, wasted fee | Resolve the strength and the threshold before submission (§5.1) |
 | R2 | Attestation made against controls that do not exist; adverse inspection finding | Medium | High — licence suspension/withdrawal | Build the SOP set and records before attesting |
 | R3 | Selenium confirmed as Schedule 1, restricting its lawful channel to pharmacies only — after retail listings have been negotiated | Medium | High — the commercial model for that line collapses | Resolve the scheduling position before trading terms are agreed (§4.1, §5.1) |
-| R4 | Product list incomplete; later lines need a chargeable amendment | **High** (line numbering shows missing items) | Medium | Obtain the full range (Decision D2) |
+| R4 | A further product is added to the range after submission and needs a chargeable amendment | Low — range confirmed closed at five lines | Low to medium — amendment fee plus delay on the new line | Confirm once more at the pre-submission check that nothing further is planned; tell the client that anything new raised after submission waits for an amendment |
 | R5 | Imported labels not compliant with SA labelling regulations | High | Medium — stock detained or relabelled at cost | Label gap analysis before first order |
 | R6 | Marine collagen requires a DALRRD veterinary import permit nobody has applied for | Medium | Medium — consignment held at port | Confirm animal-origin import requirements early |
 | R7 | Guidance relied on is superseded (see verification caveat) | **High until checked** | High | Complete `08-source-register.md` verification before client issue |
-| R8 | Client expects a quick licence and commits to supply dates | Medium | Medium — commercial damage | Do not give a date until D2–D3 are resolved and SAHPRA turnaround is confirmed |
+| R8 | Client expects a quick licence and commits to supply dates | Medium | Medium — commercial damage | Do not give a date until D3 is resolved and SAHPRA turnaround is confirmed |
 | R9 | Trade incentives, sampling or pricing structures agreed with retailers turn out to be statutorily constrained (ss 18A, 18B, 22G) | Medium | High — signed trading terms must be renegotiated | Resolve applicability before trading terms are signed (§4.1) |
 | R10 | Distribution records inadequate to execute a recall of stock already at retailers | Medium | High — recall failure is a licence-threatening finding | Build distribution traceability before the first despatch (§4.1) |
 
@@ -238,8 +238,9 @@ months must be maintained. `[VERIFY]`
 import **and** wholesale distribution. The application covers **DL02 + DL03**. See §4.1 for
 what this adds.
 
-**D2 — Product range.** Is the licence to cover only these five lines, or the complete range
-the line numbers imply? Strong recommendation: licence the full range in one application.
+**D2 — Product range. ✅ SETTLED.** The five lines listed are the complete range being
+imported. The product schedule is closed at five products. Anything added later is an
+amendment application.
 
 **D3 — Responsible person.** Who is the named responsible person, and are they a pharmacist
 registered with the South African Pharmacy Council? Required in the general licensing route;

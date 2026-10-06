@@ -5,8 +5,9 @@
 **Regulatory objective:** Obtain a licence under section 22C(1)(b) of the Medicines and
 Related Substances Act 101 of 1965 authorising the importation (and onward distribution)
 of Category D complementary medicines into South Africa.
-**Pack version:** v0.2 (draft for internal review) · **Date:** 6 October 2026
+**Pack version:** v0.3 (draft for internal review) · **Date:** 6 October 2026
 **Activity scope (settled):** import **and** wholesale/distribution to retailers — DL02 + DL03
+**Product scope (settled):** the five lines in §1 — complete range
 
 ---
 
@@ -22,11 +23,11 @@ Five lines were supplied by the client:
 | 9 | Psyllium Husk Fibre Capsules | 30 |
 | 10 | Vegan Omega 3 | 30 |
 
-> **Open question — incomplete range.** The client's line numbers (3, 8, 9, 10) indicate
-> these five items are extracted from a longer list. A licence product schedule should
-> cover the **entire** range intended for import, because adding products later is a
-> chargeable amendment application. Request the full list before submission.
-> See `03-client-information-request.md`, item G1.
+> **Range confirmed.** The client has confirmed these five lines are the **complete** range
+> being imported, notwithstanding the gaps in its own line numbering. The product schedule is
+> therefore closed at five products. Adding a line later is a chargeable amendment
+> application, so if any further product is under consideration it should be raised **before**
+> submission, not after. Decision D2: settled.
 
 No strengths, dosage-unit compositions, recommended daily doses, manufacturers or countries
 of origin were supplied. These are mandatory for the application and, for Selenium in
@@ -51,14 +52,17 @@ particular, determine the product's legal classification. See §4 of the memo.
 |---|---|---|
 | v0.1 | 6 Oct 2026 | Initial pack |
 | v0.2 | 6 Oct 2026 | Client confirmed it sells to retailers. Decision D1 settled: scope extended to DL03 (wholesale/distribution) alongside DL02. Added memo §4.1 on what wholesaling adds, four mandatory wholesale SOPs, information request §G(i), and verification items V14–V17 covering ss 18A/18B/22G, the DL02+DL03 fee position and lawful supply channels |
+| v0.3 | 6 Oct 2026 | Client confirmed the five lines are the complete import range. Decision D2 settled; product schedule closed at five products. Only D3 (responsible person) remains open |
 
 ## 3. How to use this pack
 
 1. Read `08-source-register.md`. Nothing in this pack has been verified against a
    first-hand copy of a SAHPRA document (see §5). Download and check the current
    documents before anything is sent to the client or to SAHPRA.
-2. Read `01-regulatory-strategy-memo.md`. Decision D1 is settled (DL02 + DL03); D2 and D3
-   remain open. Note §4.1 — selling to retailers carries obligations beyond the extra licence.
+2. Read `01-regulatory-strategy-memo.md`. Decisions D1 (DL02 + DL03) and D2 (five products,
+   complete range) are settled; **D3, the responsible person, is the only one still open and
+   is the longest lead item.** Note §4.1 — selling to retailers carries obligations beyond
+   the extra licence.
 3. Issue `03-client-information-request.md` to the client. The data it collects is on the
    critical path — the application cannot be drafted without it.
 4. Populate `02-product-schedule.md` as data arrives.

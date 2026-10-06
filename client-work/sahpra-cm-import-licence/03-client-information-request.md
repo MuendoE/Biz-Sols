@@ -134,7 +134,7 @@ workable but it is the longest item after the responsible person, so tell us ear
 
 | # | Item | Response |
 |---|---|---|
-| G1 | **★ Is the licence to cover only the five products listed, or a wider range?** The numbering supplied (3, 8, 9, 10) suggests other lines exist. Please supply the complete list intended for import over the next 24 months | |
+| G1 | ~~Is the licence to cover only the five products listed, or a wider range?~~ **ANSWERED: these five lines are the complete import range.** Please confirm once more before submission that no further product is planned within the next 24 months, since anything added later requires a chargeable amendment | **Five products — complete range** |
 | G2 | ~~Will the client sell only to its own account, or also wholesale?~~ **ANSWERED: the client sells to retailers.** The application covers import and wholesale/distribution (DL02 + DL03) | **Sells to retailers** |
 | G3 | Will the client export, or re-export, any product? | |
 | G4 | Will the client manufacture, repack or relabel anything in South Africa? | |

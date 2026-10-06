@@ -50,8 +50,10 @@ table in a form that can be opened in a spreadsheet and sent to the client to po
    per-tablet figure alone cannot establish the schedule status.
 3. **Name the actual manufacturing site**, not the brand owner or the trading company. A
    licence naming the wrong site is of no use at the port.
-4. **Lines 3, 8, 9 and 10 of the client's own numbering are represented here.** The missing
-   line numbers suggest further products. Add them before submission — see README §1.
+4. **The schedule is closed at five products.** The client has confirmed these are the
+   complete range being imported, despite the gaps in its own line numbering. Any product
+   added after submission requires a chargeable amendment application, so confirm once more
+   at the pre-submission check that nothing further is planned.
 5. Where a product is confirmed to be a foodstuff rather than a medicine, remove it from this
    schedule and handle it through the Department of Health / Port Health route instead.
    Record the classification decision and its basis in the client file.

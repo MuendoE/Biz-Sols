@@ -123,7 +123,7 @@ Run this before anything is submitted. Each line is a known cause of a query or 
 - [ ] Composition stated per dosage unit **and** per recommended daily dose
 - [ ] **Selenium scheduling position resolved and documented** (memo §5.1)
 - [ ] Classification decision recorded for Black Garlic and Psyllium Husk, with reasons
-- [ ] Complete product range included, not only the five lines (Decision D2)
+- [ ] Product range re-confirmed with the client as closed at five lines, with the amendment cost of any later addition explained (Decision D2, settled)
 - [ ] Manufacturing site addresses are the actual sites, not brand owners or traders
 - [ ] Every GMP certificate valid at the date of submission, with expiry dates diarised
 - [ ] Responsible person appointment and acceptance letters both signed and dated
