@@ -66,6 +66,8 @@ to stop release and to initiate a recall.
 | C9 | Security: access control, alarm, who holds keys | |
 | C10 | Pest control: contractor and service frequency | |
 | C11 | Will any activity be outsourced to a third-party logistics provider? If so, which, and is there a written quality/technical agreement? | |
+| C11a | Is there a dedicated despatch area, and are outbound consignments checked before they leave? | |
+| C11b | What system records outbound deliveries, and does it capture batch number and expiry against each customer? | |
 | C12 | Does the premises hold a Department of Health premises licence, or has one been applied for? | |
 
 **Documents:** site plan or floor plan marking receiving, quarantine, release, rejected and
@@ -121,6 +123,7 @@ agreement · organogram of the supply chain from manufacturer to South African c
 | F3 | Is there a recall procedure, and has a recall ever been simulated or performed? | |
 | F4 | How are complaints and adverse event reports received, recorded and escalated? | |
 | F5 | How are stock records kept — batch numbers, expiry dates, traceability to customer? | |
+| F5a | Is there a procedure for checking that a trade customer is entitled to receive the product before supplying them? | |
 | F6 | Is there a training record system? | |
 | F7 | Has the entity ever been inspected by any regulator? Outcome | |
 
@@ -132,11 +135,41 @@ workable but it is the longest item after the responsible person, so tell us ear
 | # | Item | Response |
 |---|---|---|
 | G1 | **★ Is the licence to cover only the five products listed, or a wider range?** The numbering supplied (3, 8, 9, 10) suggests other lines exist. Please supply the complete list intended for import over the next 24 months | |
-| G2 | **★ Will the client sell only to its own account / direct to consumer, or also wholesale to retailers, pharmacies or distributors?** | |
+| G2 | ~~Will the client sell only to its own account, or also wholesale?~~ **ANSWERED: the client sells to retailers.** The application covers import and wholesale/distribution (DL02 + DL03) | **Sells to retailers** |
 | G3 | Will the client export, or re-export, any product? | |
 | G4 | Will the client manufacture, repack or relabel anything in South Africa? | |
 | G5 | Intended sales channels: retail chains, pharmacies, health shops, e-commerce, direct selling | |
 | G6 | Is there a target launch date, and is it contractually committed? | |
+
+### G(i). Wholesale and retail trade — now that G2 is answered ★
+
+Selling to retailers is a regulated activity in its own right. These answers shape both the
+DL03 application and the advice we give on trading terms.
+
+| # | Item | Response |
+|---|---|---|
+| G7 | List the categories of customer to be supplied: retail chains, independent health shops, pharmacies, wholesalers, e-commerce platforms, direct to consumer | |
+| G8 | Name the specific retail groups being approached or already in discussion | |
+| G9 | Have any trading terms, listing agreements or supply contracts been signed or tabled? If so, provide them — we need to review them against the Act | |
+| G10 | **Are any trade incentives planned** — free stock, "buy ten get two", rebates in kind, listing fees, promotional allowances? Describe them | |
+| G11 | **Is any sampling planned** — samples to retail buyers, in-store tasting or consumer sampling? | |
+| G12 | How will pricing to retailers be structured: list price, discounts, settlement terms? | |
+| G13 | Who delivers to retailers — the client's own vehicles, a courier, or a third-party logistics provider? Name them | |
+| G14 | Are storage conditions maintained in transit, and is that demonstrable? | |
+| G15 | How will the client know which batch went to which customer, and on what date? | |
+| G16 | What is the returns policy for retail customers? Who decides whether returned stock may be resold? | |
+| G17 | Will the client supply any product to a pharmacy-only channel? | |
+
+> **Why G10, G11 and G12 matter.** The Act restricts bonusing and sampling in respect of
+> medicines, and a single-exit-price regime applies to medicines sold into the market. We are
+> confirming how far these reach Category D complementary medicines. If they apply, they
+> constrain the incentives and pricing structures the client may offer retailers. **Please do
+> not sign trading terms or commit to a promotional calendar until we have reported back.**
+
+> **Why G15 matters.** If a product has to be recalled, the client must be able to identify
+> every retailer holding the affected batch and retrieve it. Recall capability is one of the
+> four procedures the licence attestation commits the client to, and distribution records are
+> what make it possible. This has to be in place before the first despatch, not afterwards.
 
 ## H. Document checklist
 
@@ -160,6 +193,9 @@ workable but it is the longest item after the responsible person, so tell us ear
 | Supply and quality agreements | E | ☐ |
 | Existing SOPs | F | ☐ |
 | Complete product range list | G | ☐ |
+| Draft or signed trading terms / listing agreements | G(i) | ☐ |
+| Third-party logistics or courier agreement | G(i) | ☐ |
+| Returns policy for trade customers | G(i) | ☐ |
 
 ---
 

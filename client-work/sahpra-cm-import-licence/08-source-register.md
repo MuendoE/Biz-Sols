@@ -30,6 +30,10 @@ against a downloaded copy of the current document before the pack leaves Alpha C
 | V11 | **Animal-origin import control** for marine collagen — whether DALRRD requires a veterinary import permit | Consignment could be held | DALRRD; Animal Diseases Act 35 of 1984 | ☐ |
 | V12 | **Permitted substances, levels and claims** for health supplements, covering selenium, collagen, garlic, psyllium and algal omega-3 | Determines whether each product may be sold as presented | SAHPRA guideline 7.04 health supplements safety and efficacy, and its annexures; guideline 7.06 specified substances | ☐ |
 | V13 | **Section 22C(6) wording** and regulations 23 and 24 | Legal basis cited in the memo and the covering letter | Medicines and Related Substances Act 101 of 1965; General Regulations GN R.859 of 2017 | ☐ |
+| V14 | **Sections 18A (bonusing), 18B (sampling) and 22G (single exit price)** — whether each reaches Category D complementary medicines sold into retail. Specifically: (a) is section 18A confined to *registered* medicines, as one secondary source suggests? (b) is the Schedule 0 exemption from single exit pricing still in force, and does it cover Category D? (c) has the Minister excluded complementary medicines from sections 18A or 22G on the Pricing Committee's recommendation? | The client sells to retailers. If these apply they constrain trade incentives, sampling and the entire pricing model. Commercially the most material open question in the pack | Medicines and Related Substances Act 101 of 1965 ss 18A, 18B, 22G; medicine pricing regulations; Department of Health SEP instruction documents; Government Gazette for any exclusion notice | ☐ |
+| V15 | **Whether DL02 and DL03 are one application or two**, and whether one fee or two are payable | Doubles the application-stage budget if two | SAHPRA Pharma Licensing, in writing | ☐ |
+| V16 | **Good wholesaling practice expectations** applied to a Category D wholesaler at inspection | Determines the SOP and records set in `06-qms-sop-register.md` §1a | SAHPGL-LIC-02 (current version) | ☐ |
+| V17 | **Which channels may lawfully receive each product** given its schedule status — in particular whether a Schedule 1 product may be supplied only through pharmacies | Determines whether the Selenium line can be sold to general retail at all | Consolidated Schedules; Act, provisions on sale of scheduled substances | ☐ |
 
 ## 2. Sources relied on
 
@@ -73,7 +77,11 @@ against a downloaded copy of the current document before the pack leaves Alpha C
 
 ## 3. Sign-off
 
-The pack may not be issued to the client until V1 to V13 are closed.
+The pack may not be issued to the client until V1 to V17 are closed.
+
+**V14, V15 and V17 were added after the client confirmed it sells to retailers.** V14 and V17
+should be closed before the client signs any trading terms or listing agreements — see
+`03-client-information-request.md` §G(i).
 
 | Role | Name | Date | Signature |
 |---|---|---|---|

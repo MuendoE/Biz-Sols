@@ -26,8 +26,8 @@ and is the right channel for the scoping question in §2. `[VERIFY address]`
 | Type | Scope | Our position |
 |---|---|---|
 | DL01 | Manufacture, import or export Category D medicines | Not applicable — client does not manufacture |
-| **DL02** | Import or export Category D medicines | **Primary application** |
-| **DL03** | Wholesale or distribute Category D medicines | **Add if the client sells to trade customers** (Decision D1) |
+| **DL02** | Import or export Category D medicines | **Required** — the import activity |
+| **DL03** | Wholesale or distribute Category D medicines | **Required** — the client sells to retailers (Decision D1, settled) |
 
 **Before paying any fee**, put these three questions to SAHPRA Pharma Licensing in writing
 and keep the reply on file:
@@ -36,8 +36,9 @@ and keep the reply on file:
    correct type? (One published description attaches DL02 to "holders of certificate of
    registration", which cannot be read literally while no complementary medicine is
    registered.)
-2. Does the client need DL03 in addition to DL02 to sell on to retailers and pharmacies, or
-   is distribution covered within the import licence?
+2. The client imports and sells on to retailers, so both DL02 and DL03 are required. Is
+   that **one combined application or two separate applications**, are two fees payable,
+   and are both activities reflected on a single licence or on two?
 3. If any product proves to contain a Schedule 1 or higher substance, does it fall out of the
    Category D route entirely and into SAHPGL-LIC-01/-02?
 
@@ -53,9 +54,11 @@ Regulations, read with the Category D roadmap guideline. Expect to supply:
 - Any existing SAHPRA licence or application references
 
 ### 3.2 Activity and scope
-- The activity applied for: import, export, wholesale, distribute
-- Every premises at which the activity is conducted
+- The activity applied for: **import** and **wholesale/distribute** (both — see §2)
+- Every premises at which either activity is conducted
 - The product schedule (see `02-product-schedule.md`)
+- The classes of customer to be supplied, and the basis on which the client satisfies itself
+  that each is entitled to receive the product
 
 ### 3.3 Responsible person
 - Identity, qualifications, SAPC registration where applicable
@@ -106,13 +109,15 @@ letter, the application and the file.
 | N | Supply agreements and quality/technical agreements | Client, §E |
 | O | SOP set and record templates | `06-qms-sop-register.md` |
 | P | Organisational chart and training records | Client, §F |
+| P2 | **Wholesale annexure:** distribution and traceability records, customer qualification procedure, transport and third-party logistics agreements, returns procedure | Client, §C/§F |
 | Q | Proof of fee payment | `07-fees-timelines-submission.md` |
 
 ## 5. Pre-submission quality check
 
 Run this before anything is submitted. Each line is a known cause of a query or a rejection.
 
-- [ ] Licence type confirmed in writing with SAHPRA (§2)
+- [ ] Licence type confirmed in writing with SAHPRA, including whether DL02 + DL03 is one application or two (§2)
+- [ ] Both activities — import **and** wholesale/distribution — stated on the application and in the covering letter
 - [ ] Applicant legal name identical across CIPC certificate, application, covering letter and proof of payment
 - [ ] Every product's proprietary name identical across schedule, label artwork and supplier documentation
 - [ ] Composition stated per dosage unit **and** per recommended daily dose
@@ -126,6 +131,9 @@ Run this before anything is submitted. Each line is a known cause of a query or 
 - [ ] SOP set complete, version controlled, signed, dated and effective
 - [ ] Labels checked against regulations 10, 11 and 12, including the unregistered-medicine disclaimer
 - [ ] Animal-origin import requirements checked for Marine Collagen
+- [ ] Customer qualification procedure in place, and consistent with the schedule status of every line (a Schedule 1 product may not be supplied to general retail)
+- [ ] Distribution records demonstrate batch-level traceability to each customer
+- [ ] Trading terms, promotional plans and pricing tested against ss 18A, 18B and 22G
 - [ ] Fee paid, correct amount, correct reference, proof attached
 - [ ] Annexures numbered per §4 and cross-referenced from the covering letter
 - [ ] Complete copy of the submission retained in the client file, with the submission receipt

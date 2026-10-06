@@ -17,8 +17,8 @@ of drafting was reported as gazetted in February 2025 and effective 13 February 
 | Item | Indicative amount (ZAR) | Note |
 |---|---|---|
 | Manufacturer licence — new application | 26 200 | Not applicable to this client |
-| Distributor licence — new application | 15 600 | |
-| Wholesaler licence — new application | 15 600 | |
+| Distributor licence — new application | 15 600 | **Relevant** — the client distributes to retailers |
+| Wholesaler licence — new application | 15 600 | **Relevant** — the client wholesales to retailers |
 | Manufacturer licence — renewal | 22 900 | |
 | Distributor or wholesaler licence — renewal | 13 100 | |
 | Amendment application | 5 500 | Payable to add products or change premises or responsible person |
@@ -31,12 +31,18 @@ of drafting was reported as gazetted in February 2025 and effective 13 February 
    fee. Establish which fee category an importer of complementary medicines falls into.
 2. Category D licensing is reported to attract both a **licence application fee and a desktop
    evaluation fee**. Confirm whether these are separate charges and what each is.
-3. Confirm whether DL02 and DL03, if both are required, attract two fees or one.
+3. **The client requires both DL02 and DL03.** Confirm whether that is one application or
+   two, and whether one fee or two are payable. On the indicative figures this is the
+   difference between roughly R15 600 and roughly R31 200 at application stage, plus
+   potentially a second issuing fee and a second annual retention. Establish it before
+   budgeting with the client.
+4. Confirm whether the annual retention is charged per licence or per licence holder.
 
 **Budget guidance for the client:** present application fee, issuing fee and the first annual
 retention as a single first-year cost, and flag the recurring June retention and the
 five-yearly renewal. Flag the amendment fee as the reason to get the product schedule
-complete at first submission.
+complete at first submission. Present the figure as a **range** until gap 3 above is closed,
+since the DL02 + DL03 scope may double the application-stage cost.
 
 ## 2. Payment
 
@@ -50,7 +56,7 @@ complete at first submission.
 
 | Route | Use for |
 |---|---|
-| Category D online platform (reported as **www.sahpracm.org.za**) | The DL02 / DL03 licence application itself |
+| Category D online platform (reported as **www.sahpracm.org.za**) | The DL02 **and** DL03 licence applications |
 | **pharmalicensing@sahpra.org.za** | Scoping questions to Pharma Licensing; manufacturer, importer, exporter and wholesaler applications outside the Category D platform |
 
 `[VERIFY both.]` Register as a platform user before building the application — account
@@ -104,7 +110,9 @@ the importer's section 22C(1)(b) licence.
 
 | Obligation | Frequency | Owner |
 |---|---|---|
-| Annual retention fee | Each June | Client, diarised by Alpha CR |
+| Annual retention fee — **check whether payable on each of DL02 and DL03** | Each June | Client, diarised by Alpha CR |
+| Maintain distribution records giving batch-level traceability to every retail customer | Continuous | Client |
+| Re-qualify trade customers on the defined cycle | Periodic | Responsible person |
 | Licence renewal | Before expiry of the five-year term | Alpha CR |
 | Amendment application for new products, new premises, change of responsible person | As it arises | Alpha CR |
 | Maintain SOPs and records supporting the attestation | Continuous | Client / responsible person |

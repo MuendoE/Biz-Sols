@@ -23,10 +23,12 @@ questions that must be resolved first, and the decisions the client has to make.
    Related Substances Act 101 of 1965 ("the Act") prohibits importing a medicine unless the
    importer holds a licence under section 22C(1)(b). SAHPRA confirms this applies to
    Category D complementary medicines. `[VERIFY: s22C(6) wording]`
-2. **Importing is not the whole activity.** If the client will sell on to retailers,
-   pharmacies or online resellers, that is wholesale distribution and requires wholesale /
-   distribution authority in addition to import authority. Scope the application to the
-   full activity set now; adding it later is a chargeable amendment. **Decision D1.**
+2. **Importing is not the whole activity — the client sells to retailers.** That is
+   wholesale distribution, and it requires wholesale/distribution authority **in addition**
+   to import authority. The application is therefore scoped to **DL02 + DL03**. Selling to
+   trade brings obligations well beyond a second licence number — customer qualification,
+   distribution traceability and, potentially, statutory limits on trade incentives and
+   pricing. See §4.1. **Decision D1: settled.**
 3. **Apply through the Category D route, not the general pharmaceutical route.** SAHPRA
    operates a dedicated complementary medicines licensing platform with its own licence
    types (DL01/DL02/DL03) and an **attestation-based** process. `[VERIFY: licence type codes
@@ -69,8 +71,9 @@ SAHPRA's Category D licence types are reported as: `[VERIFY all three]`
 | **DL02** | Import or export Category D medicines | Importers/exporters |
 | **DL03** | Act as a wholesaler of, or distribute, Category D medicines | Wholesalers / distributors |
 
-**Working position:** the client is an importer that does not manufacture, so **DL02** is the
-primary application, with **DL03** added if the client sells on to trade customers.
+**Position (settled).** The client imports but does not manufacture, and sells on to
+retailers. The application therefore covers **DL02 (import) and DL03 (wholesale /
+distribute)**. DL01 is not applicable.
 
 **Two cautions before this is treated as settled:**
 
@@ -83,6 +86,39 @@ primary application, with **DL03** added if the client sells on to trade custome
   route is not the right vehicle for it — the general licensing route (SAHPGL-LIC-01/-02)
   and a responsible pharmacist registered with the South African Pharmacy Council are
   engaged instead. This is a live possibility for Selenium (§5).
+
+Also confirm whether DL02 and DL03 are applied for as **one combined application or two
+separate applications**, and whether two fees are payable. See `07-fees-timelines-submission.md`.
+
+### 4.1 What selling to retailers adds
+
+Wholesale distribution is a regulated activity in its own right, and the obligations it
+carries are the ones most often underestimated by a first-time importer.
+
+| Obligation | What it means in practice |
+|---|---|
+| **Good wholesaling and distribution practice** | SAHPGL-LIC-02 is SAHPRA's wholesale guideline. Expect its storage, distribution, traceability and recall expectations to be applied at inspection, even though this application runs through the Category D attestation route |
+| **Distribution records** | Every despatch traceable to batch number, expiry date and customer. Without this a recall cannot be executed — and recall is one of the four mandatory SOPs the client will attest to |
+| **Customer qualification** | A wholesaler must satisfy itself that it supplies only persons entitled to receive the product. **This interacts directly with the Selenium question in §5.1:** a Schedule 0 product may be sold through general retail, but a Schedule 1 product may move only through pharmacies. If Selenium proves to be S1, the client cannot supply that line to health shops or supermarkets at all |
+| **Transport and storage in transit** | Storage conditions maintained and demonstrable through to delivery; any third-party courier or 3PL covered by a written quality agreement |
+| **Returns from trade** | Defined acceptance criteria and documented assessment before any returned stock goes back to saleable |
+| **Section 18A — bonusing** | Prohibits supplying a medicine according to a bonus system, rebate system or other incentive scheme. This reaches ordinary retail trade incentives: free stock, "buy ten get two", rebates in kind. One secondary reading limits section 18A to *registered* medicines, which — if correct — would mean it does not presently bite on unregistered Category D products. **That reading is unverified and must not be used to design a promotion.** `[VERIFY]` |
+| **Section 18B — sampling** | Prohibits sampling of medicines. Affects sampling to retail buyers and consumer sampling campaigns alike `[VERIFY applicability to Category D]` |
+| **Section 22G — single exit price** | The transparent pricing system applies to medicines and scheduled substances, and the single exit price is the only price at which a product may be sold to anyone other than the State. **Schedule 0 medicines are reported to be exempt.** Exclusions from sections 18A and 22G are effected by the Minister on the recommendation of the Pricing Committee. **Working position:** if every line is Schedule 0, single exit pricing is unlikely to constrain the client; if the Selenium line proves to be Schedule 1, it may apply to that line `[VERIFY]` |
+| **Section 20 — advertising and claims** | Retailer marketing, point-of-sale material and e-commerce listings carry the client's claims. Their content remains the licence holder's responsibility |
+
+**Note how much turns on the Selenium scheduling question.** It drives three separate
+outcomes: whether the line is a health supplement at all and which licence route applies
+(§5.1); whether it may lawfully be supplied to general retail or only through pharmacies
+(customer qualification, above); and whether single exit pricing reaches it. One missing
+data point — micrograms of selenium per recommended daily dose — blocks all three. It is the
+first thing to get from the client.
+
+**Advice to put to the client now, not later.** The bonusing, sampling and single-exit-price
+questions go to how they may trade with retail chains. They should be resolved **before**
+trading terms, listing agreements or promotional calendars are signed. A listing agreement
+built on free-stock promotions that turn out to be prohibited is expensive to unwind. The
+working positions above are a basis for planning, not a clearance to proceed.
 
 ## 5. Product classification — the analysis that must precede the schedule
 
@@ -187,17 +223,20 @@ months must be maintained. `[VERIFY]`
 |---|---|---|---|---|
 | R1 | Selenium strength exceeds the scheduling threshold, making it S1+ and outside the health supplement route | Medium | High — wrong licence type, wrong application, wasted fee | Resolve the strength and the threshold before submission (§5.1) |
 | R2 | Attestation made against controls that do not exist; adverse inspection finding | Medium | High — licence suspension/withdrawal | Build the SOP set and records before attesting |
-| R3 | Licence scoped to import only; client sells to trade and needs wholesale authority | Medium | Medium — enforcement exposure plus amendment fee | Settle Decision D1 now |
+| R3 | Selenium confirmed as Schedule 1, restricting its lawful channel to pharmacies only — after retail listings have been negotiated | Medium | High — the commercial model for that line collapses | Resolve the scheduling position before trading terms are agreed (§4.1, §5.1) |
 | R4 | Product list incomplete; later lines need a chargeable amendment | **High** (line numbering shows missing items) | Medium | Obtain the full range (Decision D2) |
 | R5 | Imported labels not compliant with SA labelling regulations | High | Medium — stock detained or relabelled at cost | Label gap analysis before first order |
 | R6 | Marine collagen requires a DALRRD veterinary import permit nobody has applied for | Medium | Medium — consignment held at port | Confirm animal-origin import requirements early |
 | R7 | Guidance relied on is superseded (see verification caveat) | **High until checked** | High | Complete `08-source-register.md` verification before client issue |
-| R8 | Client expects a quick licence and commits to supply dates | Medium | Medium — commercial damage | Do not give a date until D1–D3 are resolved and SAHPRA turnaround is confirmed |
+| R8 | Client expects a quick licence and commits to supply dates | Medium | Medium — commercial damage | Do not give a date until D2–D3 are resolved and SAHPRA turnaround is confirmed |
+| R9 | Trade incentives, sampling or pricing structures agreed with retailers turn out to be statutorily constrained (ss 18A, 18B, 22G) | Medium | High — signed trading terms must be renegotiated | Resolve applicability before trading terms are signed (§4.1) |
+| R10 | Distribution records inadequate to execute a recall of stock already at retailers | Medium | High — recall failure is a licence-threatening finding | Build distribution traceability before the first despatch (§4.1) |
 
 ## 9. Decisions required
 
-**D1 — Activity scope.** Will the client only import for its own account, or also wholesale
-and distribute to trade customers? Determines DL02 alone versus DL02 + DL03.
+**D1 — Activity scope. ✅ SETTLED.** The client sells to retailers, so the activity set is
+import **and** wholesale distribution. The application covers **DL02 + DL03**. See §4.1 for
+what this adds.
 
 **D2 — Product range.** Is the licence to cover only these five lines, or the complete range
 the line numbers imply? Strong recommendation: licence the full range in one application.
@@ -211,7 +250,7 @@ the position for Category D needs confirmation. Usually the longest lead item �
 | # | Workstream | Owner | Depends on |
 |---|---|---|---|
 | 1 | Verify all guidance, fees and licence types against current SAHPRA documents | Alpha CR | — |
-| 2 | Confirm correct licence type(s) with SAHPRA Pharma Licensing | Alpha CR | D1 |
+| 2 | Confirm with SAHPRA Pharma Licensing: correct type codes, whether DL02 + DL03 is one application or two, and the fee position | Alpha CR | — |
 | 3 | Issue information request; collect client and product data | Alpha CR / Client | — |
 | 4 | Resolve classification per product, including Selenium scheduling | Alpha CR | 3 |
 | 5 | Appoint and document the responsible person | Client | D3 |
@@ -221,5 +260,7 @@ the position for Category D needs confirmation. Usually the longest lead item �
 | 9 | Compile and quality-check the application and annexures | Alpha CR | 3–8 |
 | 10 | Pay fees, submit, manage queries to licence issue | Alpha CR | 9 |
 | 11 | Post-licence: port-of-entry process, retention fees, inspection readiness | Alpha CR / Client | 10 |
+| 12 | **Wholesale readiness:** distribution records and batch traceability to customer, customer qualification procedure, transport and 3PL agreements, returns handling | Alpha CR / Client | D1 |
+| 13 | **Trading terms review:** test the client's proposed retail incentives, sampling and pricing against ss 18A, 18B and 22G before agreements are signed | Alpha CR | 1 |
 
 Sequence 3, 5 and 6 in parallel — they are the critical path, and 7 cannot finish before 5.

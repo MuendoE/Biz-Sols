@@ -18,18 +18,22 @@ South African Health Products Regulatory Authority
 
 Dear Sir / Madam
 
-## APPLICATION FOR A LICENCE IN TERMS OF SECTION 22C(1)(b) OF THE MEDICINES AND RELATED SUBSTANCES ACT 101 OF 1965 — IMPORTATION *[AND DISTRIBUTION]* OF CATEGORY D COMPLEMENTARY MEDICINES
+## APPLICATION FOR A LICENCE IN TERMS OF SECTION 22C(1)(b) OF THE MEDICINES AND RELATED SUBSTANCES ACT 101 OF 1965 — IMPORTATION AND DISTRIBUTION OF CATEGORY D COMPLEMENTARY MEDICINES
 
 **Applicant:** *[Full registered legal name]*
 **Registration number:** *[CIPC number]*
 **Premises:** *[Physical address of the licensed premises]*
-**Licence type applied for:** *[DL02 — Licence to import or export Category D medicines]*
-*[and DL03 — Licence to act as a wholesaler of or distribute Category D medicines]*
+**Licence types applied for:**
+DL02 — Licence to import or export Category D medicines; **and**
+DL03 — Licence to act as a wholesaler of, or distribute, Category D medicines
 
-We hereby apply for a licence in terms of section 22C(1)(b) of the Medicines and Related
+We hereby apply for licences in terms of section 22C(1)(b) of the Medicines and Related
 Substances Act 101 of 1965, read with regulations 23 and 24 of the General Regulations, to
-import *[and distribute]* Category D complementary medicines as listed in the product
-schedule at Annexure I.
+import and to act as a wholesaler of and distribute Category D complementary medicines as
+listed in the product schedule at Annexure I.
+
+The applicant imports the products listed and supplies them to retail trade customers in
+South Africa. It does not supply medicines directly to the public.
 
 The application covers *[number]* product lines, all of which are *[health supplements /
 discipline-specific complementary medicines]* intended for human use. None of the products
@@ -79,4 +83,7 @@ Yours faithfully
 3. Confirm the current addressee and submission address — for Category D the application is
    lodged through the online platform and the letter is uploaded as an annexure rather than
    posted.
+5. Confirm with SAHPRA whether DL02 and DL03 are applied for together or separately. If
+   separately, issue two covering letters, each naming only its own licence type, and
+   reference the companion application in each.
 4. Keep the annexure lettering identical to `04-application-content-guide.md` §4.
