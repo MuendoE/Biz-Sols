@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Software Solutions | Alpha CR Solutions</title>
-<meta name="description" content="Clinical research software — patient matching systems, recruitment dashboards and custom data tools built for sponsors, CROs and sites. Alpha CR Solutions, Johannesburg.">
+<meta name="description" content="Clinical research software — the Clinveo EDC (21 CFR Part 11 electronic data capture), IWRS/RTSM randomisation, the Clinical Trial Patient Matcher, LMS and custom dashboards. Alpha CR Solutions, Johannesburg.">
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="stylesheet" href="main.css?v=2">
@@ -253,15 +253,16 @@
     <div>
       <p class="hero-breadcrumb">Services · Software Solutions</p>
       <h1>Clinical Research<br>Software <em>Built for<br>the Field</em></h1>
-      <p class="hero-sub">Alpha CR Solutions builds purpose-built software for clinical research — Learning Management Systems, custom dashboards, and our Clinical Trial Patient Matcher.</p>
+      <p class="hero-sub">Alpha CR Solutions builds regulated, purpose-built software for clinical research — led by our <strong style="color:#fff;">Clinveo EDC</strong> data-capture platform, with an IWRS/RTSM for randomisation and drug supply, the Clinical Trial Patient Matcher, learning management systems and custom dashboards.</p>
       <div class="hero-actions">
-        <a href="#solutions" class="btn btn-primary">Explore Our Software <i class="fa-solid fa-arrow-down"></i></a>
-        <a href="contact.html" class="btn btn-ghost">Discuss a Custom Build</a>
+        <a href="https://demoedc.alphacrsolutions.co.za" target="_blank" rel="noopener" class="btn btn-primary"><i class="fa-solid fa-arrow-up-right-from-square"></i> View the live EDC demo</a>
+        <a href="#solutions" class="btn btn-ghost">Explore our software</a>
       </div>
       <div style="margin-top:28px;display:flex;gap:10px;flex-wrap:wrap;">
-        <span class="badge badge-teal"><i class="fa-solid fa-chalkboard-user"></i> LMS Development</span>
-        <span class="badge badge-teal"><i class="fa-solid fa-table-columns"></i> Custom Dashboards</span>
-        <span class="badge badge-gold"><i class="fa-solid fa-clock"></i> Patient Matcher (Coming Soon)</span>
+        <span class="badge badge-teal"><i class="fa-solid fa-database"></i> Clinveo EDC / CDMS</span>
+        <span class="badge badge-teal"><i class="fa-solid fa-shuffle"></i> IWRS / RTSM</span>
+        <span class="badge badge-teal"><i class="fa-solid fa-hospital-user"></i> Patient Matcher</span>
+        <span class="badge badge-teal"><i class="fa-solid fa-chalkboard-user"></i> LMS</span>
       </div>
     </div>
     <div class="sig-card">
@@ -284,9 +285,53 @@
   <div class="section-inner">
     <span class="section-label">Our Software</span>
     <h2 class="section-title">Software Built<br><em>for Clinical Research</em></h2>
-    <p class="section-lead">From Learning Management Systems to custom dashboards and our flagship Patient Matcher, Alpha CR Solutions builds software tailored to the way clinical trials actually run.</p>
+    <p class="section-lead">From our regulated Clinveo EDC and IWRS to the Patient Matcher, learning platforms and custom dashboards, Alpha CR Solutions builds software tailored to the way clinical trials actually run.</p>
     <div class="cards-grid-3" style="margin-top:48px;">
 
+      <div class="solution-card">
+        <div class="solution-card-top">
+          <div class="solution-icon" style="background:var(--teal-lt);color:var(--teal);"><i class="fa-solid fa-database"></i></div>
+          <div><h3>Clinveo EDC / CDMS</h3><p>Regulated electronic data capture</p></div>
+        </div>
+        <div class="solution-card-body">
+          <p>Our flagship data-capture platform — project-based eCRF design, data entry, edit checks and queries, with 21 CFR Part 11 controls, e-signatures and a full audit trail built in. <a href="#edc" style="color:var(--teal);font-weight:600;">See the EDC below ↓</a></p>
+          <ul class="service-list">
+            <li>Study &amp; eCRF designer with codelists</li>
+            <li>Data access groups and granular rights</li>
+            <li>Edit checks, queries and e-signatures</li>
+            <li>REST API and FHIR data exchange</li>
+            <li>Append-only audit trail (21 CFR Part 11)</li>
+          </ul>
+          <div class="solution-tags">
+            <span class="solution-tag">Next.js</span>
+            <span class="solution-tag">PostgreSQL</span>
+            <span class="solution-tag">FHIR</span>
+            <span class="solution-tag">Live demo</span>
+          </div>
+        </div>
+      </div>
+      <div class="solution-card">
+        <div class="solution-card-top">
+          <div class="solution-icon" style="background:var(--teal-lt);color:var(--teal);"><i class="fa-solid fa-shuffle"></i></div>
+          <div><h3>IWRS / RTSM</h3><p>Randomisation &amp; drug supply</p></div>
+        </div>
+        <div class="solution-card-body">
+          <p>An Interactive Response Technology system for subject randomisation and drug-supply management, integrated with the Clinveo EDC over a signed API so randomisation results write straight back to the eCRF.</p>
+          <ul class="service-list">
+            <li>Subject randomisation and stratification</li>
+            <li>Drug kit assignment and inventory</li>
+            <li>Signed EDC integration (HMAC webhooks)</li>
+            <li>Audited sessions and e-signatures</li>
+            <li>21 CFR Part 11 / GxP controls</li>
+          </ul>
+          <div class="solution-tags">
+            <span class="solution-tag">FastAPI</span>
+            <span class="solution-tag">PostgreSQL</span>
+            <span class="solution-tag">RTSM</span>
+            <span class="solution-tag">GxP</span>
+          </div>
+        </div>
+      </div>
       <div class="solution-card">
         <div class="solution-card-top">
           <div class="solution-icon" style="background:var(--teal-lt);color:var(--teal);"><i class="fa-solid fa-chalkboard-user"></i></div>
@@ -356,7 +401,7 @@
       <div class="solution-card">
         <div class="solution-card-top">
           <div class="solution-icon" style="background:var(--gold-lt);color:var(--gold);"><i class="fa-solid fa-hospital-user"></i></div>
-          <div><h3>Patient Eligibility Tools</h3><p>Custom matching for your protocol</p></div>
+          <div><h3>Clinical Trial Patient Matcher</h3><p>Eligibility matching &amp; recruitment</p></div>
         </div>
         <div class="solution-card-body">
           <p>Bespoke eligibility screening tools built around your specific protocol criteria, EHR system and site infrastructure — including integration with REDCap, Epic, Cerner or custom source systems.</p>
@@ -380,21 +425,85 @@
   </div>
 </section>
 
-<!-- FLAGSHIP PRODUCT -->
-<section class="bg-white" id="matcher">
+<!-- FLAGSHIP: CLINVEO EDC -->
+<section class="bg-white" id="edc">
   <div class="section-inner">
-    <span class="section-label">Flagship Product · Coming Soon</span>
-    <h2 class="section-title">Clinical Trial<br><em>Patient Matcher</em></h2>
-    <p class="section-lead">A product in active development at Alpha CR Solutions — an end-to-end system that parses trial protocols, queries hospital EHR systems, matches patients to eligibility criteria, and forecasts recruitment outcomes. Currently in development and not yet available for deployment.</p>
+    <span class="section-label">Flagship Platform · Live Demo</span>
+    <h2 class="section-title">Clinveo <em>EDC</em></h2>
+    <p class="section-lead">Our flagship clinical database system — a regulated, commercial-grade Electronic Data Capture and clinical data management platform. Design your study, capture and clean data, raise and resolve queries, and sign off — with 21 CFR Part 11 controls, e-signatures and a full audit trail built in from the ground up.</p>
 
     <div class="product-hero">
       <div class="product-hero-top">
         <div>
-          <div class="product-tag" style="background:rgba(201,138,43,.25);color:var(--gold);border-color:rgba(201,138,43,.4);"><i class="fa-solid fa-clock"></i> Coming Soon</div>
-          <h2>Clinical Trial Patient <em>Matcher</em></h2>
-          <p>The system will extract structured eligibility rules from a protocol's inclusion and exclusion criteria, query consented patient records across connected hospital EHRs, and return a ranked list of eligible patients with a full audit trail of every matching decision.</p>
+          <div class="product-tag"><i class="fa-solid fa-circle-check"></i> Live · try the demo</div>
+          <h2>A complete EDC / <em>CDMS</em></h2>
+          <p>Build projects and eCRFs in the online designer, define visits and edit checks, capture data with data-access-group scoping, and export to CSV, JSON or FHIR — all under an append-only audit trail with electronic signatures and revocable, audited sessions.</p>
           <div style="display:flex;gap:10px;flex-wrap:wrap;">
-            <a href="contact.html" class="btn btn-primary" style="font-size:13px;padding:10px 20px;">Register Interest <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="https://demoedc.alphacrsolutions.co.za" target="_blank" rel="noopener" class="btn btn-primary" style="font-size:13px;padding:10px 20px;"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open the live demo</a>
+            <a href="mailto:info@alphacrsolutions.co.za?subject=Clinveo%20EDC%20demo%20access" class="btn btn-outline" style="font-size:13px;padding:10px 20px;">Request access</a>
+          </div>
+          <p style="font-size:12px;color:var(--gray);margin-top:14px;">Demo access is provided to clients on request — email <a href="mailto:info@alphacrsolutions.co.za?subject=Clinveo%20EDC%20demo%20access" style="color:var(--teal);">info@alphacrsolutions.co.za</a>.</p>
+        </div>
+
+        <!-- Simulated UI preview (DEMO DATA) -->
+        <div class="product-screen">
+          <div class="screen-bar">
+            <div class="screen-dot" style="background:#e74c3c;"></div>
+            <div class="screen-dot" style="background:#f39c12;"></div>
+            <div class="screen-dot" style="background:#2ecc71;"></div>
+            <span class="screen-title">Clinveo EDC — demo preview</span>
+          </div>
+          <div style="text-align:center;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:12px;">Illustrative demo data — not real patients</div>
+          <div class="screen-row">
+            <div class="screen-card"><div class="sc-label">Subjects</div><div class="sc-val">42</div><div class="sc-sub">demo figure</div></div>
+            <div class="screen-card"><div class="sc-label">Forms clean</div><div class="sc-val">96%</div><div class="sc-sub">demo figure</div></div>
+            <div class="screen-card"><div class="sc-label">Open queries</div><div class="sc-val">11</div><div class="sc-sub">demo figure</div></div>
+          </div>
+          <ul class="screen-list">
+            <li class="match"><div class="dot"></div>APEX-HT2 · Visit 3 · signed</li>
+            <li class="match"><div class="dot"></div>NOVA-DM3 · Demographics · verified</li>
+            <li class="miss"><div class="dot"></div>RELIEF-RA1 · Vitals · query open</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="product-hero-bottom">
+        <div class="product-feature">
+          <div class="pf-icon"><i class="fa-solid fa-table-cells-large"></i></div>
+          <div><h5>Study &amp; eCRF Designer</h5><p>Build forms, typed fields, codelists and a visit schedule online, with a draft → publish lifecycle that locks forms for data entry.</p></div>
+        </div>
+        <div class="product-feature">
+          <div class="pf-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <div><h5>21 CFR Part 11 Controls</h5><p>Append-only audit trail, electronic signatures, revocable audited sessions and least-privilege RBAC — no hard deletes of regulated data.</p></div>
+        </div>
+        <div class="product-feature">
+          <div class="pf-icon"><i class="fa-solid fa-users-gear"></i></div>
+          <div><h5>Rights &amp; Data Access Groups</h5><p>Granular per-role permissions and data access groups scope every user to exactly the studies, sites and records they should see.</p></div>
+        </div>
+        <div class="product-feature">
+          <div class="pf-icon gold"><i class="fa-solid fa-plug"></i></div>
+          <div><h5>REST API + FHIR</h5><p>Versioned, token-secured API for metadata, events and records — export to CSV/JSON or exchange over FHIR, and integrate the IWRS.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PATIENT MATCHER -->
+<section class="bg-off" id="matcher">
+  <div class="section-inner">
+    <span class="section-label">Clinical Recruitment</span>
+    <h2 class="section-title">Clinical Trial<br><em>Patient Matcher</em></h2>
+    <p class="section-lead">An end-to-end recruitment system that parses trial protocols, queries hospital EHR systems, matches patients to eligibility criteria, and forecasts recruitment outcomes — pairing naturally with the Clinveo EDC to move eligible patients into your study.</p>
+
+    <div class="product-hero">
+      <div class="product-hero-top">
+        <div>
+          <div class="product-tag"><i class="fa-solid fa-hospital-user"></i> Recruitment</div>
+          <h2>Clinical Trial Patient <em>Matcher</em></h2>
+          <p>The system extracts structured eligibility rules from a protocol's inclusion and exclusion criteria, queries consented patient records across connected hospital EHRs, and returns a ranked list of eligible patients with a full audit trail of every matching decision.</p>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;">
+            <a href="contact.html" class="btn btn-primary" style="font-size:13px;padding:10px 20px;">Request a demo <i class="fa-solid fa-arrow-right"></i></a>
           </div>
         </div>
 
@@ -437,7 +546,7 @@
       <div class="product-hero-bottom">
         <div class="product-feature">
           <div class="pf-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-          <div><h5>AI Criteria Parser</h5><p>Designed to convert free-text I/E criteria into computable rules — reducing manual configuration.</p></div>
+          <div><h5>AI Criteria Parser</h5><p>Converts free-text I/E criteria into computable rules, reducing manual configuration.</p></div>
         </div>
         <div class="product-feature">
           <div class="pf-icon"><i class="fa-solid fa-hospital"></i></div>
@@ -449,7 +558,7 @@
         </div>
         <div class="product-feature">
           <div class="pf-icon"><i class="fa-solid fa-bell"></i></div>
-          <div><h5>Automated Alerts</h5><p>Intended to notify site coordinators of each potential match with a criteria breakdown and audit log.</p></div>
+          <div><h5>Automated Alerts</h5><p>Notifies site coordinators of each potential match with a criteria breakdown and audit log.</p></div>
         </div>
       </div>
     </div>
@@ -483,6 +592,16 @@
         <i class="fa-solid fa-chart-line" style="color:var(--gold);"></i>
         <h5 style="color:#fff;">System Dynamics</h5>
         <p style="color:rgba(255,255,255,.5);">Vensim-compatible SD model for recruitment forecasting and policy simulation.</p>
+      </div>
+      <div class="tech-card" style="background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.1);">
+        <i class="fa-brands fa-react" style="color:var(--teal);"></i>
+        <h5 style="color:#fff;">Next.js &amp; FastAPI</h5>
+        <p style="color:rgba(255,255,255,.5);">The Clinveo EDC and IWRS/RTSM application layer — audited, role-based and API-first.</p>
+      </div>
+      <div class="tech-card" style="background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.1);">
+        <i class="fa-solid fa-database" style="color:var(--teal);"></i>
+        <h5 style="color:#fff;">PostgreSQL</h5>
+        <p style="color:rgba(255,255,255,.5);">The regulated data store behind the EDC and IWRS — append-only audit, no hard deletes.</p>
       </div>
       <div class="tech-card" style="background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.1);">
         <i class="fa-brands fa-html5" style="color:var(--teal);"></i>
@@ -542,7 +661,7 @@
   <div class="cta-banner-inner">
     <div class="cta-text">
       <h2>Have a software need in clinical research?</h2>
-      <p>Tell us what you want to build, or register your interest in the Patient Matcher — we'd like to hear from you.</p>
+      <p>Book a Clinveo EDC demo, ask about the IWRS or Patient Matcher, or tell us what you want to build — we'd like to hear from you.</p>
     </div>
     <a href="contact.html" class="btn btn-white">Get in Touch →</a>
   </div>
@@ -572,9 +691,10 @@
       <li><a href="software.html">Software Solutions</a></li>
     </ul></div>
     <div class="footer-col"><h4>Software</h4><ul>
-      <li><a href="software.html#solutions">LMS Development</a></li>
-      <li><a href="software.html#solutions">Custom Dashboards</a></li>
-      <li><a href="software.html#matcher">Patient Matcher (soon)</a></li>
+      <li><a href="software.html#edc">Clinveo EDC / CDMS</a></li>
+      <li><a href="software.html#solutions">IWRS / RTSM</a></li>
+      <li><a href="software.html#matcher">Patient Matcher</a></li>
+      <li><a href="software.html#solutions">LMS &amp; Dashboards</a></li>
       <li><a href="contact.html">Discuss a Project</a></li>
     </ul></div>
     <div class="footer-col"><h4>Company</h4><ul>
