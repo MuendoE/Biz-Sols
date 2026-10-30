@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CRA Training &amp; Simulations | Alpha CR Solutions</title>
 <meta name="description" content="CRA training through real-site shadowing and online CRA simulations to build and assess monitoring competency. Plus patient engagement and recruitment support for clinical trials in South Africa.">
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="main.css?v=2">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
@@ -100,6 +100,28 @@
   font-size: 12px; color: var(--gold); font-weight: 600; margin-top: 10px;
 }
 </style>
+<style>
+/* Signature: CRA simulation console */
+.sig-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:22px;backdrop-filter:blur(8px);align-self:center;}
+.sig-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;}
+.sig-lbl{font-family:var(--font-mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:#5DCAA5;}
+.sig-live{width:7px;height:7px;border-radius:50%;background:#C98A2B;animation:sig-blink 1.6s ease-in-out infinite;}
+@keyframes sig-blink{50%{opacity:.25}}
+.sim-screen{background:rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:16px;font-family:var(--font-mono);}
+.sim-line{font-size:12px;line-height:1.5;color:rgba(255,255,255,.82);margin:0 0 9px;opacity:0;transform:translateY(4px);animation:sim-in 7s ease infinite;}
+.sim-line:last-child{margin-bottom:0;}
+.sim-arrow{color:#5DCAA5;margin-right:7px;}
+.sim-line.ok,.sim-line.ok .sim-arrow{color:#2FC4CE;}
+.sim-line.l1{animation-delay:.4s}
+.sim-line.l2{animation-delay:1.3s}
+.sim-line.l3{animation-delay:2.2s}
+.sim-line.l4{animation-delay:3.1s}
+.sim-line.l5{animation-delay:4.0s}
+@keyframes sim-in{0%,3%{opacity:0;transform:translateY(4px)}8%,92%{opacity:1;transform:none}100%{opacity:0}}
+.sim-cursor{margin-left:4px;color:#2FC4CE;animation:sim-cur 1s steps(1) infinite;}
+@keyframes sim-cur{50%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.sig-live,.sim-cursor{animation:none}.sim-line{opacity:1;transform:none;animation:none}}
+</style>
 </head>
 <body>
 
@@ -122,6 +144,7 @@
         <li><a href="software.html"><i class="fa-solid fa-laptop-code"></i>Software Solutions</a></li>
       </ul>
     </li>
+    <li><a href="partner-with-us.html">Partner With Us</a></li>
     <li><a href="enrolment.html">Enrol</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
@@ -137,6 +160,7 @@
   <a href="cra-training.html">CRA Training &amp; Simulations</a>
   <a href="gcp-training.html">GCP Training</a>
   <a href="software.html">Software Solutions</a>
+  <a href="partner-with-us.html">Partner With Us</a>
   <a href="enrolment.html">Enrol</a>
   <span class="mob-section">Company</span>
   <a href="about.html">About Us</a>
@@ -149,17 +173,21 @@
     <div>
       <p class="hero-breadcrumb">Services · CRA Training &amp; Simulations</p>
       <h1>Building &amp; Proving<br><em>CRA Competency</em></h1>
-      <p class="hero-sub">Alpha CR Solutions trains the next generation of Clinical Research Associates through real-site shadowing and online CRA simulations — and helps CROs and sponsors assess monitoring competency to reduce qualification oversight visits.</p>
+      <p class="hero-sub">Alpha CR Solutions trains the next generation of Clinical Research Associates through real-site shadowing and online CRA simulations, and helps CROs and sponsors assess monitoring competency to reduce qualification oversight visits.</p>
       <div class="hero-actions">
         <span class="paid-wrap"><a href="https://learn.alphacrsolutions.co.za/course/view.php?id=5" class="btn btn-primary">Start a Simulation <i class="fa-solid fa-lock"></i></a><span class="paid-tip"><a class="lms-card" href="https://learn.alphacrsolutions.co.za/course/view.php?id=5"><span class="lms-bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="lms-url">learn.alphacrsolutions.co.za</span></span><span class="lms-body"><span class="lms-logo">Alpha CR Solutions LMS</span><span class="lms-sub">Training portal &middot; browse course categories</span><span class="lms-cta">Access Simulations <i class="fa-solid fa-arrow-right"></i></span></span></a></span></span>
         <a href="#simulations" class="btn btn-ghost"><i class="fa-solid fa-chevron-down"></i> Learn More</a>
       </div>
     </div>
-    <div class="hero-stat-grid">
-      <div class="hero-stat-card"><div class="hsc-icon"><i class="fa-solid fa-user-graduate"></i></div><h4>CRA Training</h4><p>Training new CRAs through structured shadowing of real site visits.</p></div>
-      <div class="hero-stat-card"><div class="hsc-icon"><i class="fa-solid fa-laptop-code"></i></div><h4>Online Simulations</h4><p>Simulated monitoring scenarios completed online to build and test skills.</p></div>
-      <div class="hero-stat-card"><div class="hsc-icon"><i class="fa-solid fa-chart-line"></i></div><h4>Reduce QOVs</h4><p>Competency assessment that helps reduce qualification oversight visit frequency.</p></div>
-      <div class="hero-stat-card"><div class="hsc-icon"><i class="fa-solid fa-users"></i></div><h4>Patient Recruitment</h4><p>Patient engagement and recruitment support to keep enrolment on track.</p></div>
+    <div class="sig-card">
+      <div class="sig-head"><span class="sig-lbl">Simulation Console</span><span class="sig-live"></span></div>
+      <div class="sim-screen">
+        <p class="sim-line l1"><span class="sim-arrow">▸</span>Scenario 03 loaded · Phase II</p>
+        <p class="sim-line l2"><span class="sim-arrow">▸</span>Protocol deviation detected</p>
+        <p class="sim-line l3"><span class="sim-arrow">▸</span>Source discrepancy · Visit 4 vitals</p>
+        <p class="sim-line l4"><span class="sim-arrow">▸</span>Query raised to site</p>
+        <p class="sim-line l5 ok"><span class="sim-arrow">✓</span>Resolved · competency scored<span class="sim-cursor">▌</span></p>
+      </div>
     </div>
   </div>
 </section>
@@ -169,7 +197,7 @@
   <div class="section-inner">
     <span class="section-label">CRA Simulations</span>
     <h2 class="section-title">Online CRA Simulations<br><em>for Every Stage of a Career</em></h2>
-    <p class="section-lead">Our online CRA simulations recreate the real challenges of clinical monitoring — protocol deviations, source data discrepancies, difficult site interactions — in a controlled environment. They can be tailored to what a client wants to assess or teach.</p>
+    <p class="section-lead">Our online CRA simulations recreate the real challenges of clinical monitoring (protocol deviations, source data discrepancies, difficult site interactions) in a controlled environment. They can be tailored to what a client wants to assess or teach.</p>
 
     <h3 style="font-size:18px;color:var(--navy);margin:48px 0 0;">Who the Simulations Are For</h3>
     <div class="audience-grid">
@@ -204,7 +232,7 @@
       <div class="usecase-card">
         <div class="uc-icon"><i class="fa-solid fa-graduation-cap"></i></div>
         <h3>Skills Building for Individuals</h3>
-        <p>For individuals entering or growing in the CRA profession, simulations provide a safe, realistic environment to practise source data verification, protocol compliance checks, query management and site communication — without the risk of learning on a live trial.</p>
+        <p>For individuals entering or growing in the CRA profession, simulations provide a safe, realistic environment to practise source data verification, protocol compliance checks, query management and site communication, without the risk of learning on a live trial.</p>
         <ul class="service-list">
           <li>Realistic monitoring scenarios</li>
           <li>Self-paced online completion</li>
@@ -212,6 +240,7 @@
           <li>Evidence of competency for your CV</li>
         </ul>
         <span class="paid-wrap" style="display:block;margin-top:18px;"><a href="https://learn.alphacrsolutions.co.za/course/view.php?id=5" class="btn btn-primary" style="width:100%;justify-content:center;">Start a Simulation <i class="fa-solid fa-lock"></i></a><span class="paid-tip"><a class="lms-card" href="https://learn.alphacrsolutions.co.za/course/view.php?id=5"><span class="lms-bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="lms-url">learn.alphacrsolutions.co.za</span></span><span class="lms-body"><span class="lms-logo">Alpha CR Solutions LMS</span><span class="lms-sub">Training portal &middot; browse course categories</span><span class="lms-cta">Access Simulations <i class="fa-solid fa-arrow-right"></i></span></span></a></span></span>
+        <p style="margin-top:12px;font-size:12px;color:var(--gray);text-align:center;">Cancel before enrolment for an 80% refund. See our <a href="refund-and-cancellation-policy.html" style="color:var(--teal);">Refund &amp; Cancellation Policy</a>.</p>
       </div>
       <div class="usecase-card gold">
         <div class="uc-icon"><i class="fa-solid fa-chart-line"></i></div>
@@ -236,7 +265,7 @@
       <div>
         <span class="section-label">Field Training</span>
         <h2 class="section-title">Training New CRAs<br><em>on Real Site Work</em></h2>
-        <p style="font-size:15px;color:#3d4f6a;line-height:1.82;margin-bottom:16px;">Simulations build the foundation, but real competency comes from the field. Alpha CR Solutions trains new CRAs by having them shadow experienced monitors on real site visits — under supervision and within the bounds of site and sponsor agreements.</p>
+        <p style="font-size:15px;color:#3d4f6a;line-height:1.82;margin-bottom:16px;">Simulations build the foundation, but real competency comes from the field. Alpha CR Solutions trains new CRAs by having them shadow experienced monitors on real site visits, under supervision and within the bounds of site and sponsor agreements.</p>
         <p style="font-size:15px;color:#3d4f6a;line-height:1.82;margin-bottom:28px;">This structured, mentored approach bridges the gap between theory and practice, producing CRAs who are genuinely ready to monitor independently.</p>
         <a href="contact.html" class="btn btn-primary">Train With Us <i class="fa-solid fa-arrow-right"></i></a>
       </div>
@@ -293,9 +322,9 @@
     <p class="section-lead">Getting started is simple. Create your free account, request your place, and we'll enrol you as soon as your payment is confirmed.</p>
     <div class="enrol-pathway">
       <div class="pathway-step"><div class="step-circle"><span class="step-num">1</span><i class="fa-solid fa-user-plus"></i></div><p class="step-title">Create your account</p><p class="step-body">Register free on our learning portal at <a href="https://learn.alphacrsolutions.co.za" target="_blank" rel="noopener">learn.alphacrsolutions.co.za</a> and confirm your email.</p></div>
-      <div class="pathway-step"><div class="step-circle"><span class="step-num">2</span><i class="fa-solid fa-envelope"></i></div><p class="step-title">Request enrolment</p><p class="step-body">Email <a href="mailto:enrolments@alphacrsolutions.co.za?subject=Course%20enrolment%20request">enrolments@alphacrsolutions.co.za</a> with the course you'd like to join. We'll reply with the fee and banking details.</p></div>
-      <div class="pathway-step step-gold"><div class="step-circle"><span class="step-num">3</span><i class="fa-solid fa-building-columns"></i></div><p class="step-title">Make payment</p><p class="step-body">Pay by EFT or securely online by card (PayFast) using the details we send you.</p></div>
-      <div class="pathway-step step-gold"><div class="step-circle"><span class="step-num">4</span><i class="fa-solid fa-graduation-cap"></i></div><p class="step-title">Get enrolled &amp; start</p><p class="step-body">Once your payment reflects, we enrol you in the course — log in and start learning right away.</p></div>
+      <div class="pathway-step"><div class="step-circle"><span class="step-num">2</span><i class="fa-solid fa-envelope"></i></div><p class="step-title">Request enrolment</p><p class="step-body">Email <a href="mailto:enrolments@alphacrsolutions.co.za?subject=Course%20enrolment%20request">enrolments@alphacrsolutions.co.za</a> with the course you'd like to join. We'll reply with the fee.</p></div>
+      <div class="pathway-step step-gold"><div class="step-circle"><span class="step-num">3</span><i class="fa-solid fa-building-columns"></i></div><p class="step-title">Make payment</p><p class="step-body">Pay by EFT using the <a href="enrolment.html#payment">banking details on our Enrol page</a>, or securely online by card (PayFast).</p></div>
+      <div class="pathway-step step-gold"><div class="step-circle"><span class="step-num">4</span><i class="fa-solid fa-graduation-cap"></i></div><p class="step-title">Get enrolled &amp; start</p><p class="step-body">Once your payment reflects, we enrol you in the course. Log in and start learning right away.</p></div>
     </div>
   </div>
 </section>
@@ -323,7 +352,8 @@
       <div class="social-links">
         <a href="https://www.linkedin.com/company/alpha-cr-solutions/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a>
         <a href="https://x.com/acrsoln" target="_blank" rel="noopener" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-        <a href="mailto:info@alphacrsolutions.co.za"><i class="fa-regular fa-envelope"></i></a>
+        <a href="https://wa.me/27608837967" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="mailto:enquiries@alphacrsolutions.co.za"><i class="fa-regular fa-envelope"></i></a>
       </div>
     </div>
     <div class="footer-col"><h4>Services</h4><ul>
@@ -340,16 +370,18 @@
     </ul></div>
     <div class="footer-col"><h4>Company</h4><ul>
       <li><a href="about.html">About Alpha CR</a></li>
+      <li><a href="partner-with-us.html">Partner With Us</a></li>
       <li><a href="contact.html">Contact Us</a></li>
       <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      <li><a href="refund-and-cancellation-policy.html">Refund &amp; Cancellation Policy</a></li>
     </ul></div>
   </div>
   <div class="footer-bottom">
-    <span>© Alpha CR Solutions 2026 — All rights reserved · Johannesburg, South Africa</span>
-    <span><a href="privacy-policy.html">Privacy Policy</a> · <a href="terms-of-use.html">Terms of Use</a></span>
+    <span>© Alpha CR Solutions 2026. All rights reserved · Johannesburg, South Africa</span>
+    <span><a href="privacy-policy.html">Privacy Policy</a> · <a href="refund-and-cancellation-policy.html">Refund &amp; Cancellation Policy</a> · <a href="terms-of-use.html">Terms of Use</a></span>
   </div>
 </footer>
-<script src="main.js"></script>
-<script src="chat-widget.js?v=2" defer></script>
+<script src="main.js?v=2"></script>
+<script src="chat-widget.js?v=4" defer></script>
 </body>
 </html>

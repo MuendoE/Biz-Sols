@@ -1,6 +1,8 @@
 /* ================================================================
    ALPHA CR SOLUTIONS — MAIN STYLESHEET
-   Fonts: DM Serif Display + Inter (Google Fonts)
+   Fonts: Source Serif 4 (headlines) + Inter (body) + IBM Plex Mono
+          (reference numbers, stats, data — reads as a document/
+          registry code rather than decoration)
    Icons: Font Awesome 6
    ================================================================ */
 
@@ -22,13 +24,16 @@
   --radius:   10px;
   --shadow:   0 4px 24px rgba(0,0,0,0.07);
   --shadow-lg:0 12px 48px rgba(0,0,0,0.12);
+  --font-serif: 'Source Serif 4', serif;
+  --font-sans:  'Inter', sans-serif;
+  --font-mono:  'IBM Plex Mono', monospace;
 }
 
 /* ── Reset & Base ──────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; font-size: 16px; }
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-sans);
   color: var(--text);
   background: var(--white);
   line-height: 1.65;
@@ -40,11 +45,18 @@ a { text-decoration: none; color: inherit; }
 ul { list-style: none; }
 
 /* ── Typography ────────────────────────────────────────────────── */
-.serif { font-family: 'DM Serif Display', serif; }
-h1, h2, h3 { font-family: 'DM Serif Display', serif; line-height: 1.1; }
+.serif { font-family: var(--font-serif); }
+h1, h2, h3 { font-family: var(--font-serif); font-weight: 600; line-height: 1.1; }
 h1 { font-size: clamp(34px, 5vw, 58px); }
 h2 { font-size: clamp(26px, 3.5vw, 42px); }
 h3 { font-size: clamp(18px, 2vw, 22px); }
+
+/* Reference numbers, stats, and data figures — never body or headline text */
+.mono {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
 
 /* ── Section shells ────────────────────────────────────────────── */
 section { padding: 80px 5%; }
@@ -101,7 +113,7 @@ section { padding: 80px 5%; }
   background: linear-gradient(135deg, var(--teal), var(--teal-dk));
   border-radius: 8px;
   display: flex; align-items: center; justify-content: center;
-  font-family: 'DM Serif Display', serif;
+  font-family: var(--font-serif);
   font-size: 20px; color: #fff; flex-shrink: 0;
 }
 .nav-logo-text { font-size: 15px; font-weight: 600; color: #fff; line-height: 1.2; }
@@ -245,8 +257,9 @@ section { padding: 80px 5%; }
 }
 .stat-item:last-child { border-right: none; }
 .stat-num {
-  font-family: 'DM Serif Display', serif;
-  font-size: 38px; color: #fff; line-height: 1; margin-bottom: 6px;
+  font-family: var(--font-mono);
+  font-weight: 600; letter-spacing: -0.02em;
+  font-size: 36px; color: #fff; line-height: 1; margin-bottom: 6px;
 }
 .stat-label { font-size: 12px; color: rgba(255,255,255,.75); font-weight: 500; }
 
@@ -321,7 +334,7 @@ section { padding: 80px 5%; }
 }
 .feature-block { padding: 4px; }
 .feature-num {
-  font-family: 'DM Serif Display', serif;
+  font-family: var(--font-serif);
   font-size: 48px; color: var(--teal); opacity: .35;
   line-height: 1; margin-bottom: 12px;
 }
@@ -433,7 +446,7 @@ section { padding: 80px 5%; }
   background: var(--off); border-left: 4px solid var(--teal);
   border-radius: 0 10px 10px 0; padding: 28px 32px; margin: 32px 0;
 }
-.quote-block p { font-family: 'DM Serif Display', serif; font-size: 20px; color: var(--navy); font-style: italic; line-height: 1.5; }
+.quote-block p { font-family: var(--font-serif); font-size: 20px; color: var(--navy); font-style: italic; line-height: 1.5; }
 .quote-block cite { display: block; margin-top: 14px; font-size: 13px; font-weight: 600; color: var(--teal); font-style: normal; }
 
 /* ── Values grid ───────────────────────────────────────────────── */
@@ -468,7 +481,7 @@ section { padding: 80px 5%; }
   width: 90px; height: 90px; border-radius: 50%;
   background: rgba(255,255,255,.12); border: 2px solid rgba(255,255,255,.25);
   display: flex; align-items: center; justify-content: center;
-  font-family: 'DM Serif Display', serif;
+  font-family: var(--font-serif);
   font-size: 36px; color: #fff;
 }
 .team-info { padding: 24px; }
@@ -482,7 +495,7 @@ section { padding: 80px 5%; }
   max-width: 1200px; margin: 0 auto;
   display: flex; align-items: center; justify-content: space-between; gap: 32px;
 }
-.cta-text h2 { font-family: 'DM Serif Display', serif; font-size: clamp(22px,2.5vw,34px); color: #fff; margin-bottom: 10px; }
+.cta-text h2 { font-family: var(--font-serif); font-size: clamp(22px,2.5vw,34px); color: #fff; margin-bottom: 10px; }
 .cta-text p  { font-size: 15px; color: rgba(255,255,255,.8); }
 
 /* ── Contact form ──────────────────────────────────────────────── */
@@ -544,7 +557,7 @@ select.form-control { appearance: none; cursor: pointer; }
   display: flex; align-items: center; justify-content: center; font-size: 26px;
 }
 .recognition-body h2 {
-  font-family: 'DM Serif Display', serif;
+  font-family: var(--font-serif);
   font-size: clamp(20px,2.2vw,28px); color: var(--navy);
   margin: 12px 0 10px;
 }
@@ -628,15 +641,33 @@ select.form-control { appearance: none; cursor: pointer; }
 /* ── How to enrol — 4-step flow (reuses .pathway-step visuals) ──── */
 .enrol-pathway {
   display: grid; grid-template-columns: repeat(4,1fr);
-  margin-top: 52px; position: relative; gap: 0 8px;
+  margin-top: 52px; position: relative; gap: 0 8px; overflow: visible;
 }
 .enrol-pathway::before {
   content: ''; position: absolute; top: 34px;
-  left: calc(100%/8); right: calc(100%/8); height: 2px;
+  left: calc(100%/8); width: calc(100% - 2*(100%/8)); height: 2px;
   background: linear-gradient(90deg, var(--teal), var(--gold)); z-index: 0;
+}
+.enrol-pathway::after {
+  content: ''; position: absolute; top: 28px;
+  left: calc(100%/8 - 7px); width: 14px; height: 14px;
+  border-top: 2px solid var(--gold); border-right: 2px solid var(--gold);
+  transform: rotate(45deg); z-index: 0; pointer-events: none;
+  animation: enrol-arrow-travel 12s linear infinite;
+  opacity: 1;
 }
 .enrol-pathway .step-body a { color: var(--teal); font-weight: 600; text-decoration: none; }
 .enrol-pathway .step-body a:hover { text-decoration: underline; }
+@keyframes enrol-arrow-travel {
+  0% { left: calc(100%/8 - 7px); opacity: 1; }
+  16% { left: calc(100%/8 - 7px); opacity: 1; }
+  20% { left: calc(3*(100%/8) - 7px); opacity: 1; }
+  36% { left: calc(3*(100%/8) - 7px); opacity: 1; }
+  40% { left: calc(5*(100%/8) - 7px); opacity: 1; }
+  56% { left: calc(5*(100%/8) - 7px); opacity: 1; }
+  60% { left: calc(7*(100%/8) - 7px); opacity: 1; }
+  100% { left: calc(7*(100%/8) - 7px); opacity: 1; }
+}
 @media (max-width: 900px) {
   .enrol-pathway { grid-template-columns: 1fr 1fr; gap: 34px 12px; }
   .enrol-pathway::before { display: none; }
@@ -665,3 +696,45 @@ select.form-control { appearance: none; cursor: pointer; }
 .faq-item .faq-a { padding: 0 22px 18px; }
 .faq-item .faq-a p { font-size: 14px; color: var(--gray); line-height: 1.7; margin: 0; }
 .faq-item .faq-a a { color: var(--teal); font-weight: 600; }
+
+/* ── Dynamic upgrades: nav condense, card motion, stat readouts ──── */
+.site-nav { transition: height .28s ease, box-shadow .28s ease, border-color .28s ease; border-bottom: 1px solid transparent; }
+.site-nav .nav-logo-mark { transition: width .28s ease, height .28s ease, font-size .28s ease; }
+.site-nav.scrolled { height: 54px; box-shadow: 0 2px 20px rgba(0,0,0,0.42); border-bottom-color: rgba(255,255,255,0.09); }
+.site-nav.scrolled .nav-logo-mark { width: 32px; height: 32px; font-size: 17px; }
+
+.card-icon { transition: transform .28s cubic-bezier(.2,.7,.2,1), background .25s ease, color .25s ease; }
+.service-card { transition: box-shadow .25s, transform .2s, border-color .25s; }
+.service-card:hover { border-color: rgba(0,155,168,.4); }
+.service-card:hover .card-icon { transform: translateY(-3px) scale(1.08); }
+
+/* Stats read as measured instrument values */
+.stats-strip .stat-num { position: relative; display: inline-block; padding-bottom: 9px; }
+.stats-strip .stat-num::after {
+  content: ''; position: absolute; left: 50%; bottom: 0;
+  width: 20px; height: 2px; background: rgba(255,255,255,.5);
+  transform: translateX(-50%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-nav, .site-nav .nav-logo-mark, .card-icon, .service-card { transition: none; }
+  .service-card:hover .card-icon { transform: none; }
+}
+
+/* ── Cohesive motion layer (all inner pages) ────────────────────── */
+/* Hero content settles in on load */
+.hero .hero-inner > * { opacity: 0; animation: hero-enter .65s cubic-bezier(.2,.7,.2,1) forwards; }
+.hero .hero-inner > *:nth-child(1) { animation-delay: .05s; }
+.hero .hero-inner > *:nth-child(2) { animation-delay: .14s; }
+.hero .hero-inner > *:nth-child(3) { animation-delay: .23s; }
+.hero .hero-inner > *:nth-child(4) { animation-delay: .32s; }
+@keyframes hero-enter { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+
+/* Sections reveal as they scroll into view (elements tagged by main.js) */
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s cubic-bezier(.2,.7,.2,1); }
+.reveal.revealed { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero .hero-inner > * { opacity: 1; animation: none; }
+  .reveal, .reveal.revealed { opacity: 1; transform: none; transition: none; }
+}

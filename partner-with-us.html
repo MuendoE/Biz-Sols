@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Partner With Us | Alpha CR Solutions</title>
+<meta name="description" content="Partner with Alpha CR Solutions to become a high-performing clinical trial site: regulatory and ethics support, study start-up, GCP training, SDR-first monitoring and clinical research software for investigator sites across South Africa.">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="main.css?v=2">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<style>
+/* Capability number tags */
+.cap-num { font-family: var(--font-mono); font-size: 11px; font-weight: 600; color: var(--teal); border: 1px solid var(--teal-lt); border-radius: 6px; padding: 2px 8px; margin-right: 8px; vertical-align: 2px; }
+.cap-num.gold { color: var(--gold); border-color: rgba(201,138,43,.3); }
+/* Quote card (mirrors the deck) */
+.quote-card { background: var(--navy); border-radius: 12px; padding: 28px; display: flex; align-items: center; }
+.quote-card p { font-family: var(--font-serif); font-style: italic; font-size: 18px; color: #fff; line-height: 1.55; }
+/* What your site gains */
+.gain-row { display: flex; align-items: flex-start; gap: 14px; padding: 16px 2px; border-bottom: 1px solid var(--border); }
+.gain-row:last-child { border-bottom: none; }
+.gain-row .g-ic { width: 30px; height: 30px; border-radius: 8px; background: var(--teal-lt); color: var(--teal); display: flex; align-items: center; justify-content: center; font-size: 13px; flex-shrink: 0; margin-top: 2px; }
+.gain-row p { font-size: 15.5px; color: #3d4f6a; line-height: 1.6; }
+.gain-row p strong { color: var(--navy); }
+/* Five-step partnership pathway */
+.partner-steps { display: grid; grid-template-columns: repeat(5,1fr); gap: 14px; margin-top: 44px; }
+.p-step { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 22px 18px; transition: box-shadow .25s, transform .2s, border-color .25s; }
+.p-step:hover { box-shadow: var(--shadow-lg); transform: translateY(-3px); border-color: rgba(0,155,168,.4); }
+.p-step .s-num { font-family: var(--font-mono); font-size: 22px; font-weight: 600; color: var(--teal); margin-bottom: 10px; }
+.p-step h3 { font-size: 14.5px; font-weight: 700; color: var(--navy); margin-bottom: 7px; line-height: 1.3; }
+.p-step p { font-size: 12.5px; color: var(--gray); line-height: 1.6; }
+@media (max-width: 1040px) { .partner-steps { grid-template-columns: repeat(2,1fr) } }
+@media (max-width: 600px) { .partner-steps { grid-template-columns: 1fr } }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-mark">α</div>
+    <div class="nav-logo-text">Alpha CR Solutions<span>Clinical Research</span></div>
+  </a>
+  <ul class="nav-menu">
+    <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+    <li>
+      <a href="#">Services <i class="fa-solid fa-chevron-down"></i></a>
+      <ul class="nav-dropdown">
+        <li><a href="regulatory-consultancy.html"><i class="fa-solid fa-shield-halved"></i>Regulatory Consultancy</a></li>
+        <li><a href="study-startup.html"><i class="fa-solid fa-rocket"></i>Study Start-up &amp; Site Support</a></li>
+        <li><a href="cra-monitoring.html"><i class="fa-solid fa-magnifying-glass-chart"></i>CRA &amp; Monitoring</a></li>
+        <li><a href="cra-training.html"><i class="fa-solid fa-user-graduate"></i>CRA Training &amp; Simulations</a></li>
+        <li><a href="gcp-training.html"><i class="fa-solid fa-graduation-cap"></i>GCP Training</a></li>
+        <li><a href="software.html"><i class="fa-solid fa-laptop-code"></i>Software Solutions</a></li>
+      </ul>
+    </li>
+    <li class="active"><a href="partner-with-us.html">Partner With Us</a></li>
+    <li><a href="enrolment.html">Enrol</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+  </ul>
+  <button class="nav-hamburger" id="nav-burger"><span></span><span></span><span></span></button>
+</nav>
+<nav class="nav-mobile" id="nav-mobile">
+  <a href="index.html">Home</a>
+  <span class="mob-section">Services</span>
+  <a href="regulatory-consultancy.html">Regulatory Consultancy</a>
+  <a href="study-startup.html">Study Start-up &amp; Site Support</a>
+  <a href="cra-monitoring.html">CRA &amp; Monitoring</a>
+  <a href="cra-training.html">CRA Training &amp; Simulations</a>
+  <a href="gcp-training.html">GCP Training</a>
+  <a href="software.html">Software Solutions</a>
+  <a href="partner-with-us.html">Partner With Us</a>
+  <a href="enrolment.html">Enrol</a>
+  <span class="mob-section">Company</span>
+  <a href="about.html">About Us</a>
+  <a href="contact.html" class="mob-cta">Contact Us</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner" style="max-width:860px;text-align:center;margin:0 auto;">
+    <p class="hero-breadcrumb">Site Partnership · For Investigator Sites</p>
+    <h1>Become a High-Performing Clinical Trial Site,<br><em>with a partner beside you</em></h1>
+    <p class="hero-sub" style="margin:0 auto 36px;max-width:600px;">Alpha CR Solutions helps investigator sites across South Africa build, and keep, the capability to run high-quality clinical trials, from first submission to final close-out.</p>
+    <div class="hero-actions" style="justify-content:center;">
+      <a href="contact.html#enquiry-form" class="btn btn-primary">Start a Conversation <i class="fa-solid fa-arrow-right"></i></a>
+      <a href="#how" class="btn btn-ghost"><i class="fa-solid fa-chevron-down"></i> How It Works</a>
+    </div>
+  </div>
+</section>
+
+<!-- THE CHALLENGE -->
+<section class="bg-off">
+  <div class="section-inner">
+    <span class="section-label">The Challenge</span>
+    <h2 class="section-title">Running Trials Well is <em>Hard on a Site</em></h2>
+    <p class="section-lead">Modern trials demand current regulatory submissions, GCP-trained staff, disciplined SOPs, continuous inspection-readiness and dedicated technology, all while the clinic keeps caring for patients.</p>
+    <div class="cards-grid-2">
+      <div class="service-card">
+        <div class="card-icon"><i class="fa-solid fa-seedling"></i></div>
+        <h3>New sites: eager, but unsure how to start</h3>
+        <p>Keen to run a first study, but how do you become compliant and credible to sponsors? The regulatory pathway, the SOPs, the training and the systems all have to exist before the first patient is screened.</p>
+      </div>
+      <div class="service-card">
+        <div class="card-icon gold"><i class="fa-solid fa-gauge-high"></i></div>
+        <h3>Established sites: capable, but at capacity</h3>
+        <p>Stretched staff, ageing SOPs, manual data handling and recurring audit findings cap how much you can take on and hold you back from more complex, higher-value studies.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- A PARTNER, NOT A PRODUCT -->
+<section class="bg-white">
+  <div class="section-inner intro-grid">
+    <div class="intro-body">
+      <span class="section-label">Who We Are</span>
+      <h2 class="section-title">A Partner,<br><em>Not a Product</em></h2>
+      <p>Alpha CR Solutions is a South African clinical research consultancy based in Johannesburg. Rather than sell disconnected one-off services, we work alongside your team across the <strong>full trial lifecycle</strong>, from first submission to final close-out, to make your site trial-ready and keep it inspection-ready.</p>
+      <p>We support both <strong>naive sites</strong> preparing for their first trials and <strong>established sites</strong> expanding their capacity or therapeutic scope.</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:22px;">
+        <span class="badge badge-teal"><i class="fa-solid fa-certificate"></i> ICH E6(R3) GCP</span>
+        <span class="badge badge-teal"><i class="fa-solid fa-shield-halved"></i> SAHPRA &amp; NHREC</span>
+        <span class="badge badge-teal"><i class="fa-solid fa-magnifying-glass"></i> SDR-First</span>
+        <span class="badge badge-gold"><i class="fa-solid fa-laptop-code"></i> In-House Software</span>
+      </div>
+    </div>
+    <div>
+      <div class="quote-block">
+        <p>"One partner across the whole lifecycle, so nothing falls between the gaps."</p>
+        <cite>The Alpha CR partnership principle</cite>
+      </div>
+      <div style="margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+        <div style="background:var(--white);border:1px solid var(--border);border-radius:10px;padding:20px;text-align:center;">
+          <div style="font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:34px;color:var(--teal);line-height:1;">15+</div>
+          <div style="font-size:12px;color:var(--gray);margin-top:6px;font-weight:500;">Therapeutic areas covered</div>
+        </div>
+        <div style="background:var(--white);border:1px solid var(--border);border-radius:10px;padding:20px;text-align:center;">
+          <div style="font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:34px;color:var(--teal);line-height:1;">5</div>
+          <div style="font-size:12px;color:var(--gray);margin-top:6px;font-weight:500;">Capabilities, one accountable partner</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FIVE CAPABILITIES -->
+<section class="bg-off" id="capabilities">
+  <div class="section-inner">
+    <span class="section-label">What We Bring</span>
+    <h2 class="section-title">Five Capabilities, <em>One Accountable Partner</em></h2>
+    <p class="section-lead">Everything a site needs to run trials to modern standards, provided as one coherent partnership rather than five separate vendors.</p>
+    <div class="cards-grid-3">
+      <div class="service-card">
+        <div class="card-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <h3><span class="cap-num">01</span>Regulatory &amp; Ethics</h3>
+        <p>SAHPRA Clinical Trial Applications, NHREC-registered IRB and site IEC submissions, and ICF development, POPIA-aligned throughout.</p>
+        <a href="regulatory-consultancy.html" class="card-link">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="service-card">
+        <div class="card-icon"><i class="fa-solid fa-rocket"></i></div>
+        <h3><span class="cap-num">02</span>Study Start-up</h3>
+        <p>SOPs, source-document design, vendor qualification, permits and a TMF-ready site file, so your first patient can be screened without delay.</p>
+        <a href="study-startup.html" class="card-link">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="service-card">
+        <div class="card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+        <h3><span class="cap-num">03</span>GCP &amp; CRA Training</h3>
+        <p>ICH E6(R3) and SA GCP 2020 training, TransCelerate mutually recognised, with an HPCSA-accredited Foundation Course (24 CEUs), plus CRA simulations and competency assessment for your whole team.</p>
+        <a href="gcp-training.html" class="card-link">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="service-card">
+        <div class="card-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+        <h3><span class="cap-num">04</span>CRA &amp; Monitoring</h3>
+        <p>An SDR-first, risk-based monitoring approach that builds data integrity from day one and keeps your site inspection-ready.</p>
+        <a href="cra-monitoring.html" class="card-link">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="service-card" style="background:var(--gold-lt);border-color:rgba(201,138,43,.3);">
+        <div class="card-icon gold"><i class="fa-solid fa-laptop-code"></i></div>
+        <h3><span class="cap-num gold">05</span>Clinical Software</h3>
+        <p>Clinveo EDC, IWRS/RTSM, the Patient Matcher and a hosted learning platform. This technology is made available to our partner sites.</p>
+        <a href="software.html" class="card-link">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="quote-card">
+        <p>"Everything a sponsor expects to see at a site, built once and kept current."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOFTWARE DIFFERENTIATOR -->
+<section class="bg-navy">
+  <div class="section-inner">
+    <span class="section-label">The Differentiator</span>
+    <h2 class="section-title" style="color:#fff;">Software Few Consultancies <em>Can Offer a Site</em></h2>
+    <p class="section-lead">We build our own clinical research software, so partner sites run on a modern, compliant stack without licence barriers or a build project of their own.</p>
+    <div class="cards-grid-2">
+      <div class="service-card dark" style="border-color:rgba(201,138,43,.35);">
+        <div class="card-icon gold"><i class="fa-solid fa-database"></i></div>
+        <h3>Clinveo EDC / CDMS: Flagship</h3>
+        <p>Regulated electronic data capture: study &amp; eCRF design, edit checks, e-signatures and an append-only audit trail, with 21 CFR Part 11 controls. Live demo available on request.</p>
+        <a href="software.html#edc" class="card-link">See the EDC <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="service-card dark">
+        <div class="card-icon"><i class="fa-solid fa-shuffle"></i></div>
+        <h3>IWRS / RTSM</h3>
+        <p>Subject randomisation and drug-supply management, integrated with the EDC over a signed API so results write straight back to the eCRF.</p>
+      </div>
+      <div class="service-card dark">
+        <div class="card-icon"><i class="fa-solid fa-hospital-user"></i></div>
+        <h3>Clinical Trial Patient Matcher</h3>
+        <p>Matches protocol eligibility criteria to consented EHR records and returns a ranked list of eligible patients, with a full audit trail.</p>
+      </div>
+      <div class="service-card dark">
+        <div class="card-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+        <h3>LMS &amp; Dashboards</h3>
+        <p>A hosted learning platform for GCP and protocol training, plus live recruitment and data dashboards with sponsor-ready reporting views.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT YOUR SITE GAINS -->
+<section class="bg-white">
+  <div class="section-inner" style="max-width:860px;">
+    <span class="section-label">Why It Matters to You</span>
+    <h2 class="section-title">What Your Site <em>Gains</em></h2>
+    <div style="margin-top:34px;">
+      <div class="gain-row"><div class="g-ic"><i class="fa-solid fa-check"></i></div><p><strong>Trial-ready faster</strong>: with an experienced partner, not a manual.</p></div>
+      <div class="gain-row"><div class="g-ic"><i class="fa-solid fa-check"></i></div><p><strong>Fewer audit findings and cleaner data</strong>: through SDR-first monitoring.</p></div>
+      <div class="gain-row"><div class="g-ic"><i class="fa-solid fa-check"></i></div><p><strong>A GCP-certified team</strong>: with documented evidence of competency.</p></div>
+      <div class="gain-row"><div class="g-ic"><i class="fa-solid fa-check"></i></div><p><strong>Purpose-built trial technology</strong>: without the capital outlay.</p></div>
+      <div class="gain-row"><div class="g-ic"><i class="fa-solid fa-check"></i></div><p><strong>One accountable partner</strong>: across the full trial lifecycle.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW A PARTNERSHIP TAKES SHAPE -->
+<section class="bg-off" id="how">
+  <div class="section-inner">
+    <span class="section-label">Getting Started</span>
+    <h2 class="section-title">How a Partnership <em>Takes Shape</em></h2>
+    <p class="section-lead">It starts with a free, no-obligation site-readiness conversation, and builds from there at your pace.</p>
+    <div class="partner-steps">
+      <div class="p-step"><div class="s-num">1</div><h3>Discovery call</h3><p>A relaxed conversation about your site, team and goals. No preparation needed.</p></div>
+      <div class="p-step"><div class="s-num">2</div><h3>Readiness assessment</h3><p>A short, plain-English gap analysis against GCP and regulatory standards.</p></div>
+      <div class="p-step"><div class="s-num">3</div><h3>Enablement plan</h3><p>A prioritised roadmap across regulatory, SOPs, training and technology.</p></div>
+      <div class="p-step"><div class="s-num">4</div><h3>Activation</h3><p>Submissions lodged, SOPs written, staff trained, software set up and ready.</p></div>
+      <div class="p-step"><div class="s-num">5</div><h3>Ongoing partnership</h3><p>Monitoring support, refresher training, technology and readiness upkeep.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- STANDARDS -->
+<section class="bg-white" style="padding:60px 5%;">
+  <div class="section-inner" style="text-align:center;">
+    <span class="section-label">Trust</span>
+    <h2 class="section-title">Standards We <em>Work To</em></h2>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:28px;">
+      <span class="badge badge-teal">ICH E6(R3) GCP</span>
+      <span class="badge badge-teal">SAHPRA</span>
+      <span class="badge badge-teal">NHREC · IRB / IEC</span>
+      <span class="badge badge-teal">POPIA</span>
+      <span class="badge badge-teal">TransCelerate GCP</span>
+      <span class="badge badge-teal">SA GCP 2020 · HPCSA accredited</span>
+      <span class="badge badge-teal">21 CFR Part 11 (software)</span>
+      <span class="badge badge-teal">SDR-first methodology</span>
+      <span class="badge badge-gold">15+ therapeutic areas</span>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner">
+  <div class="cta-banner-inner">
+    <div class="cta-text">
+      <h2>Let's talk about your site</h2>
+      <p>Tell us where you are today, and we'll show you where a partnership could take you, starting with a free site-readiness conversation.</p>
+    </div>
+    <a href="contact.html#enquiry-form" class="btn btn-white">Start the Conversation →</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="nav-logo" style="margin-bottom:4px;">
+        <div class="nav-logo-mark">α</div>
+        <div class="nav-logo-text" style="color:#fff;">Alpha CR Solutions<span>Clinical Research</span></div>
+      </a>
+      <p>Full-service clinical research consultancy based in Johannesburg, South Africa.</p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/company/alpha-cr-solutions/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://x.com/acrsoln" target="_blank" rel="noopener" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://wa.me/27608837967" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="mailto:enquiries@alphacrsolutions.co.za"><i class="fa-regular fa-envelope"></i></a>
+      </div>
+    </div>
+    <div class="footer-col"><h4>Services</h4><ul>
+      <li><a href="regulatory-consultancy.html">Regulatory Consultancy</a></li>
+      <li><a href="study-startup.html">Study Start-up &amp; Site Support</a></li>
+      <li><a href="cra-monitoring.html">CRA &amp; Monitoring</a></li>
+      <li><a href="cra-training.html">CRA Training &amp; Simulations</a></li>
+      <li><a href="gcp-training.html">GCP Training</a></li>
+      <li><a href="software.html">Software Solutions</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Expertise</h4><ul>
+      <li><a href="#">Oncology</a></li><li><a href="#">Infectious Diseases</a></li>
+      <li><a href="#">Endocrinology</a></li><li><a href="#">Cardiovascular</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Company</h4><ul>
+      <li><a href="about.html">About Alpha CR</a></li>
+      <li><a href="partner-with-us.html">Partner With Us</a></li>
+      <li><a href="enrolment.html">Enrol</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      <li><a href="refund-and-cancellation-policy.html">Refund &amp; Cancellation Policy</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span>© Alpha CR Solutions 2026. All rights reserved · Johannesburg, South Africa</span>
+    <span><a href="privacy-policy.html">Privacy Policy</a> · <a href="refund-and-cancellation-policy.html">Refund &amp; Cancellation Policy</a> · <a href="terms-of-use.html">Terms of Use</a></span>
+  </div>
+</footer>
+<script src="main.js?v=2"></script>
+<script src="chat-widget.js?v=4" defer></script>
+</body>
+</html>

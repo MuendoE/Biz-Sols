@@ -4,15 +4,49 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Enrol | Alpha CR Solutions</title>
-<meta name="description" content="How to enrol in Alpha CR Solutions GCP training and CRA simulations — register on our learning portal, request enrolment, and pay by EFT or online card via PayFast.">
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta name="description" content="How to enrol in Alpha CR Solutions GCP training and CRA simulations: register on our learning portal, request enrolment, and pay by EFT or online card via PayFast.">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="main.css?v=2">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<style>
+/* Signature: enrolment pathway activates step by step */
+.enrol-pathway .step-circle::after{content:'';position:absolute;inset:-6px;border-radius:50%;border:2px solid var(--teal);opacity:0;pointer-events:none;animation:enrol-pulse 12s ease-in-out infinite;}
+.enrol-pathway .pathway-step.step-gold .step-circle::after{border-color:var(--gold);}
+.enrol-pathway .pathway-step:nth-child(1) .step-circle::after{animation-delay:0s}
+.enrol-pathway .pathway-step:nth-child(2) .step-circle::after{animation-delay:3.2s}
+.enrol-pathway .pathway-step:nth-child(3) .step-circle::after{animation-delay:6.4s}
+.enrol-pathway .pathway-step:nth-child(4) .step-circle::after{animation-delay:9.6s}
+@keyframes enrol-pulse{0%{opacity:0;transform:scale(.85)}8%{opacity:.35;transform:scale(.95)}20%{opacity:.75;transform:scale(1)}45%{opacity:.3;transform:scale(1.2)}70%{opacity:0;transform:scale(1.45)}100%{opacity:0;transform:scale(1.45)}}
+@media (prefers-reduced-motion:reduce){.enrol-pathway .step-circle::after{display:none;}}
+/* EFT banking details */
+.bank-details { margin: 6px 0 0; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+.bank-details > div { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 11px 16px; border-bottom: 1px solid var(--border); font-size: 14px; }
+.bank-details > div:last-child { border-bottom: none; }
+.bank-details dt { color: var(--gray); flex-shrink: 0; }
+.bank-details dd { margin: 0; color: var(--navy); font-weight: 600; text-align: right; }
+.bank-details dd.mono { font-family: var(--font-mono); letter-spacing: .02em; }
+.service-card .bank-note { margin: 16px 0 18px; }
+.service-card .bank-note a { color: var(--teal); font-weight: 600; }
+/* PayFast course picker */
+.pf-form label { display: block; font-size: 12.5px; font-weight: 600; color: var(--navy); margin: 16px 0 6px; }
+.pf-form select, .pf-form input[type=number] { width: 100%; padding: 12px 14px; font: inherit; font-size: 14px; color: var(--navy); background: var(--white); border: 1.5px solid var(--border); border-radius: 8px; }
+.pf-form select:focus, .pf-form input[type=number]:focus { outline: none; border-color: var(--teal); box-shadow: 0 0 0 3px rgba(0,155,168,.15); }
+.pf-summary { margin: 18px 0 0; padding: 14px 16px; background: var(--off); border: 1px solid var(--border); border-radius: 10px; }
+.pf-unit { font-size: 13px; color: var(--gray); }
+.pf-total { display: flex; justify-content: space-between; align-items: baseline; margin-top: 6px; font-size: 14px; color: var(--navy); }
+.pf-total strong { font-family: var(--font-mono); font-size: 24px; }
+.pf-hint { font-size: 12.5px; color: var(--gray); margin: 8px 0 0; min-height: 18px; }
+.pf-error { font-size: 13px; color: #b3261e; margin: 8px 0 0; }
+.pf-pay { margin-top: 14px; }
+.pf-pay input[type=image] { cursor: pointer; max-width: 100%; height: auto; }
+.pf-status { margin: 0 0 14px; padding: 12px 14px; border-radius: 10px; font-size: 13.5px; line-height: 1.6; background: var(--teal-lt); color: var(--navy); border: 1px solid rgba(0,155,168,.25); }
+.pf-status.warn { background: var(--gold-lt); border-color: rgba(201,138,43,.3); }
+</style>
 </head>
 <body>
 
@@ -35,6 +69,7 @@
         <li><a href="software.html"><i class="fa-solid fa-laptop-code"></i>Software Solutions</a></li>
       </ul>
     </li>
+    <li><a href="partner-with-us.html">Partner With Us</a></li>
     <li class="active"><a href="enrolment.html">Enrol</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
@@ -50,6 +85,7 @@
   <a href="cra-training.html">CRA Training &amp; Simulations</a>
   <a href="gcp-training.html">GCP Training</a>
   <a href="software.html">Software Solutions</a>
+  <a href="partner-with-us.html">Partner With Us</a>
   <a href="enrolment.html">Enrol</a>
   <span class="mob-section">Company</span>
   <a href="about.html">About Us</a>
@@ -72,9 +108,9 @@
     <p class="section-lead">Getting started is simple. We'll enrol you as soon as your payment is confirmed.</p>
     <div class="enrol-pathway">
       <div class="pathway-step"><div class="step-circle"><span class="step-num">1</span><i class="fa-solid fa-user-plus"></i></div><p class="step-title">Create your account</p><p class="step-body">Register free on our learning portal at <a href="https://learn.alphacrsolutions.co.za" target="_blank" rel="noopener">learn.alphacrsolutions.co.za</a> and confirm your email.</p></div>
-      <div class="pathway-step"><div class="step-circle"><span class="step-num">2</span><i class="fa-solid fa-envelope"></i></div><p class="step-title">Request enrolment</p><p class="step-body">Email <a href="mailto:enrolments@alphacrsolutions.co.za?subject=Course%20enrolment%20request">enrolments@alphacrsolutions.co.za</a> with the course you'd like to join. We'll confirm the fee and payment options.</p></div>
-      <div class="pathway-step step-gold"><div class="step-circle"><span class="step-num">3</span><i class="fa-solid fa-credit-card"></i></div><p class="step-title">Make payment</p><p class="step-body">Pay the course fee by <strong>EFT</strong> or securely <strong>online by card via PayFast</strong> — whichever suits you.</p></div>
-      <div class="pathway-step step-gold"><div class="step-circle"><span class="step-num">4</span><i class="fa-solid fa-graduation-cap"></i></div><p class="step-title">Get enrolled &amp; start</p><p class="step-body">Once your payment reflects, we enrol you in the course — log in and start learning right away.</p></div>
+      <div class="pathway-step"><div class="step-circle"><span class="step-num">2</span><i class="fa-solid fa-envelope"></i></div><p class="step-title">Request enrolment</p><p class="step-body">Email <a href="mailto:enrolments@alphacrsolutions.co.za?subject=Course%20enrolment%20request">enrolments@alphacrsolutions.co.za</a> with the course you'd like to join. Fees are on our <a href="gcp-training.html#foundation-course">GCP training page</a>, and we quote CRA simulations and groups of 10 or more.</p></div>
+      <div class="pathway-step step-gold"><div class="step-circle"><span class="step-num">3</span><i class="fa-solid fa-credit-card"></i></div><p class="step-title">Make payment</p><p class="step-body">Pay the course fee by <strong>EFT</strong> using the banking details below, or securely <strong>online by card via PayFast</strong>. Then send your proof of payment, with your name and the course, to <a href="mailto:payments@alphacrsolutions.co.za?subject=Proof%20of%20payment">payments@alphacrsolutions.co.za</a>.</p></div>
+      <div class="pathway-step step-gold"><div class="step-circle"><span class="step-num">4</span><i class="fa-solid fa-graduation-cap"></i></div><p class="step-title">Get enrolled &amp; start</p><p class="step-body">Once we receive your proof of payment, we enrol you in the course and you will receive an email confirmation. Log in and start learning right away.</p></div>
     </div>
   </div>
 </section>
@@ -83,20 +119,55 @@
 <section class="bg-off" id="payment">
   <div class="section-inner">
     <h2 class="section-title">Payment <em>Options</em></h2>
-    <p class="section-lead">Choose whichever is most convenient — pay by EFT, or securely online by card via PayFast.</p>
+    <p class="section-lead">Choose whichever is most convenient: pay by EFT, or securely online by card via PayFast.</p>
     <div class="cards-grid-2" style="margin-top:40px;">
       <div class="service-card">
         <div class="card-icon"><i class="fa-solid fa-building-columns"></i></div>
         <h3>EFT / Bank Transfer</h3>
-        <p>Request enrolment and we'll email you our banking details. Pay the course fee by EFT, and we'll enrol you as soon as your payment reflects.</p>
-        <a href="mailto:enrolments@alphacrsolutions.co.za?subject=Course%20enrolment%20request" class="btn btn-outline" style="margin-top:6px;">Request banking details</a>
+        <p>Pay the course fee by EFT using the banking details below, then email your proof of payment. We enrol you as soon as your payment reflects.</p>
+        <dl class="bank-details">
+          <div><dt>Account holder</dt><dd>Alpha CR Solutions (Pty) Ltd</dd></div>
+          <div><dt>Bank</dt><dd>First National Bank (FNB)</dd></div>
+          <div><dt>Account type</dt><dd>Business Account</dd></div>
+          <div><dt>Account number</dt><dd class="mono">63213970767</dd></div>
+          <div><dt>Branch code</dt><dd class="mono">255355</dd></div>
+          <div><dt>SWIFT code</dt><dd class="mono">FIRNZAJJ</dd></div>
+        </dl>
+        <p class="bank-note">Use your full name as the payment reference. Then email your proof of payment and the course name to <a href="mailto:payments@alphacrsolutions.co.za?subject=Proof%20of%20payment">payments@alphacrsolutions.co.za</a>.</p>
+        <a href="mailto:payments@alphacrsolutions.co.za?subject=Proof%20of%20payment" class="btn btn-outline">Send proof of payment</a>
       </div>
       <div class="service-card">
         <div class="card-icon"><i class="fa-solid fa-credit-card"></i></div>
         <h3>Online Card Payment</h3>
-        <p>Pay instantly and securely by debit or credit card through PayFast, South Africa's trusted online payment gateway.</p>
-        <!-- TODO: replace href="#" with your PayFast payment link/button URL -->
-        <a href="#" class="btn btn-primary" style="margin-top:6px;">Pay with PayFast <i class="fa-solid fa-arrow-right"></i></a>
+        <p>Choose your course, then pay instantly and securely by debit or credit card through PayFast, South Africa's trusted online payment gateway.</p>
+        <div class="pf-status" id="pf-status" role="status" hidden></div>
+        <noscript><p class="bank-note">Card payment needs JavaScript. Please pay by EFT instead, or email <a href="mailto:enrolments@alphacrsolutions.co.za?subject=Course%20enrolment">enrolments@alphacrsolutions.co.za</a>.</p></noscript>
+        <form id="pf-form" class="pf-form" name="PayFastPayNowForm" action="https://payment.payfast.io/eng/process" method="post" hidden>
+          <input required type="hidden" name="cmd" value="_paynow">
+          <input required type="hidden" name="receiver" pattern="[0-9]" value="35819753">
+          <input type="hidden" name="return_url" value="https://alphacrsolutions.co.za/enrolment.html?payment=thanks">
+          <input type="hidden" name="cancel_url" value="https://alphacrsolutions.co.za/enrolment.html?payment=cancelled">
+          <input type="hidden" name="notify_url" value="https://alphacrsolutions.co.za/contact.html">
+          <input required type="hidden" name="amount" value="3500.00">
+          <input required type="hidden" name="item_name" maxlength="100" value="SA-GCP Foundation Course">
+          <input type="hidden" name="item_description" maxlength="255" value="Full SA-GCP accredited course">
+          <label for="pf-course">Course</label>
+          <select id="pf-course">
+            <option value="sa-gcp">SA-GCP Foundation Course (HPCSA accredited), R3,500</option>
+            <option value="ich">ICH E6(R3) GCP course, R575</option>
+          </select>
+          <label for="pf-qty">Number of people</label>
+          <input id="pf-qty" type="number" inputmode="numeric" min="1" max="500" step="1" value="1">
+          <div class="pf-summary" aria-live="polite">
+            <div class="pf-unit" id="pf-unit">R3,500.00 per person</div>
+            <div class="pf-total"><span>Total to pay</span><strong id="pf-total">R3,500.00</strong></div>
+          </div>
+          <p class="pf-hint" id="pf-hint"></p>
+          <p class="pf-error" id="pf-error" role="alert" hidden></p>
+          <div class="pf-pay">
+            <input type="image" src="https://my.payfast.io/images/buttons/PayNow/Dark-Large-PayNow.png" alt="Pay Now" title="Pay Now with Payfast">
+          </div>
+        </form>
         <p style="font-size:12px;color:var(--gray-lt);margin:12px 0 0;"><i class="fa-solid fa-lock"></i> Secured by PayFast</p>
       </div>
     </div>
@@ -115,23 +186,35 @@
       </details>
       <details class="faq-item">
         <summary>How much do the GCP training and CRA simulation courses cost?</summary>
-        <div class="faq-a"><p>Course fees vary by programme. Email <a href="mailto:enrolments@alphacrsolutions.co.za?subject=Course%20fees">enrolments@alphacrsolutions.co.za</a> with the course you are interested in and we will send current pricing and payment details.</p></div>
+        <div class="faq-a"><p><strong>Good Clinical Practice Foundation Course:</strong> R3,500 per person.<br><strong>Groups of 10 or more:</strong> 10% discount, R3,150 per person.<br><strong>ICH E6(R3) GCP course:</strong> R575 per person.<br>CRA simulation fees vary by programme. Email <a href="mailto:enrolments@alphacrsolutions.co.za?subject=Course%20fees">enrolments@alphacrsolutions.co.za</a> with the simulation you are interested in and we will send current pricing and payment details.</p></div>
       </details>
       <details class="faq-item">
         <summary>What payment methods do you accept?</summary>
         <div class="faq-a"><p>You can pay by <strong>EFT / bank transfer</strong> or by <strong>debit or credit card online via PayFast</strong>, South Africa&rsquo;s trusted payment gateway.</p></div>
       </details>
       <details class="faq-item">
+        <summary>Can I cancel and get a refund?</summary>
+        <div class="faq-a"><p>Yes. If you cancel <strong>before enrolment</strong> takes effect you receive an <strong>80% refund</strong> (we retain a 20% administrative fee). Once you have been given access to the course, fees are non-refundable. Email <a href="mailto:refunds@alphacrsolutions.co.za?subject=Cancellation%20request">refunds@alphacrsolutions.co.za</a> to cancel. Full details are in our <a href="refund-and-cancellation-policy.html">Refund &amp; Cancellation Policy</a>.</p></div>
+      </details>
+      <details class="faq-item">
         <summary>Do I receive a certificate?</summary>
         <div class="faq-a"><p>Yes. On completing the course and its assessment you receive an Alpha CR Solutions certificate of completion, evidencing the training you have undertaken.</p></div>
       </details>
       <details class="faq-item">
+        <summary>What happens if I fail three attempts?</summary>
+        <div class="faq-a"><p>Please contact <a href="mailto:enrolments@alphacrsolutions.co.za?subject=Final%20assessment%20attempts">Alpha CR Solutions</a>. We will discuss options on an individual basis.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Is the GCP course HPCSA accredited?</summary>
+        <div class="faq-a"><p>Yes. Our <strong>Good Clinical Practice Foundation Course</strong> is accredited by HPCSA and you will earn CPD points for the activity. HPCSA-registered participants earn <strong>24 CEUs</strong>: 16 General and 8 Ethics, Human Rights and Medical Law, on passing the final assessment at 80%. Delegates who are not registered with the HPCSA, such as pharmacists and nurses, receive an attendance certificate only. <a href="gcp-training.html#foundation-course">See the course details</a>.</p></div>
+      </details>
+      <details class="faq-item">
         <summary>Is the GCP training aligned with ICH GCP?</summary>
-        <div class="faq-a"><p>Yes &mdash; our Good Clinical Practice training is aligned with <strong>ICH E6(R3) GCP</strong> and contextualised for South African investigative sites and SAHPRA requirements.</p></div>
+        <div class="faq-a"><p>Yes, our Good Clinical Practice training is aligned with <strong>ICH E6(R3) GCP</strong> and contextualised for South African investigative sites and SAHPRA requirements.</p></div>
       </details>
       <details class="faq-item">
         <summary>Who are the courses for?</summary>
-        <div class="faq-a"><p>Our training suits Clinical Research Associates (CRAs), investigators, study coordinators and site staff &mdash; from new entrants to experienced clinical research professionals looking to build or prove their competency.</p></div>
+        <div class="faq-a"><p>Our training suits Clinical Research Associates (CRAs), investigators, study coordinators and site staff, from new entrants to experienced clinical research professionals looking to build or prove their competency.</p></div>
       </details>
     </div>
   </div>
@@ -142,9 +225,12 @@
   "@type": "FAQPage",
   "mainEntity": [
     { "@type": "Question", "name": "How do I enrol in an Alpha CR Solutions course?", "acceptedAnswer": { "@type": "Answer", "text": "Create a free account on our learning portal, email enrolments@alphacrsolutions.co.za to request your course, pay the fee by EFT or online card, and we enrol you as soon as your payment reflects." } },
-    { "@type": "Question", "name": "How much do the GCP training and CRA simulation courses cost?", "acceptedAnswer": { "@type": "Answer", "text": "Course fees vary by programme. Email enrolments@alphacrsolutions.co.za with the course you are interested in and we will send current pricing and payment details." } },
+    { "@type": "Question", "name": "How much do the GCP training and CRA simulation courses cost?", "acceptedAnswer": { "@type": "Answer", "text": "Good Clinical Practice Foundation Course: R3,500 per person. Groups of 10 or more: 10% discount, R3,150 per person. ICH E6(R3) GCP course: R575 per person. CRA simulation fees vary by programme. Email enrolments@alphacrsolutions.co.za with the simulation you are interested in and we will send current pricing and payment details." } },
     { "@type": "Question", "name": "What payment methods do you accept?", "acceptedAnswer": { "@type": "Answer", "text": "You can pay by EFT / bank transfer or by debit or credit card online via PayFast, South Africa's trusted payment gateway." } },
+    { "@type": "Question", "name": "Can I cancel and get a refund?", "acceptedAnswer": { "@type": "Answer", "text": "If you cancel before enrolment takes effect you receive an 80% refund (we retain a 20% administrative fee). Once you have been given access to the course, fees are non-refundable. Email refunds@alphacrsolutions.co.za to cancel. Full details are in our Refund & Cancellation Policy." } },
     { "@type": "Question", "name": "Do I receive a certificate?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. On completing the course and its assessment you receive an Alpha CR Solutions certificate of completion, evidencing the training you have undertaken." } },
+    { "@type": "Question", "name": "What happens if I fail three attempts?", "acceptedAnswer": { "@type": "Answer", "text": "Please contact Alpha CR Solutions. We will discuss options on an individual basis." } },
+    { "@type": "Question", "name": "Is the GCP course HPCSA accredited?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Our Good Clinical Practice Foundation Course is accredited by HPCSA and you will earn CPD points for the activity. HPCSA-registered participants earn 24 CEUs: 16 General and 8 Ethics, Human Rights and Medical Law, on passing the final assessment at 80%. Delegates who are not registered with the HPCSA, such as pharmacists and nurses, receive an attendance certificate only." } },
     { "@type": "Question", "name": "Is the GCP training aligned with ICH GCP?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Our Good Clinical Practice training is aligned with ICH E6(R3) GCP and contextualised for South African investigative sites and SAHPRA requirements." } },
     { "@type": "Question", "name": "Who are the courses for?", "acceptedAnswer": { "@type": "Answer", "text": "Our training suits Clinical Research Associates (CRAs), investigators, study coordinators and site staff, from new entrants to experienced clinical research professionals looking to build or prove their competency." } }
   ]
@@ -174,7 +260,8 @@
       <div class="social-links">
         <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
         <a href="https://x.com/acrsoln" target="_blank" rel="noopener" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-        <a href="mailto:info@alphacrsolutions.co.za"><i class="fa-regular fa-envelope"></i></a>
+        <a href="https://wa.me/27608837967" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="mailto:enquiries@alphacrsolutions.co.za"><i class="fa-regular fa-envelope"></i></a>
       </div>
     </div>
     <div class="footer-col"><h4>Services</h4><ul>
@@ -191,17 +278,81 @@
     </ul></div>
     <div class="footer-col"><h4>Company</h4><ul>
       <li><a href="about.html">About Alpha CR</a></li>
+      <li><a href="partner-with-us.html">Partner With Us</a></li>
       <li><a href="enrolment.html">Enrol</a></li>
       <li><a href="contact.html">Contact Us</a></li>
       <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      <li><a href="refund-and-cancellation-policy.html">Refund &amp; Cancellation Policy</a></li>
     </ul></div>
   </div>
   <div class="footer-bottom">
-    <span>© Alpha CR Solutions 2026 — All rights reserved · Johannesburg, South Africa</span>
-    <span><a href="privacy-policy.html">Privacy Policy</a> · <a href="terms-of-use.html">Terms of Use</a></span>
+    <span>© Alpha CR Solutions 2026. All rights reserved · Johannesburg, South Africa</span>
+    <span><a href="privacy-policy.html">Privacy Policy</a> · <a href="refund-and-cancellation-policy.html">Refund &amp; Cancellation Policy</a> · <a href="terms-of-use.html">Terms of Use</a></span>
   </div>
 </footer>
-<script src="main.js"></script>
-<script src="chat-widget.js?v=2" defer></script>
+<script src="main.js?v=2"></script>
+<script>
+/* PayFast course picker: sets the amount, item name and description from the chosen course and number of people. */
+(function () {
+  var form = document.getElementById('pf-form');
+  if (!form) return;
+  var COURSES = {
+    'sa-gcp': { name: 'SA-GCP Foundation Course', cents: 350000, desc: 'Full SA-GCP accredited course', groupMin: 10, groupOff: 0.10 },
+    'ich': { name: 'ICH-GCP E6 (R3)', cents: 57500, desc: 'The TransCelerate recognised ICH-GCP certificate. Applies to both SA and rest of the world.', groupMin: 0, groupOff: 0 }
+  };
+  var sel = document.getElementById('pf-course'), qtyEl = document.getElementById('pf-qty');
+  var unitEl = document.getElementById('pf-unit'), totalEl = document.getElementById('pf-total');
+  var hintEl = document.getElementById('pf-hint'), errEl = document.getElementById('pf-error');
+  var amount = form.elements['amount'], itemName = form.elements['item_name'], itemDesc = form.elements['item_description'];
+
+  function money(c) {
+    var p = (c / 100).toFixed(2).split('.');
+    return 'R' + p[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',') + '.' + p[1];
+  }
+  function read() {
+    var c = COURSES[sel.value], raw = String(qtyEl.value).trim(), q = parseInt(raw, 10);
+    var valid = !!c && /^\d+$/.test(raw) && q >= 1 && q <= 500;
+    return { c: c, q: q, valid: valid };
+  }
+  function update() {
+    var r = read();
+    if (!r.valid) { errEl.hidden = false; errEl.textContent = 'Enter a whole number of people from 1 to 500.'; return false; }
+    errEl.hidden = true;
+    var c = r.c, group = c.groupMin && r.q >= c.groupMin;
+    var unit = group ? Math.round(c.cents * (1 - c.groupOff)) : c.cents;
+    var total = unit * r.q;
+    amount.value = (total / 100).toFixed(2);
+    itemName.value = (r.q > 1 ? c.name + ' x ' + r.q : c.name).substring(0, 100);
+    itemDesc.value = (r.q > 1 ? r.q + ' participants at ' + money(unit) + ' each' + (group ? ' (10% group rate). ' : '. ') : '') + c.desc;
+    itemDesc.value = itemDesc.value.substring(0, 255);
+    unitEl.textContent = money(unit) + ' per person' + (group ? ' (10% group discount applied)' : '');
+    totalEl.textContent = money(total);
+    hintEl.textContent = (c.groupMin && !group) ? 'Groups of ' + c.groupMin + ' or more get 10% off, automatically.' : '';
+    return true;
+  }
+  sel.addEventListener('change', update);
+  qtyEl.addEventListener('input', update);
+  form.addEventListener('submit', function (e) { if (!update()) { e.preventDefault(); qtyEl.focus(); } });
+
+  var params = new URLSearchParams(window.location.search);
+  var preset = params.get('course');
+  if (preset && COURSES[preset]) sel.value = preset;
+  update();
+  form.hidden = false;
+
+  var status = document.getElementById('pf-status'), pay = params.get('payment');
+  var contact = 'payments@alphacrsolutions.co.za';
+  if (status && pay === 'thanks') {
+    status.innerHTML = 'Thank you for your payment. Please email your name, the course and your learning portal email to <a href="mailto:' + contact + '?subject=Proof%20of%20payment">' + contact + '</a> so we can enrol you.';
+    status.hidden = false;
+  } else if (status && pay === 'cancelled') {
+    status.className = 'pf-status warn';
+    status.textContent = 'Your card payment was cancelled and you have not been charged.';
+    status.hidden = false;
+  }
+  if (pay) { var sec = document.getElementById('payment'); if (sec) sec.scrollIntoView(); }
+})();
+</script>
+<script src="chat-widget.js?v=4" defer></script>
 </body>
 </html>

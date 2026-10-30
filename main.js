@@ -29,18 +29,50 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  /* ── Scroll-reveal (simple intersection observer) ──────────── */
-  const revealEls = document.querySelectorAll('.reveal');
-  if (revealEls.length) {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('revealed');
-          observer.unobserve(e.target);
+  /* ── Scroll-reveal: sections settle in as they enter view ──── */
+  const prefersReduced = window.matchMedia &&
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!prefersReduced) {
+    // Only tag content that starts below the fold, so nothing above it flickers.
+    const belowFold = (el) => el.getBoundingClientRect().top > window.innerHeight * 0.82;
+    const stagger = ['.cards-grid-2', '.cards-grid-3', '.cards-grid-4', '.enrol-pathway', '.faq-list'];
+    const items = [];
+    const tag = (el, delay) => {
+      if (!belowFold(el)) return;
+      if (delay) el.style.transitionDelay = delay + 's';
+      el.classList.add('reveal');
+      items.push(el);
+    };
+
+    document.querySelectorAll('section:not(.hero):not(.hero-home) .section-inner').forEach(inner => {
+      Array.from(inner.children).forEach(child => {
+        if (stagger.some(sel => child.matches(sel))) {
+          Array.from(child.children).forEach((card, i) => tag(card, Math.min(i * 0.07, 0.35)));
+        } else {
+          tag(child, 0);
         }
       });
-    }, { threshold: 0.12 });
-    revealEls.forEach(el => observer.observe(el));
+    });
+
+    // Reveal anything at or above the viewport — robust against anchor jumps and fast scrolls.
+    const reveal = () => {
+      const trigger = window.innerHeight * 0.9;
+      for (let i = items.length - 1; i >= 0; i--) {
+        if (items[i].getBoundingClientRect().top < trigger) {
+          items[i].classList.add('revealed');
+          items.splice(i, 1);
+        }
+      }
+    };
+    let ticking = false;
+    const onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => { reveal(); ticking = false; });
+    };
+    reveal();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
   }
 
   /* ── Animated stat counters ────────────────────────────────── */
@@ -69,42 +101,13 @@ document.addEventListener('DOMContentLoaded', () => {
     counters.forEach(c => counterObserver.observe(c));
   }
 
-  /* ── Contact form feedback ─────────────────────────────────── */
-  const form = document.getElementById('contact-form');
-  if (form) {
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const btn = form.querySelector('.form-submit');
-      const originalText = btn.textContent;
-      btn.textContent = 'Sending…';
-      btn.disabled = true;
-      try {
-        const res = await fetch(form.action, {
-          method: 'POST',
-          body: new FormData(form),
-          headers: { 'Accept': 'application/json' }
-        });
-        if (res.ok) {
-          form.innerHTML = `
-            <div style="text-align:center;padding:48px 0;">
-              <div style="width:64px;height:64px;border-radius:50%;background:var(--teal-lt);color:var(--teal);
-                          display:flex;align-items:center;justify-content:center;
-                          font-size:28px;margin:0 auto 20px;">
-                <i class="fa-solid fa-check"></i>
-              </div>
-              <h3 style="color:var(--navy);margin-bottom:12px;">Message sent!</h3>
-              <p style="color:var(--gray);font-size:15px;">
-                Thank you for reaching out. We'll be in touch within one business day.
-              </p>
-            </div>`;
-        } else {
-          btn.textContent = 'Try again';
-          btn.disabled = false;
-        }
-      } catch {
-        btn.textContent = originalText;
-        btn.disabled = false;
-      }
-    });
+  /* ── Nav condenses after leaving the hero ──────────────────── */
+  const siteNav = document.querySelector('.site-nav');
+  if (siteNav) {
+    const onNavScroll = () => siteNav.classList.toggle('scrolled', window.scrollY > 36);
+    onNavScroll();
+    window.addEventListener('scroll', onNavScroll, { passive: true });
   }
+
+  /* Contact form is handled by an embedded Microsoft Form (see contact.html). */
 });
