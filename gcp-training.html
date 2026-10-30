@@ -124,6 +124,12 @@
 .cpd-pricing { margin-top: 48px; }
 .cpd-pricing h3 { font-size: 20px; color: var(--navy); margin-bottom: 18px; }
 .cpd-price-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
+.cpd-price-group { display: flex; flex-direction: column; }
+.cpd-price-group.wide { grid-column: span 2; }
+.cpd-group-label { display: flex; align-items: center; gap: 12px; font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 12px; }
+.cpd-group-label::after { content: ""; flex: 1; height: 1px; background: var(--border); }
+.cpd-price-sub { display: grid; grid-template-columns: 1fr; gap: 16px; flex: 1; }
+.cpd-price-group.wide .cpd-price-sub { grid-template-columns: repeat(2,1fr); }
 .cpd-price { display: flex; flex-direction: column; background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 24px; }
 .cpd-price.gold { background: var(--gold-lt); border-color: rgba(201,138,43,.3); }
 .cpd-price .cp-label { font-family: var(--font-mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--teal); }
@@ -132,7 +138,7 @@
 .cpd-price .cp-unit { font-size: 12.5px; color: var(--gray); }
 .cpd-price .cp-desc { font-size: 13.5px; color: var(--gray); line-height: 1.65; margin: 14px 0 20px; }
 .cpd-price .btn { margin-top: auto; align-self: flex-start; }
-@media (max-width: 900px) { .cpd-facts { grid-template-columns: repeat(2,1fr); } .cpd-steps, .cpd-price-grid { grid-template-columns: 1fr; } }
+@media (max-width: 900px) { .cpd-facts { grid-template-columns: repeat(2,1fr); } .cpd-steps, .cpd-price-grid { grid-template-columns: 1fr; } .cpd-price-group.wide { grid-column: auto; } .cpd-price-group.wide .cpd-price-sub { grid-template-columns: 1fr; } }
 @media (max-width: 520px) { .cpd-facts { grid-template-columns: 1fr; } }
 </style>
 <style>
@@ -281,26 +287,36 @@
     <div class="cpd-pricing">
       <h3>Pricing</h3>
       <div class="cpd-price-grid">
-        <div class="cpd-price">
-          <span class="cp-label">Individual training</span>
-          <div class="cp-amount">R3,500</div>
-          <div class="cp-unit">per person</div>
-          <p class="cp-desc">Good Clinical Practice Foundation Course. HPCSA accredited, 24 CEUs.</p>
-          <a href="enrolment.html?course=sa-gcp#payment" class="btn btn-primary">Enrol and pay <i class="fa-solid fa-arrow-right"></i></a>
+        <div class="cpd-price-group wide">
+          <div class="cpd-group-label">SA-GCP</div>
+          <div class="cpd-price-sub">
+            <div class="cpd-price">
+              <span class="cp-label">Individual training</span>
+              <div class="cp-amount">R3,500</div>
+              <div class="cp-unit">per person</div>
+              <p class="cp-desc">Good Clinical Practice Foundation Course. HPCSA accredited, 24 CEUs.</p>
+              <a href="enrolment.html?course=sa-gcp#payment" class="btn btn-primary">Enrol and pay <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="cpd-price gold">
+              <span class="cp-label">Group training</span>
+              <div class="cp-amount">R3,150</div>
+              <div class="cp-unit">per person, groups of 10 or more</div>
+              <p class="cp-desc">A 10% group discount on the individual rate for groups of 10 or more people.</p>
+              <a href="mailto:enrolments@alphacrsolutions.co.za?subject=GCP%20group%20training%20quote" class="btn btn-outline">Request a group quote</a>
+            </div>
+          </div>
         </div>
-        <div class="cpd-price gold">
-          <span class="cp-label">Group training</span>
-          <div class="cp-amount">R3,150</div>
-          <div class="cp-unit">per person, groups of 10 or more</div>
-          <p class="cp-desc">A 10% group discount on the individual rate for groups of 10 or more people.</p>
-          <a href="mailto:enrolments@alphacrsolutions.co.za?subject=GCP%20group%20training%20quote" class="btn btn-outline">Request a group quote</a>
-        </div>
-        <div class="cpd-price">
-          <span class="cp-label">ICH E6(R3) GCP course</span>
-          <div class="cp-amount">R575</div>
-          <div class="cp-unit">per person</div>
-          <p class="cp-desc">The TransCelerate recognised ICH-GCP certificate. Applies to both SA and the rest of the world.</p>
-          <a href="enrolment.html?course=ich#payment" class="btn btn-outline">Enrol and pay</a>
+        <div class="cpd-price-group">
+          <div class="cpd-group-label">ICH-GCP</div>
+          <div class="cpd-price-sub">
+            <div class="cpd-price">
+              <span class="cp-label">ICH E6(R3) GCP course</span>
+              <div class="cp-amount">R575</div>
+              <div class="cp-unit">per person</div>
+              <p class="cp-desc">The TransCelerate recognised ICH-GCP certificate. Applies to both SA and the rest of the world.</p>
+              <a href="enrolment.html?course=ich#payment" class="btn btn-outline">Enrol and pay</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
