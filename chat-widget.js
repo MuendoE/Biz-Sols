@@ -4,6 +4,11 @@
 (function () {
   "use strict";
 
+  // ---- WhatsApp ---------------------------------------------------------
+  var WA_NUMBER = "27608837967";
+  var WA_DISPLAY = "+27 60 883 7967";
+  var WA_LINK = "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent("Hello Alpha CR Solutions, I would like to find out more.");
+
   // ---- Knowledge base ---------------------------------------------------
   var KB = {
     gcp: {
@@ -68,8 +73,8 @@
     },
     contact: {
       label: "Contact a consultant",
-      answer: "Happy to connect you with the team. Email info@alphacrsolutions.co.za for general enquiries or enrolments@alphacrsolutions.co.za for training, or use our contact form.",
-      links: [["Contact page", "contact.html"], ["Email info", "mailto:info@alphacrsolutions.co.za"]],
+      answer: "Happy to connect you with the team. WhatsApp us on " + WA_DISPLAY + ", email enquiries@alphacrsolutions.co.za for general enquiries or enrolments@alphacrsolutions.co.za for training, or use our contact form.",
+      links: [["WhatsApp us", WA_LINK], ["Contact page", "contact.html"], ["Email enquiries", "mailto:enquiries@alphacrsolutions.co.za"]],
       next: []
     }
   };
@@ -88,7 +93,7 @@
     [/\b(start[- ]?up|mta|permit|permits|vendor|sop|sops|site set)\b/i, "startup"],
     [/\b(software|patient match|matcher|dashboard|data tool)\b/i, "software"],
     [/\b(about|who are|where.*based|location|johannesburg)\b/i, "about"],
-    [/\b(contact|consultant|talk|speak|call|phone|reach|get in touch)\b/i, "contact"]
+    [/\b(contact|consultant|talk|speak|call|phone|whatsapp|reach|get in touch)\b/i, "contact"]
   ];
 
   var GREETING = "Hi! I'm the Alpha CR assistant. I can help with our services, training and enrolment. What would you like to know?";
@@ -98,6 +103,14 @@
   var css = [
     ".acr-fab{position:fixed;right:20px;bottom:20px;width:58px;height:58px;border-radius:50%;background:#009BA8;border:none;cursor:pointer;box-shadow:0 6px 20px rgba(0,0,0,.25);display:flex;align-items:center;justify-content:center;z-index:99998;transition:transform .15s,background .15s}",
     ".acr-fab:hover{background:#007e89;transform:translateY(-2px)}",
+    ".acr-wa{position:fixed;right:20px;bottom:90px;width:58px;height:58px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;z-index:99997;box-shadow:0 6px 20px rgba(0,0,0,.25);text-decoration:none;transition:transform .15s,background .15s,opacity .15s}",
+    ".acr-wa:hover{background:#1ebe5b;transform:translateY(-2px)}",
+    ".acr-wa:focus-visible{outline:3px solid #0D1B35;outline-offset:3px}",
+    ".acr-wa i{font-size:31px;line-height:1;color:#fff}",
+    ".acr-wa-tip{position:absolute;right:68px;top:50%;transform:translateY(-50%);background:#0D1B35;color:#fff;font:600 12px Inter,system-ui,Arial,sans-serif;padding:6px 10px;border-radius:8px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .15s}",
+    ".acr-wa:hover .acr-wa-tip,.acr-wa:focus-visible .acr-wa-tip{opacity:1}",
+    ".acr-wa.acr-hide{opacity:0;pointer-events:none;transform:translateY(8px)}",
+    "@media (prefers-reduced-motion:reduce){.acr-wa,.acr-wa-tip{transition:none}}",
     ".acr-fab svg{width:26px;height:26px;fill:#fff}",
     ".acr-panel{position:fixed;right:20px;bottom:88px;width:360px;max-width:calc(100vw - 32px);height:520px;max-height:calc(100vh - 120px);background:#fff;border-radius:16px;box-shadow:0 16px 48px rgba(13,27,53,.28);display:flex;flex-direction:column;overflow:hidden;z-index:99999;opacity:0;transform:translateY(12px) scale(.98);pointer-events:none;transition:opacity .18s,transform .18s;font-family:Inter,system-ui,Arial,sans-serif}",
     ".acr-panel.open{opacity:1;transform:none;pointer-events:auto}",
@@ -148,6 +161,12 @@
       '<form class="acr-input" id="acr-form"><input id="acr-text" type="text" placeholder="Ask a question…" autocomplete="off" aria-label="Type your question"><button type="submit" aria-label="Send">➤</button></form>' +
       '<div class="acr-foot">Automated assistant · for detailed advice, contact a consultant</div>';
 
+    var wa = el("a", "acr-wa");
+    wa.href = WA_LINK; wa.target = "_blank"; wa.rel = "noopener";
+    wa.setAttribute("aria-label", "Chat with us on WhatsApp");
+    wa.innerHTML = '<i class="fa-brands fa-whatsapp" aria-hidden="true"></i><span class="acr-wa-tip">WhatsApp us</span>';
+
+    document.body.appendChild(wa);
     document.body.appendChild(fab);
     document.body.appendChild(panel);
 
@@ -200,10 +219,11 @@
 
     function open() {
       panel.classList.add("open");
+      wa.classList.add("acr-hide"); wa.tabIndex = -1;
       if (!greeted) { greeted = true; addText(GREETING); renderChips(INITIAL); }
       setTimeout(function () { text.focus(); }, 200);
     }
-    function close() { panel.classList.remove("open"); }
+    function close() { panel.classList.remove("open"); wa.classList.remove("acr-hide"); wa.tabIndex = 0; }
 
     fab.addEventListener("click", function () { panel.classList.contains("open") ? close() : open(); });
     panel.querySelector(".acr-x").addEventListener("click", close);
