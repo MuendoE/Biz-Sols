@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GCP Training | Alpha CR Solutions</title>
-<meta name="description" content="TransCelerate mutually recognised, ICH E6(R3) aligned Good Clinical Practice training for investigators, coordinators and site teams in South Africa — Alpha CR Solutions, Johannesburg.">
+<title>GCP Training: HPCSA Accredited Foundation Course | Alpha CR Solutions</title>
+<meta name="description" content="SA GCP 2020 Foundation Course with HPCSA CPD accreditation (24 CEUs), TransCelerate mutually recognised and ICH E6(R3) aligned. GCP training for investigators, coordinators and site teams in South Africa.">
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="stylesheet" href="main.css?v=2">
@@ -105,6 +105,35 @@
   display: inline-flex; align-items: center; gap: 6px;
   font-size: 12px; color: var(--gold); font-weight: 600; margin-top: 10px;
 }
+
+/* CPD-accredited Foundation Course */
+.cpd-facts { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 44px; }
+.cpd-fact { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 20px 22px; }
+.cpd-fact .cf-val { font-family: var(--font-mono); font-weight: 600; font-size: 26px; line-height: 1.1; color: var(--teal); }
+.cpd-fact.gold .cf-val { color: var(--gold); }
+.cpd-fact .cf-label { font-size: 12.5px; color: var(--gray); line-height: 1.5; margin-top: 7px; }
+.cpd-how { margin-top: 48px; }
+.cpd-how h3 { font-size: 20px; color: var(--navy); margin-bottom: 18px; }
+.cpd-steps { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
+.cpd-step { display: flex; gap: 14px; background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+.cpd-step .cs-num { flex-shrink: 0; width: 34px; height: 34px; border-radius: 50%; background: var(--teal-lt); color: var(--teal); font-family: var(--font-mono); font-weight: 600; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+.cpd-step h4 { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+.cpd-step p { font-size: 13.5px; color: var(--gray); line-height: 1.65; }
+.cpd-audience { font-size: 14px; color: #3d4f6a; line-height: 1.75; margin-top: 26px; max-width: 820px; }
+.cpd-audience strong { color: var(--navy); }
+.cpd-pricing { margin-top: 48px; }
+.cpd-pricing h3 { font-size: 20px; color: var(--navy); margin-bottom: 18px; }
+.cpd-price-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
+.cpd-price { display: flex; flex-direction: column; background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 24px; }
+.cpd-price.gold { background: var(--gold-lt); border-color: rgba(201,138,43,.3); }
+.cpd-price .cp-label { font-family: var(--font-mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--teal); }
+.cpd-price.gold .cp-label { color: var(--gold); }
+.cpd-price .cp-amount { font-family: var(--font-mono); font-weight: 600; font-size: 34px; line-height: 1.1; color: var(--navy); margin: 12px 0 2px; }
+.cpd-price .cp-unit { font-size: 12.5px; color: var(--gray); }
+.cpd-price .cp-desc { font-size: 13.5px; color: var(--gray); line-height: 1.65; margin: 14px 0 20px; }
+.cpd-price .btn { margin-top: auto; align-self: flex-start; }
+@media (max-width: 900px) { .cpd-facts { grid-template-columns: repeat(2,1fr); } .cpd-steps, .cpd-price-grid { grid-template-columns: 1fr; } }
+@media (max-width: 520px) { .cpd-facts { grid-template-columns: 1fr; } }
 </style>
 <style>
 /* Signature: GCP course-completion ring */
@@ -183,12 +212,13 @@
     <div>
       <p class="hero-breadcrumb">Services · GCP Training</p>
       <h1>ICH E6(R3)<br><em>GCP Training</em><br>for South African Sites</h1>
-      <p class="hero-sub">Good Clinical Practice is not a once-off certification — it is a working culture. Alpha CR Solutions delivers practical, South Africa-contextualised GCP training for investigative site teams at every level.</p>
+      <p class="hero-sub">Good Clinical Practice is not a once-off certification. It is a working culture. Alpha CR Solutions delivers practical, South Africa-contextualised GCP training for investigative site teams at every level.</p>
       <div class="hero-actions">
         <span class="paid-wrap"><a href="https://learn.alphacrsolutions.co.za/course/view.php?id=5" class="btn btn-primary">Access the Course <i class="fa-solid fa-lock"></i></a><span class="paid-tip"><a class="lms-card" href="https://learn.alphacrsolutions.co.za/course/view.php?id=5"><span class="lms-bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="lms-url">learn.alphacrsolutions.co.za</span></span><span class="lms-body"><span class="lms-logo">Alpha CR Solutions LMS</span><span class="lms-sub">Training portal &middot; browse course categories</span><span class="lms-cta">Become GCP certified <i class="fa-solid fa-arrow-right"></i></span></span></a></span></span>
         <a href="contact.html" class="btn btn-ghost">Book Group Training</a>
       </div>
       <div style="margin-top:28px;display:flex;gap:10px;flex-wrap:wrap;">
+        <a href="#foundation-course" class="badge badge-gold"><i class="fa-solid fa-user-doctor"></i> HPCSA Accredited · 24 CEUs</a>
         <span class="badge badge-gold"><i class="fa-solid fa-award"></i> TransCelerate Mutually Recognised</span>
         <span class="badge badge-teal"><i class="fa-solid fa-certificate"></i> ICH E6(R3) Aligned</span>
         <span class="badge badge-teal"><i class="fa-solid fa-shield-halved"></i> SAHPRA Compliant</span>
@@ -217,6 +247,66 @@
   </div>
 </section>
 
+<!-- CPD-ACCREDITED FOUNDATION COURSE (SA-GCP) -->
+<section class="bg-off" id="foundation-course">
+  <div class="section-inner">
+    <div class="recognition-banner">
+      <div class="recognition-mark"><i class="fa-solid fa-user-doctor"></i></div>
+      <div class="recognition-body">
+        <span class="badge badge-gold"><i class="fa-solid fa-award"></i> HPCSA Accredited · 24 CEUs</span>
+        <h2>The SA-GCP Foundation Course is accredited for HPCSA CPD</h2>
+        <p>Our courses are accredited by HPCSA and you will earn CPD points for the activity.</p>
+      </div>
+    </div>
+
+    <div class="cpd-facts">
+      <div class="cpd-fact gold"><div class="cf-val">24 CEUs</div><div class="cf-label">16 General + 8 Ethics, Human Rights &amp; Medical Law</div></div>
+      <div class="cpd-fact"><div class="cf-val">~23 h</div><div class="cf-label">Study time, blended online and live</div></div>
+      <div class="cpd-fact"><div class="cf-val">13 + 4</div><div class="cf-label">Self-paced modules plus scenario checkpoints</div></div>
+      <div class="cpd-fact"><div class="cf-val">6 h</div><div class="cf-label">Facilitated live workshop on Microsoft Teams</div></div>
+      <div class="cpd-fact"><div class="cf-val">80%</div><div class="cf-label">Pass mark on the final assessment, up to 3 attempts</div></div>
+      <div class="cpd-fact"><div class="cf-val">SA GCP 2020</div><div class="cf-label">Taught alongside ICH E6(R3)</div></div>
+    </div>
+
+    <div class="cpd-how">
+        <h3>How the course works</h3>
+        <div class="cpd-steps">
+        <div class="cpd-step"><div class="cs-num">1</div><div><h4>Self-paced online learning</h4><p>Thirteen modules with knowledge checks and four scenario checkpoints, delivered on the Alpha CR Solutions learning platform.</p></div></div>
+        <div class="cpd-step"><div class="cs-num">2</div><div><h4>Live facilitated workshop</h4><p>A six-hour workshop on Microsoft Teams with case work, a consent role-play, a safety drill and an inspection-readiness game.</p></div></div>
+        <div class="cpd-step"><div class="cs-num">3</div><div><h4>Final assessment and certificate</h4><p>A gated final certification examination. You need 80% to pass, with up to three attempts, and receive a signed certificate on success.</p></div></div>
+        </div>
+        <p class="cpd-audience"><strong>Who it is for.</strong> Medical and dental practitioners in clinical research roles, such as investigators, sub-investigators and study physicians, and the wider trial-site team, including study coordinators, research nurses, pharmacists, research associates and new entrants to clinical research. No prior GCP certificate is required.</p>
+    </div>
+
+    <div class="cpd-pricing">
+      <h3>Pricing</h3>
+      <div class="cpd-price-grid">
+        <div class="cpd-price">
+          <span class="cp-label">Individual training</span>
+          <div class="cp-amount">R3,500</div>
+          <div class="cp-unit">per person</div>
+          <p class="cp-desc">Good Clinical Practice Foundation Course. HPCSA accredited, 24 CEUs.</p>
+          <a href="mailto:enrolments@alphacrsolutions.co.za?subject=GCP%20Foundation%20Course%20enrolment" class="btn btn-primary">Enrol in the Foundation Course <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="cpd-price gold">
+          <span class="cp-label">Group training</span>
+          <div class="cp-amount">R3,150</div>
+          <div class="cp-unit">per person, groups of 10 or more</div>
+          <p class="cp-desc">A 10% group discount on the individual rate for groups of 10 or more people.</p>
+          <a href="mailto:enrolments@alphacrsolutions.co.za?subject=GCP%20group%20training%20quote" class="btn btn-outline">Request a group quote</a>
+        </div>
+        <div class="cpd-price">
+          <span class="cp-label">ICH E6(R3) GCP course</span>
+          <div class="cp-amount">R575</div>
+          <div class="cp-unit">per person</div>
+          <p class="cp-desc">The TransCelerate recognised ICH-GCP certificate. Applies to both SA and the rest of the world.</p>
+          <a href="enrolment.html#payment" class="btn btn-outline">Enrol and pay</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- TRANSCELERATE RECOGNITION -->
 <section class="bg-off">
   <div class="section-inner">
@@ -225,8 +315,8 @@
       <div class="recognition-body">
         <span class="badge badge-gold"><i class="fa-solid fa-award"></i> TransCelerate Mutually Recognised</span>
         <h2>Recognised under the TransCelerate GCP Training Mutual Recognition Programme</h2>
-        <p>Our <strong>Good Clinical Practice Course — ICH E6(R3)</strong> has been reviewed and is now listed on the <a class="ref-link" href="https://www.transcelerate-gcp-mutual-recognition.com/view-course" target="_blank" rel="noopener">TransCelerate GCP Training Mutual Recognition</a> register and uploaded to the <strong>Shared Investigator Platform (SIP)</strong>.</p>
-        <p>This means a GCP certificate earned through this course is accepted across TransCelerate member companies and investigator sites — so your site team will not need to repeat GCP training when joining their trials.</p>
+        <p>Our <strong>Good Clinical Practice Course (ICH E6(R3))</strong> has been reviewed and is now listed on the <a class="ref-link" href="https://www.transcelerate-gcp-mutual-recognition.com/view-course" target="_blank" rel="noopener">TransCelerate GCP Training Mutual Recognition</a> register and uploaded to the <strong>Shared Investigator Platform (SIP)</strong>.</p>
+        <p>This means a GCP certificate earned through this course is accepted across TransCelerate member companies and investigator sites, so your site team will not need to repeat GCP training when joining their trials.</p>
       </div>
     </div>
   </div>
@@ -247,7 +337,7 @@
       <div class="audience-card">
         <div class="audience-icon"><i class="fa-solid fa-clipboard-user"></i></div>
         <h4>Study Coordinators</h4>
-        <p>Day-to-day GCP application — informed consent, source documentation, CRF completion, query management, IMP handling and subject safety monitoring.</p>
+        <p>Day-to-day GCP application: informed consent, source documentation, CRF completion, query management, IMP handling and subject safety monitoring.</p>
       </div>
       <div class="audience-card">
         <div class="audience-icon"><i class="fa-solid fa-pills"></i></div>
@@ -267,7 +357,7 @@
       <div class="audience-card">
         <div class="audience-icon"><i class="fa-solid fa-user-tie"></i></div>
         <h4>New to Clinical Research</h4>
-        <p>Foundation GCP training for staff who are new to clinical trials — covering the principles, regulatory framework and their role in protecting subjects and data.</p>
+        <p>Foundation GCP training for staff who are new to clinical trials, covering the principles, regulatory framework and their role in protecting subjects and data.</p>
       </div>
     </div>
   </div>
@@ -278,12 +368,12 @@
   <div class="section-inner">
     <span class="section-label">Delivery Formats</span>
     <h2 class="section-title">Delivered via <em>LMS</em>,<br>In-Person and Live Virtual</h2>
-    <p class="section-lead">Our GCP training is delivered through three channels — a self-paced Learning Management System (LMS), live physical training, and live virtual sessions — so you can choose what fits your team's schedule, location and size.</p>
+    <p class="section-lead">Our GCP training is delivered through three channels: a self-paced Learning Management System (LMS), live physical training, and live virtual sessions. Choose what fits your team's schedule, location and size.</p>
     <div class="cards-grid-3" style="margin-top:48px;">
       <div class="format-card">
         <div class="format-badge"><i class="fa-solid fa-laptop"></i> LMS</div>
         <h3>LMS / Online Learning</h3>
-        <p>Self-paced GCP training delivered through our Learning Management System — ideal for geographically dispersed teams or sites that need to train staff flexibly without operational disruption.</p>
+        <p>Self-paced GCP training delivered through our Learning Management System, ideal for geographically dispersed teams or sites that need to train staff flexibly without operational disruption.</p>
         <ul>
           <li><i class="fa-solid fa-check"></i>Self-paced online modules</li>
           <li><i class="fa-solid fa-check"></i>Accessible anywhere, anytime</li>
@@ -307,7 +397,7 @@
       <div class="format-card">
         <div class="format-badge"><i class="fa-solid fa-video"></i> Live Virtual</div>
         <h3>Live Virtual Training</h3>
-        <p>Instructor-led GCP training delivered live over Microsoft Teams or similar — combining the interaction of in-person training with the convenience of remote attendance.</p>
+        <p>Instructor-led GCP training delivered live over Microsoft Teams or similar, combining the interaction of in-person training with the convenience of remote attendance.</p>
         <ul>
           <li><i class="fa-solid fa-check"></i>Live instructor over Teams</li>
           <li><i class="fa-solid fa-check"></i>Interactive Q&amp;A and discussion</li>
@@ -358,9 +448,9 @@
     <p class="section-lead">Getting started is simple. Create your free account, request your place, and we'll enrol you as soon as your payment is confirmed.</p>
     <div class="enrol-pathway">
       <div class="pathway-step"><div class="step-circle"><span class="step-num">1</span><i class="fa-solid fa-user-plus"></i></div><p class="step-title">Create your account</p><p class="step-body">Register free on our learning portal at <a href="https://learn.alphacrsolutions.co.za" target="_blank" rel="noopener">learn.alphacrsolutions.co.za</a> and confirm your email.</p></div>
-      <div class="pathway-step"><div class="step-circle"><span class="step-num">2</span><i class="fa-solid fa-envelope"></i></div><p class="step-title">Request enrolment</p><p class="step-body">Email <a href="mailto:enrolments@alphacrsolutions.co.za?subject=Course%20enrolment%20request">enrolments@alphacrsolutions.co.za</a> with the course you'd like to join. We'll reply with the fee and banking details.</p></div>
-      <div class="pathway-step step-gold"><div class="step-circle"><span class="step-num">3</span><i class="fa-solid fa-building-columns"></i></div><p class="step-title">Make payment</p><p class="step-body">Pay by EFT or securely online by card (PayFast) using the details we send you.</p></div>
-      <div class="pathway-step step-gold"><div class="step-circle"><span class="step-num">4</span><i class="fa-solid fa-graduation-cap"></i></div><p class="step-title">Get enrolled &amp; start</p><p class="step-body">Once your payment reflects, we enrol you in the course — log in and start learning right away.</p></div>
+      <div class="pathway-step"><div class="step-circle"><span class="step-num">2</span><i class="fa-solid fa-envelope"></i></div><p class="step-title">Request enrolment</p><p class="step-body">Email <a href="mailto:enrolments@alphacrsolutions.co.za?subject=Course%20enrolment%20request">enrolments@alphacrsolutions.co.za</a> with the course you'd like to join. Fees are listed on this page.</p></div>
+      <div class="pathway-step step-gold"><div class="step-circle"><span class="step-num">3</span><i class="fa-solid fa-building-columns"></i></div><p class="step-title">Make payment</p><p class="step-body">Pay by EFT using the <a href="enrolment.html#payment">banking details on our Enrol page</a>, or securely online by card (PayFast).</p></div>
+      <div class="pathway-step step-gold"><div class="step-circle"><span class="step-num">4</span><i class="fa-solid fa-graduation-cap"></i></div><p class="step-title">Get enrolled &amp; start</p><p class="step-body">Once your payment reflects, we enrol you in the course. Log in and start learning right away.</p></div>
     </div>
   </div>
 </section>
@@ -412,11 +502,11 @@
     </ul></div>
   </div>
   <div class="footer-bottom">
-    <span>© Alpha CR Solutions 2026 — All rights reserved · Johannesburg, South Africa</span>
+    <span>© Alpha CR Solutions 2026. All rights reserved · Johannesburg, South Africa</span>
     <span><a href="privacy-policy.html">Privacy Policy</a> · <a href="refund-and-cancellation-policy.html">Refund &amp; Cancellation Policy</a> · <a href="terms-of-use.html">Terms of Use</a></span>
   </div>
 </footer>
 <script src="main.js?v=2"></script>
-<script src="chat-widget.js?v=2" defer></script>
+<script src="chat-widget.js?v=3" defer></script>
 </body>
 </html>

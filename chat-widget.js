@@ -8,19 +8,19 @@
   var KB = {
     gcp: {
       label: "GCP Training",
-      answer: "Our Good Clinical Practice Course (ICH E6(R3)) is TransCelerate mutually recognised and listed on the Shared Investigator Platform (SIP). It's delivered three ways — self-paced on our LMS, in-person at your site, or live online over Teams. Every participant receives a certificate of completion and TMF-ready training records.",
+      answer: "Our Good Clinical Practice Course (ICH E6(R3)) is TransCelerate mutually recognised and listed on the Shared Investigator Platform (SIP). It's delivered three ways: self-paced on our LMS, in-person at your site, or live online over Teams. Every participant receives a certificate of completion and TMF-ready training records.",
       links: [["View GCP Training", "gcp-training.html"], ["Enrol on the LMS", "https://learn.alphacrsolutions.co.za"]],
       next: ["transcelerate", "enrol", "craTraining", "contact"]
     },
     transcelerate: {
       label: "TransCelerate recognition",
-      answer: "Yes — our Good Clinical Practice Course (ICH E6(R3)) is mutually recognised under the TransCelerate GCP Training Mutual Recognition Programme and is uploaded to the Shared Investigator Platform (SIP). That means a GCP certificate earned through this course is accepted across TransCelerate member companies and investigator sites, so your team won't need to repeat GCP training when joining their trials.",
+      answer: "Yes, our Good Clinical Practice Course (ICH E6(R3)) is mutually recognised under the TransCelerate GCP Training Mutual Recognition Programme and is uploaded to the Shared Investigator Platform (SIP). That means a GCP certificate earned through this course is accepted across TransCelerate member companies and investigator sites, so your team won't need to repeat GCP training when joining their trials.",
       links: [["GCP Training", "gcp-training.html"], ["View the TransCelerate listing", "https://www.transcelerate-gcp-mutual-recognition.com/view-course"]],
       next: ["enrol", "gcp", "contact"]
     },
     cra: {
       label: "CRA & Monitoring",
-      answer: "We provide experienced CRAs and full site monitoring — source data verification (SDV), source data review (SDR) and risk-based monitoring to ICH E6(R3) standards, with inspection-ready documentation throughout.",
+      answer: "We provide experienced CRAs and full site monitoring: source data verification (SDV), source data review (SDR) and risk-based monitoring to ICH E6(R3) standards, with inspection-ready documentation throughout.",
       links: [["CRA & Monitoring", "cra-monitoring.html"]],
       next: ["craTraining", "regulatory", "contact"]
     },
@@ -32,19 +32,19 @@
     },
     regulatory: {
       label: "Regulatory / SAHPRA",
-      answer: "We manage the full regulatory and ethics lifecycle: SAHPRA Clinical Trial Applications, amendments and safety reports; NHREC-registered IRB and site IEC ethics submissions; and protocol & ICF development.",
+      answer: "We manage the full regulatory and ethics lifecycle: SAHPRA Clinical Trial Applications, amendments and safety reports; NHREC-registered IRB and site IEC ethics submissions; and ICF development.",
       links: [["Regulatory Consultancy", "regulatory-consultancy.html"]],
       next: ["startup", "contact"]
     },
     startup: {
       label: "Study Start-up",
-      answer: "Our study start-up support covers MTAs, import/export permits, vendor assessments, source data templates and SOP development — everything needed to activate your sites.",
+      answer: "Our study start-up support covers MTAs, import/export permits, vendor assessments, source data templates and SOP development. It includes everything needed to activate your sites.",
       links: [["Study Start-up & Site Support", "study-startup.html"]],
       next: ["regulatory", "contact"]
     },
     software: {
       label: "Software",
-      answer: "We build clinical research software — patient-matching systems, recruitment dashboards and custom data tools for sponsors, CROs and sites.",
+      answer: "We build clinical research software: patient-matching systems, recruitment dashboards and custom data tools for sponsors, CROs and sites.",
       links: [["Software Solutions", "software.html"]],
       next: ["contact"]
     },
@@ -68,7 +68,7 @@
     },
     contact: {
       label: "Contact a consultant",
-      answer: "Happy to connect you with the team. Email info@alphacrsolutions.co.za for general enquiries or enrolments@alphacrsolutions.co.za for training — or use our contact form.",
+      answer: "Happy to connect you with the team. Email info@alphacrsolutions.co.za for general enquiries or enrolments@alphacrsolutions.co.za for training, or use our contact form.",
       links: [["Contact page", "contact.html"], ["Email info", "mailto:info@alphacrsolutions.co.za"]],
       next: []
     }
@@ -187,7 +187,7 @@
 
     function answer(q) {
       for (var i = 0; i < RULES.length; i++) { if (RULES[i][0].test(q)) { addBot(KB[RULES[i][1]]); return; } }
-      addText("I'm not sure I caught that — here are some things I can help with. You can also contact a consultant directly.");
+      addText("I'm not sure I caught that. Here are some things I can help with. You can also contact a consultant directly.");
       renderChips(["gcp", "cra", "regulatory", "enrol", "contact"]);
     }
 
