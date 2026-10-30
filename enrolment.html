@@ -32,6 +32,20 @@
 .bank-details dd.mono { font-family: var(--font-mono); letter-spacing: .02em; }
 .service-card .bank-note { margin: 16px 0 18px; }
 .service-card .bank-note a { color: var(--teal); font-weight: 600; }
+/* PayFast course picker */
+.pf-form label { display: block; font-size: 12.5px; font-weight: 600; color: var(--navy); margin: 16px 0 6px; }
+.pf-form select, .pf-form input[type=number] { width: 100%; padding: 12px 14px; font: inherit; font-size: 14px; color: var(--navy); background: var(--white); border: 1.5px solid var(--border); border-radius: 8px; }
+.pf-form select:focus, .pf-form input[type=number]:focus { outline: none; border-color: var(--teal); box-shadow: 0 0 0 3px rgba(0,155,168,.15); }
+.pf-summary { margin: 18px 0 0; padding: 14px 16px; background: var(--off); border: 1px solid var(--border); border-radius: 10px; }
+.pf-unit { font-size: 13px; color: var(--gray); }
+.pf-total { display: flex; justify-content: space-between; align-items: baseline; margin-top: 6px; font-size: 14px; color: var(--navy); }
+.pf-total strong { font-family: var(--font-mono); font-size: 24px; }
+.pf-hint { font-size: 12.5px; color: var(--gray); margin: 8px 0 0; min-height: 18px; }
+.pf-error { font-size: 13px; color: #b3261e; margin: 8px 0 0; }
+.pf-pay { margin-top: 14px; }
+.pf-pay input[type=image] { cursor: pointer; max-width: 100%; height: auto; }
+.pf-status { margin: 0 0 14px; padding: 12px 14px; border-radius: 10px; font-size: 13.5px; line-height: 1.6; background: var(--teal-lt); color: var(--navy); border: 1px solid rgba(0,155,168,.25); }
+.pf-status.warn { background: var(--gold-lt); border-color: rgba(201,138,43,.3); }
 </style>
 </head>
 <body>
@@ -125,23 +139,34 @@
       <div class="service-card">
         <div class="card-icon"><i class="fa-solid fa-credit-card"></i></div>
         <h3>Online Card Payment</h3>
-        <p>Pay instantly and securely by debit or credit card through PayFast, South Africa's trusted online payment gateway.</p>
-        <form name="PayFastPayNowForm" action="https://payment.payfast.io/eng/process" method="post" style="margin-top:6px;">
+        <p>Choose your course, then pay instantly and securely by debit or credit card through PayFast, South Africa's trusted online payment gateway.</p>
+        <div class="pf-status" id="pf-status" role="status" hidden></div>
+        <noscript><p class="bank-note">Card payment needs JavaScript. Please pay by EFT instead, or email <a href="mailto:enrolments@alphacrsolutions.co.za?subject=Course%20enrolment">enrolments@alphacrsolutions.co.za</a>.</p></noscript>
+        <form id="pf-form" class="pf-form" name="PayFastPayNowForm" action="https://payment.payfast.io/eng/process" method="post" hidden>
           <input required type="hidden" name="cmd" value="_paynow">
           <input required type="hidden" name="receiver" pattern="[0-9]" value="35819753">
-          <input type="hidden" name="return_url" value="https://alphacrsolutions.co.za/enrolment.html">
-          <input type="hidden" name="cancel_url" value="https://alphacrsolutions.co.za/enrolment.html">
+          <input type="hidden" name="return_url" value="https://alphacrsolutions.co.za/enrolment.html?payment=thanks">
+          <input type="hidden" name="cancel_url" value="https://alphacrsolutions.co.za/enrolment.html?payment=cancelled">
           <input type="hidden" name="notify_url" value="https://alphacrsolutions.co.za/contact.html">
-          <input required type="hidden" name="amount" value="575">
-          <input required type="hidden" name="item_name" maxlength="255" value="ICH-GCP E6 (R3)">
-          <input type="hidden" name="item_description" maxlength="255" value="The TransCelerate recognised ICH-GCP certificate. Applies to both SA and rest of the world.">
-          <table>
-            <tr>
-              <td colspan="2" align="center">
-                <input type="image" src="https://my.payfast.io/images/buttons/PayNow/Dark-Large-PayNow.png" alt="Pay Now" title="Pay Now with Payfast">
-              </td>
-            </tr>
-          </table>
+          <input required type="hidden" name="amount" value="3500.00">
+          <input required type="hidden" name="item_name" maxlength="100" value="SA-GCP Foundation Course">
+          <input type="hidden" name="item_description" maxlength="255" value="Full SA-GCP accredited course">
+          <label for="pf-course">Course</label>
+          <select id="pf-course">
+            <option value="sa-gcp">SA-GCP Foundation Course (HPCSA accredited), R3,500</option>
+            <option value="ich">ICH E6(R3) GCP course, R575</option>
+          </select>
+          <label for="pf-qty">Number of people</label>
+          <input id="pf-qty" type="number" inputmode="numeric" min="1" max="500" step="1" value="1">
+          <div class="pf-summary" aria-live="polite">
+            <div class="pf-unit" id="pf-unit">R3,500.00 per person</div>
+            <div class="pf-total"><span>Total to pay</span><strong id="pf-total">R3,500.00</strong></div>
+          </div>
+          <p class="pf-hint" id="pf-hint"></p>
+          <p class="pf-error" id="pf-error" role="alert" hidden></p>
+          <div class="pf-pay">
+            <input type="image" src="https://my.payfast.io/images/buttons/PayNow/Dark-Large-PayNow.png" alt="Pay Now" title="Pay Now with Payfast">
+          </div>
         </form>
         <p style="font-size:12px;color:var(--gray-lt);margin:12px 0 0;"><i class="fa-solid fa-lock"></i> Secured by PayFast</p>
       </div>
@@ -265,6 +290,68 @@
   </div>
 </footer>
 <script src="main.js?v=2"></script>
+<script>
+/* PayFast course picker: sets the amount, item name and description from the chosen course and number of people. */
+(function () {
+  var form = document.getElementById('pf-form');
+  if (!form) return;
+  var COURSES = {
+    'sa-gcp': { name: 'SA-GCP Foundation Course', cents: 350000, desc: 'Full SA-GCP accredited course', groupMin: 10, groupOff: 0.10 },
+    'ich': { name: 'ICH-GCP E6 (R3)', cents: 57500, desc: 'The TransCelerate recognised ICH-GCP certificate. Applies to both SA and rest of the world.', groupMin: 0, groupOff: 0 }
+  };
+  var sel = document.getElementById('pf-course'), qtyEl = document.getElementById('pf-qty');
+  var unitEl = document.getElementById('pf-unit'), totalEl = document.getElementById('pf-total');
+  var hintEl = document.getElementById('pf-hint'), errEl = document.getElementById('pf-error');
+  var amount = form.elements['amount'], itemName = form.elements['item_name'], itemDesc = form.elements['item_description'];
+
+  function money(c) {
+    var p = (c / 100).toFixed(2).split('.');
+    return 'R' + p[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',') + '.' + p[1];
+  }
+  function read() {
+    var c = COURSES[sel.value], raw = String(qtyEl.value).trim(), q = parseInt(raw, 10);
+    var valid = !!c && /^\d+$/.test(raw) && q >= 1 && q <= 500;
+    return { c: c, q: q, valid: valid };
+  }
+  function update() {
+    var r = read();
+    if (!r.valid) { errEl.hidden = false; errEl.textContent = 'Enter a whole number of people from 1 to 500.'; return false; }
+    errEl.hidden = true;
+    var c = r.c, group = c.groupMin && r.q >= c.groupMin;
+    var unit = group ? Math.round(c.cents * (1 - c.groupOff)) : c.cents;
+    var total = unit * r.q;
+    amount.value = (total / 100).toFixed(2);
+    itemName.value = (r.q > 1 ? c.name + ' x ' + r.q : c.name).substring(0, 100);
+    itemDesc.value = (r.q > 1 ? r.q + ' participants at ' + money(unit) + ' each' + (group ? ' (10% group rate). ' : '. ') : '') + c.desc;
+    itemDesc.value = itemDesc.value.substring(0, 255);
+    unitEl.textContent = money(unit) + ' per person' + (group ? ' (10% group discount applied)' : '');
+    totalEl.textContent = money(total);
+    hintEl.textContent = (c.groupMin && !group) ? 'Groups of ' + c.groupMin + ' or more get 10% off, automatically.' : '';
+    return true;
+  }
+  sel.addEventListener('change', update);
+  qtyEl.addEventListener('input', update);
+  form.addEventListener('submit', function (e) { if (!update()) { e.preventDefault(); qtyEl.focus(); } });
+
+  var params = new URLSearchParams(window.location.search);
+  var preset = params.get('course');
+  if (preset && COURSES[preset]) sel.value = preset;
+  update();
+  form.hidden = false;
+
+  var status = document.getElementById('pf-status'), pay = params.get('payment');
+  var contact = 'payments@alphacrsolutions.co.za';
+  if (status && pay === 'thanks') {
+    status.innerHTML = 'Thank you for your payment. Please email your name, the course and your learning portal email to <a href="mailto:' + contact + '?subject=Proof%20of%20payment">' + contact + '</a> so we can enrol you.';
+    status.hidden = false;
+  } else if (status && pay === 'cancelled') {
+    status.className = 'pf-status warn';
+    status.textContent = 'Your card payment was cancelled and you have not been charged.';
+    status.hidden = false;
+  }
+  if (pay) { var sec = document.getElementById('payment'); if (sec) sec.scrollIntoView(); }
+})();
+</script>
 <script src="chat-widget.js?v=3" defer></script>
 </body>
 </html>
